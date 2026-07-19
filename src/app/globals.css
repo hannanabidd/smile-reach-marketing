@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #2f3f8f;
+  --blue: #4b8fe8;
+  --blue-text: #2560b4;
+  --gold: #f4b942;
+  --orange: #f28c28;
+
+  --sky: #eaf4ff;
+  --gray: #f8fafc;
+  --white: #ffffff;
+  --charcoal: #2d3748;
+}
+
+@theme inline {
+  --color-navy: var(--navy);
+  --color-blue: var(--blue);
+  --color-blue-text: var(--blue-text);
+  --color-gold: var(--gold);
+  --color-orange: var(--orange);
+
+  --color-sky: var(--sky);
+  --color-gray: var(--gray);
+  --color-white: var(--white);
+  --color-charcoal: var(--charcoal);
+
+  --font-display: var(--font-plus-jakarta-sans);
+  --font-body: var(--font-inter);
+
+  --radius-button: 12px;
+  --radius-card: 16px;
+
+  --container-page: 1200px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--white);
+  color: var(--charcoal);
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display), Arial, Helvetica, sans-serif;
+    letter-spacing: -0.02em;
+    color: var(--navy);
+  }
+}
+
+:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Type scale, per CLAUDE.md section 3. Mobile size first, desktop at 768px+. */
+.text-display-1 {
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1.08;
+}
+.text-display-2 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.text-display-3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.text-body {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+.text-body-lg {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+.text-eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+@media (min-width: 768px) {
+  .text-display-1 {
+    font-size: 56px;
+  }
+  .text-display-2 {
+    font-size: 40px;
+  }
+  .text-display-3 {
+    font-size: 24px;
+  }
+  .text-body-lg {
+    font-size: 20px;
+  }
+}
