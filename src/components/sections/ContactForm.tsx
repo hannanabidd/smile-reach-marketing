@@ -18,7 +18,7 @@ import {
 import { submitContactForm } from "@/app/contact/actions";
 import { SITE_PHONE, SITE_PHONE_HREF } from "@/lib/site";
 
-type Intent = "practice" | "school" | "other";
+export type Intent = "practice" | "school" | "other";
 
 const INTENT_OPTIONS: { value: Intent; label: string; description: string }[] = [
   {
@@ -320,13 +320,17 @@ function ConsentField<T extends FieldValues>({
   );
 }
 
-export default function ContactForm() {
+export default function ContactForm({
+  defaultIntent = "practice",
+}: {
+  defaultIntent?: Intent;
+} = {}) {
   const searchParams = useSearchParams();
-  const initialIntent = (searchParams.get("intent") as Intent) ?? "practice";
+  const initialIntent = (searchParams.get("intent") as Intent) ?? defaultIntent;
   const initialHelp = searchParams.get("help") ?? undefined;
 
   const [intent, setIntent] = useState<Intent>(
-    INTENT_OPTIONS.some((o) => o.value === initialIntent) ? initialIntent : "practice"
+    INTENT_OPTIONS.some((o) => o.value === initialIntent) ? initialIntent : defaultIntent
   );
   const [submittedName, setSubmittedName] = useState<string | null>(null);
   const reduceMotion = useReducedMotion();
