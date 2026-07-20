@@ -45,13 +45,13 @@ export default function TagDiagram() {
         <div className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-2">
           <Reveal>
             <Card className="h-full">
-              <p className="text-eyebrow mb-4 text-blue-text">Front &mdash; school side</p>
+              <p className="text-eyebrow mb-4 text-blue-text">Front school side</p>
               <CalloutList items={FRONT} />
             </Card>
           </Reveal>
           <Reveal delay={0.05}>
             <Card className="h-full">
-              <p className="text-eyebrow mb-4 text-blue-text">Reverse &mdash; sponsor side</p>
+              <p className="text-eyebrow mb-4 text-blue-text">Reverse sponsor side</p>
               <CalloutList items={REVERSE} />
             </Card>
           </Reveal>

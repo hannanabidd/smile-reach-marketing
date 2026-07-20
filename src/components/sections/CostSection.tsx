@@ -29,7 +29,7 @@ export default function CostSection() {
               <p className="mt-2 text-sm text-charcoal/70">
                 Pricing pending client input. No figure exists in any
                 supplied content. This is the largest conversion gap on the
-                site &mdash; get at least a starting-from number or a range
+                site, get at least a starting-from number or a range
                 tied to school size before launch. Do not invent a figure.
               </p>
             ) : (

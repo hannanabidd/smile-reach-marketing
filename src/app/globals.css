@@ -34,10 +34,6 @@
   --container-page: 1200px;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   background: var(--white);
   color: var(--charcoal);
@@ -61,9 +57,6 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
   *,
   *::before,
   *::after {

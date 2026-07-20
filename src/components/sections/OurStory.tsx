@@ -29,7 +29,7 @@ export default function OurStory() {
                   company and what they did before, what year, the specific
                   moment that started it, and the first school and first
                   sponsor. See ABOUT.md. Do not fabricate these details even
-                  temporarily &mdash; a missing story is recoverable, a false
+                  temporarily, a missing story is recoverable, a false
                   one is not.
                 </p>
               </>

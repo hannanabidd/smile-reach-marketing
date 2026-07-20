@@ -80,7 +80,7 @@ export default function FAQAccordion({
                   aria-expanded={open}
                   aria-controls={`faq-panel-${index}`}
                   onClick={() => setOpenIndex(open ? null : index)}
-                  className="flex w-full items-center justify-between gap-4 py-5 text-left"
+                  className="flex w-full items-center justify-between gap-4 py-5 text-left cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-blue focus-visible:ring-offset-2"
                 >
                   <span className="text-[17px] font-semibold text-navy">
                     {item.q}

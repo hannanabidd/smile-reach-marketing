@@ -290,7 +290,7 @@ export default function ParentPickUpTagsPage() {
           Numbered duplicates tied to the same record, and a replacement
           process the office can run without calling us. Ask your Smile
           Reach representative whether replacement stock is included in
-          your sponsorship or handled as a reorder &mdash; this varies by
+          your sponsorship or handled as a reorder, this varies by
           program.
         </p>
       </Prose>
