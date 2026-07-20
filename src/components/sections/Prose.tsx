@@ -19,6 +19,7 @@ export default function Prose({
   buttons,
   centered = false,
   maxWidth = 760,
+  id,
 }: {
   background?: keyof typeof BG_CLASSES;
   heading: string;
@@ -27,11 +28,12 @@ export default function Prose({
   buttons?: ButtonSpec[];
   centered?: boolean;
   maxWidth?: number;
+  id?: string;
 }) {
   const allButtons = buttons ?? (button ? [button] : []);
 
   return (
-    <section className={`${BG_CLASSES[background]} py-16 sm:py-24`}>
+    <section id={id} className={`scroll-mt-22 ${BG_CLASSES[background]} py-16 sm:py-24`}>
       <Container>
         <Reveal
           style={{ maxWidth }}

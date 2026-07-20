@@ -62,7 +62,7 @@ export default function ProcessSteps({
     <section className={`${BG_CLASSES[background]} py-16 sm:py-24`}>
       <Container>
         <Reveal className="text-center">
-          <Eyebrow>{eyebrow}</Eyebrow>
+          {eyebrow ? <Eyebrow>{eyebrow}</Eyebrow> : null}
           <h2 className="text-display-2 font-bold text-navy">{heading}</h2>
         </Reveal>
 

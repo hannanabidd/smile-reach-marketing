@@ -17,10 +17,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://smilereachmarketing.com"),
-  title: {
-    default: "Smile Reach Marketing | School Sponsorship for Pediatric Practices",
-    template: "%s | Smile Reach Marketing",
-  },
+  title: "Smile Reach Marketing | School Sponsorship for Pediatric Practices",
   description:
     "Sponsor Parent Pick-Up Tags at local schools and reach thousands of families every school day. Exclusive sponsorships for orthodontists, pediatric dentists, and family practices.",
   alternates: { canonical: "/" },

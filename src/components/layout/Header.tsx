@@ -10,7 +10,7 @@ import Button from "@/components/ui/Button";
 const NAV_ITEMS = [
   { label: "Home", href: "/" },
   { label: "Pick-Up Tags", href: "/parent-pick-up-tags" },
-  { label: "Products", href: "/school-marketing-products" },
+  { label: "Products", href: "/products" },
   { label: "Community Marketing", href: "/community-marketing" },
   { label: "About", href: "/about" },
   { label: "Resources", href: "/resources" },

@@ -1,9 +1,11 @@
 import type { MetadataRoute } from "next";
+import { PRODUCTS } from "@/lib/products";
 
 const routes = [
   "",
   "/parent-pick-up-tags",
-  "/school-marketing-products",
+  "/products",
+  ...PRODUCTS.map((product) => `/products/${product.slug}`),
   "/community-marketing",
   "/about",
   "/resources",

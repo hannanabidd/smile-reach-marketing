@@ -188,7 +188,7 @@ export default function CommunityMarketingPage() {
         </Container>
       </section>
 
-      <Prose background="white" heading="Is community marketing right for your practice?" button={{ label: "See who sponsors tags", href: "/parent-pick-up-tags#industries" }}>
+      <Prose id="who-we-serve" background="white" heading="Is community marketing right for your practice?" button={{ label: "See who sponsors tags", href: "/parent-pick-up-tags#industries" }}>
         <p>
           This strategy is not for everyone, and it is worth being honest
           about the fit. School sponsorship works best when three things
@@ -269,7 +269,7 @@ export default function CommunityMarketingPage() {
         centered
         buttons={[
           { label: "Parent Pick-Up Tags", href: "/parent-pick-up-tags", variant: "secondary" },
-          { label: "All school products", href: "/school-marketing-products", variant: "ghost" },
+          { label: "All school products", href: "/products", variant: "ghost" },
         ]}
       >
         <p>

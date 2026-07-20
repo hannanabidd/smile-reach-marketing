@@ -1,7 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import Container from "@/components/ui/Container";
 import Eyebrow from "@/components/ui/Eyebrow";
-import ImageSlot from "@/components/ui/ImageSlot";
 import Reveal from "@/components/motion/Reveal";
 
 export default function ProductGrid() {
@@ -23,8 +23,8 @@ export default function ProductGrid() {
 
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2">
           <Reveal className="group relative overflow-hidden rounded-card bg-navy p-8 transition-all duration-200 ease-out hover:-translate-y-1.5 sm:col-span-2 sm:row-span-2">
-            <a href="/school-marketing-products#pick-up-tags" className="flex h-full flex-col justify-between">
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-card">
+            <Link href="/parent-pick-up-tags" className="flex h-full flex-col justify-between">
+              <div className="relative aspect-4/3 w-full overflow-hidden rounded-card">
                 <Image
                   src="/Images/hero-pickup-line.png"
                   alt="A Parent Pick-Up Tag hanging from a car mirror"
@@ -44,34 +44,38 @@ export default function ProductGrid() {
                   participating family&apos;s car.
                 </p>
               </div>
-            </a>
+            </Link>
           </Reveal>
 
           <Reveal delay={0.05} className="group overflow-hidden rounded-card border border-transparent bg-sky p-6 transition-all duration-200 ease-out hover:-translate-y-1.5 hover:border-blue/40">
-            <a href="/school-marketing-products#take-home-folders">
-              <ImageSlot label="Everglades Pediatric Dentistry — folder photo pending" aspect="4 / 3" />
+            <Link href="/products/take-home-folders">
+              <div className="relative aspect-4/3 w-full overflow-hidden rounded-card bg-white">
+                <Image
+                  src="/Images/product-folders.png"
+                  alt="Sponsored take-home folder"
+                  fill
+                  sizes="(min-width: 1024px) 25vw, 50vw"
+                  className="object-contain p-3 transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
               <h3 className="text-display-3 mt-4 font-bold text-navy">
                 Take-Home Folders
               </h3>
               <p className="text-body mt-1 text-charcoal/90">
                 Homework goes home in it. So does your practice.
               </p>
-              <p className="mt-2 text-xs font-semibold uppercase tracking-wide text-blue-text">
-                Everglades Pediatric Dentistry
-              </p>
-            </a>
+            </Link>
           </Reveal>
 
           <Reveal delay={0.1} className="group overflow-hidden rounded-card border border-transparent bg-sky p-6 transition-all duration-200 ease-out hover:-translate-y-1.5 hover:border-blue/40">
-            <a href="/school-marketing-products#water-bottles">
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-card bg-white">
+            <Link href="/products/water-bottles">
+              <div className="relative aspect-4/3 w-full overflow-hidden rounded-card bg-white">
                 <Image
-                  src="/Images/products-desk-spread.png"
-                  alt="Branded water bottles on a classroom desk"
+                  src="/Images/product-bottles.png"
+                  alt="Sponsored branded water bottle"
                   fill
                   sizes="(min-width: 1024px) 25vw, 50vw"
                   className="object-contain p-3 transition-transform duration-300 group-hover:scale-105"
-                  style={{ objectPosition: "82% 55%" }}
                 />
               </div>
               <h3 className="text-display-3 mt-4 font-bold text-navy">
@@ -80,34 +84,39 @@ export default function ProductGrid() {
               <p className="text-body mt-1 text-charcoal/90">
                 On the desk all day, in the backpack all year.
               </p>
-            </a>
+            </Link>
           </Reveal>
 
           <Reveal delay={0.15} className="group overflow-hidden rounded-card border border-transparent bg-sky p-6 transition-all duration-200 ease-out hover:-translate-y-1.5 hover:border-blue/40">
-            <a href="/school-marketing-products#calendar-magnets">
-              <ImageSlot label="Holt Ortho — calendar magnet asset pending" aspect="4 / 3" />
+            <Link href="/products/calendar-magnets">
+              <div className="relative aspect-4/3 w-full overflow-hidden rounded-card bg-white">
+                <Image
+                  src="/Images/product-calender-magnets.png"
+                  alt="Sponsored school calendar magnet"
+                  fill
+                  sizes="(min-width: 1024px) 25vw, 50vw"
+                  className="object-contain p-3 transition-transform duration-300 group-hover:scale-105"
+                  style={{ objectPosition: "center bottom" }}
+                />
+              </div>
               <h3 className="text-display-3 mt-4 font-bold text-navy">
                 Calendar Magnets
               </h3>
               <p className="text-body mt-1 text-charcoal/90">
                 On the fridge from August to June.
               </p>
-              <p className="mt-2 text-xs font-semibold uppercase tracking-wide text-blue-text">
-                Holt Ortho
-              </p>
-            </a>
+            </Link>
           </Reveal>
 
           <Reveal delay={0.2} className="group overflow-hidden rounded-card border border-transparent bg-sky p-6 transition-all duration-200 ease-out hover:-translate-y-1.5 hover:border-blue/40">
-            <a href="/school-marketing-products#pencils">
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-card bg-white">
+            <Link href="/products/pencils">
+              <div className="relative aspect-4/3 w-full overflow-hidden rounded-card bg-white">
                 <Image
-                  src="/Images/products-desk-spread.png"
-                  alt="Branded pencils on a classroom desk"
+                  src="/Images/product-pencils.png"
+                  alt="Sponsored branded pencils"
                   fill
                   sizes="(min-width: 1024px) 25vw, 50vw"
                   className="object-contain p-3 transition-transform duration-300 group-hover:scale-105"
-                  style={{ objectPosition: "35% 90%" }}
                 />
               </div>
               <h3 className="text-display-3 mt-4 font-bold text-navy">
@@ -116,9 +125,18 @@ export default function ProductGrid() {
               <p className="text-body mt-1 text-charcoal/90">
                 The classroom supply every teacher runs out of.
               </p>
-            </a>
+            </Link>
           </Reveal>
         </div>
+
+        <Reveal delay={0.25} className="mt-8 flex justify-center">
+          <Link
+            href="/products"
+            className="text-[15px] font-semibold text-blue-text hover:text-navy"
+          >
+            See all school marketing products &rarr;
+          </Link>
+        </Reveal>
       </Container>
     </section>
   );

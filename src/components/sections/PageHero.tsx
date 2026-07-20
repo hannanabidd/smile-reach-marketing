@@ -7,7 +7,7 @@ import Reveal from "@/components/motion/Reveal";
 import Glow from "@/components/ui/Glow";
 
 type ButtonSpec = { label: string; href: string; variant?: "primary" | "secondary" | "ghost" | "ghost-light" };
-type ImageSpec = { src: string; alt: string; objectPosition?: string };
+type ImageSpec = { src: string; alt: string; objectPosition?: string; fit?: "cover" | "contain" };
 
 export default function PageHero({
   eyebrow,
@@ -51,14 +51,18 @@ export default function PageHero({
           </Reveal>
 
           <Reveal delay={0.1}>
-            <div className="relative aspect-4/5 w-full overflow-hidden rounded-card">
+            <div
+              className={`relative aspect-4/5 w-full overflow-hidden rounded-card ${
+                image.fit === "contain" ? "bg-sky" : ""
+              }`}
+            >
               <Image
                 src={image.src}
                 alt={image.alt}
                 fill
                 priority
                 sizes="(min-width: 1024px) 45vw, 100vw"
-                className="object-cover"
+                className={image.fit === "contain" ? "object-contain p-8" : "object-cover"}
                 style={{ objectPosition: image.objectPosition ?? "50% 50%" }}
               />
             </div>

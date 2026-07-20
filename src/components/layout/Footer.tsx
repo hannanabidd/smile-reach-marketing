@@ -5,7 +5,7 @@ import { SITE_PHONE, SITE_PHONE_HREF, SITE_EMAIL, SITE_EMAIL_HREF } from "@/lib/
 const NAV_ITEMS = [
   { label: "Home", href: "/" },
   { label: "Pick-Up Tags", href: "/parent-pick-up-tags" },
-  { label: "School Marketing Products", href: "/school-marketing-products" },
+  { label: "School Marketing Products", href: "/products" },
   { label: "Community Marketing", href: "/community-marketing" },
   { label: "About", href: "/about" },
   { label: "Resources", href: "/resources" },
@@ -13,12 +13,12 @@ const NAV_ITEMS = [
 ];
 
 const PRODUCT_ITEMS = [
-  "Parent Pick-Up Tags",
-  "Car Rider Tags",
-  "Take-Home Folders",
-  "Calendar Magnets",
-  "Water Bottles",
-  "Pencils",
+  { label: "Parent Pick-Up Tags", href: "/parent-pick-up-tags" },
+  { label: "Car Rider Tags", href: "/parent-pick-up-tags" },
+  { label: "Take-Home Folders", href: "/products/take-home-folders" },
+  { label: "Calendar Magnets", href: "/products/calendar-magnets" },
+  { label: "Water Bottles", href: "/products/water-bottles" },
+  { label: "Pencils", href: "/products/pencils" },
 ];
 
 export default function Footer() {
@@ -56,8 +56,13 @@ export default function Footer() {
             <p className="text-eyebrow mb-4 text-white/60">Products</p>
             <ul className="space-y-2">
               {PRODUCT_ITEMS.map((product) => (
-                <li key={product} className="text-sm text-white/80">
-                  {product}
+                <li key={product.label}>
+                  <Link
+                    href={product.href}
+                    className="text-sm text-white/80 hover:text-white"
+                  >
+                    {product.label}
+                  </Link>
                 </li>
               ))}
             </ul>
