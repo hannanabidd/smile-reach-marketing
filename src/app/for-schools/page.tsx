@@ -5,7 +5,7 @@ import PageHero from "@/components/sections/PageHero";
 import BenefitGrid, { type Benefit } from "@/components/sections/BenefitGrid";
 import ProcessSteps, { type Step } from "@/components/sections/ProcessSteps";
 import FAQAccordion, { type FAQ } from "@/components/sections/FAQAccordion";
-import SchoolContactSection from "@/components/sections/SchoolContactSection";
+// import SchoolContactSection from "@/components/sections/SchoolContactSection";
 import FinalCTA from "@/components/sections/FinalCTA";
 
 export const metadata: Metadata = {
