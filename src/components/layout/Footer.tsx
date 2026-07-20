@@ -29,7 +29,12 @@ export default function Footer() {
       <Container>
         <div className="grid grid-cols-1 gap-10 pb-14 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <p className="text-display-3 font-extrabold text-white">Smile Reach</p>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/Images/SRM-logo.svg"
+              alt="Smile Reach Marketing"
+              className="h-16 w-auto brightness-0 invert"
+            />
             <p className="mt-4 max-w-65 text-sm text-white/70">
               Connecting practices with local families through exclusive
               school sponsorship opportunities.

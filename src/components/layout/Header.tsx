@@ -36,8 +36,13 @@ export default function Header() {
       }`}
     >
       <Container className="flex h-full items-center justify-between">
-        <Link href="/" className="text-display-3 font-extrabold text-navy">
-          Smile Reach
+        <Link href="/" className="flex items-center">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/Images/SRM-logo.svg"
+            alt="Smile Reach Marketing"
+            className="h-14 w-auto"
+          />
         </Link>
 
         <nav className="hidden items-center gap-7 [@media(min-width:1080px)]:flex">

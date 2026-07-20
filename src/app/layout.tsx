@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   openGraph: {
     images: ["/og.png"],
   },
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 const organizationSchema = {
