@@ -11,9 +11,9 @@ import Container from "@/components/ui/Container";
 import Reveal from "@/components/motion/Reveal";
 
 export const metadata: Metadata = {
-  title: "School Sponsorship & Community Marketing for Local Practices",
+  title: "Community Marketing for Dentists & Orthodontists",
   description:
-    "Why school sponsorship reaches local families more effectively than traditional advertising. The strategy, the math, and the honest limits of community marketing for pediatric and orthodontic practices.",
+    "Why school sponsorship reaches local families better than ads. The strategy, the math, and the honest limits, for pediatric and orthodontic practices.",
   alternates: { canonical: "/community-marketing" },
 };
 

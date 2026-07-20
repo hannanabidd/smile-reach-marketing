@@ -8,9 +8,9 @@ import FinalCTA from "@/components/sections/FinalCTA";
 import { SPONSORSHIP_STEPS } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "School Marketing Products | Sponsored Materials for Local Schools",
+  title: "Sponsored School Marketing Products | Smile Reach",
   description:
-    "Parent Pick-Up Tags, take-home folders, calendar magnets, water bottles, pencils, and more. Sponsored school materials that carry your practice into every family home.",
+    "Parent Pick-Up Tags, take-home folders, calendar magnets, water bottles, and pencils: sponsored school materials that carry your practice into every home.",
   alternates: { canonical: "/products" },
 };
 

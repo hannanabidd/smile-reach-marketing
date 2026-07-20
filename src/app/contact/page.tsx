@@ -9,9 +9,9 @@ import FAQAccordion from "@/components/sections/FAQAccordion";
 import FinalCTA from "@/components/sections/FinalCTA";
 
 export const metadata: Metadata = {
-  title: "Contact Smile Reach Marketing | Check Availability & Request Pricing",
+  title: "Contact Us | Check Availability & Pricing | Smile Reach",
   description:
-    "Talk to our team about sponsoring Parent Pick-Up Tags at schools in your area, or request tags for your school. Check availability, request pricing, or schedule a consultation.",
+    "Talk to our team about sponsoring Parent Pick-Up Tags near you, or request tags for your school. Check availability or book a free consultation.",
   alternates: { canonical: "/contact" },
 };
 

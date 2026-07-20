@@ -13,9 +13,9 @@ import ServicesStrip from "@/components/sections/ServicesStrip";
 import FinalCTA from "@/components/sections/FinalCTA";
 
 export const metadata: Metadata = {
-  title: "Smile Reach Marketing | School Sponsorship for Pediatric Practices",
+  title: "School Sponsorship Marketing | Smile Reach Marketing",
   description:
-    "Sponsor Parent Pick-Up Tags at local schools and reach thousands of families every school day. Exclusive sponsorships for orthodontists, pediatric dentists, and family practices.",
+    "Smile Reach Marketing connects dental and orthodontic practices with local families through exclusive school sponsorships, led by Parent Pick-Up Tags.",
   alternates: { canonical: "/" },
   openGraph: { images: ["/og.png"] },
 };

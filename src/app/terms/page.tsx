@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import ComingSoon from "@/components/ui/ComingSoon";
 
 export const metadata: Metadata = {
-  title: "Terms",
+  title: "Terms of Service | Smile Reach Marketing",
+  description:
+    "The terms and conditions governing your use of the Smile Reach Marketing website, sponsorship programs, and school marketing services.",
   alternates: { canonical: "/terms" },
 };
 

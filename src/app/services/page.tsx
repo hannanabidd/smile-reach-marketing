@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import ComingSoon from "@/components/ui/ComingSoon";
 
 export const metadata: Metadata = {
-  title: "Agency Services",
+  title: "Marketing Services for Dental & Ortho Practices",
   description:
-    "Local SEO, Google Business Profile optimisation, review management, website development, social media, and digital advertising for practices that want them.",
+    "Local SEO, Google Business Profile optimization, review management, web development, social media, and ads for dental and orthodontic practices.",
   alternates: { canonical: "/services" },
 };
 

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import ComingSoon from "@/components/ui/ComingSoon";
 
 export const metadata: Metadata = {
-  title: "Resources",
+  title: "Resources & Guides | Smile Reach Marketing",
   description:
-    "Guides and articles for practices considering school sponsorship marketing.",
+    "Guides and articles on school sponsorship marketing for orthodontists, pediatric dentists, and family practices looking to reach local families.",
   alternates: { canonical: "/resources" },
 };
 

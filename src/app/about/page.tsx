@@ -8,9 +8,9 @@ import TrustedBy from "@/components/sections/TrustedBy";
 import FinalCTA from "@/components/sections/FinalCTA";
 
 export const metadata: Metadata = {
-  title: "About Smile Reach Marketing | School Sponsorship Specialists",
+  title: "About Us | School Sponsorship Specialists | Smile Reach",
   description:
-    "Smile Reach Marketing connects schools that need resources with local practices that want to reach families. Our story, our mission, and how we work.",
+    "Smile Reach Marketing connects schools that need resources with local practices that want to reach families. Our mission, our story, how we work.",
   alternates: { canonical: "/about" },
 };
 

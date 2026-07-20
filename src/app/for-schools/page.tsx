@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import ComingSoon from "@/components/ui/ComingSoon";
 
 export const metadata: Metadata = {
-  title: "For Schools",
+  title: "Free Parent Pick-Up Tags for Your School | Smile Reach",
   description:
-    "Request free Parent Pick-Up Tags for your school, covered entirely by a local sponsor.",
+    "Request free Parent Pick-Up Tags for your school. A local business sponsor covers design, printing, and delivery, at no cost to your school.",
   alternates: { canonical: "/for-schools" },
 };
 

@@ -14,9 +14,9 @@ import Container from "@/components/ui/Container";
 import Reveal from "@/components/motion/Reveal";
 
 export const metadata: Metadata = {
-  title: "Parent Pick-Up Tags & Car Rider Tags | Sponsored Free for Schools",
+  title: "Parent Pick-Up Tags & Car Rider Tags | Free for Schools",
   description:
-    "Parent Pick-Up Tags improve school dismissal safety at no cost to the school. A single local sponsor funds the program and reaches thousands of families every school day.",
+    "Parent Pick-Up Tags improve school dismissal safety at no cost to schools. One local sponsor funds the program and reaches families every school day.",
   alternates: { canonical: "/parent-pick-up-tags" },
 };
 

@@ -11,6 +11,7 @@ export type ProductSummary = {
 
 export type ProductDetail = ProductSummary & {
   tagline: string;
+  metaTitle: string;
   metaDescription: string;
   whyItWorks: string[];
   specs: Spec[];
@@ -35,6 +36,7 @@ export const PRODUCTS: ProductDetail[] = [
     name: "Take-Home Folders",
     tagline: "The busiest piece of paper in a child's day.",
     oneLiner: "Opened at the kitchen table five nights a week.",
+    metaTitle: "Sponsored Take-Home Folders for Schools | Smile Reach",
     metaDescription:
       "Sponsored take-home folders carry your practice into every family home, five nights a week. Free for the school, funded by a single local sponsor.",
     image: "/Images/product-folders.png",
@@ -61,8 +63,9 @@ export const PRODUCTS: ProductDetail[] = [
     name: "Calendar Magnets",
     tagline: "The one document every family needs and nobody can find.",
     oneLiner: "On the fridge from August to June.",
+    metaTitle: "Sponsored School Calendar Magnets | Smile Reach",
     metaDescription:
-      "Sponsored school-year calendar magnets live on the family fridge all year. Your practice sits at the bottom of the document parents check for every early-out day and holiday.",
+      "Sponsored school-year calendar magnets live on the family fridge all year. Your practice sits at the bottom of the document parents check all year.",
     image: "/Images/product-calender-magnets.png",
     imagePosition: "center bottom",
     href: "/products/calendar-magnets",
@@ -88,8 +91,9 @@ export const PRODUCTS: ProductDetail[] = [
     name: "Water Bottles",
     tagline: "The sponsored item with a life outside school.",
     oneLiner: "On the desk all day, in the backpack all year.",
+    metaTitle: "Sponsored School Water Bottles | Smile Reach",
     metaDescription:
-      "Sponsored student water bottles sit on the desk all day and travel everywhere else. The rare sponsored item families use outside school, in front of other parents.",
+      "Sponsored student water bottles sit on the desk all day and travel everywhere else: the rare sponsored item families use in front of other parents.",
     image: "/Images/product-bottles.png",
     href: "/products/water-bottles",
     whyItWorks: [
@@ -113,6 +117,7 @@ export const PRODUCTS: ProductDetail[] = [
     name: "Pencils",
     tagline: "The least glamorous item we print. The most reliably welcome.",
     oneLiner: "The supply every teacher runs out of.",
+    metaTitle: "Sponsored School Pencils | Smile Reach Marketing",
     metaDescription:
       "Sponsored pencils are the classroom supply teachers run out of and buy themselves. Low cost, high goodwill, and your practice on every desk.",
     image: "/Images/product-pencils.png",
@@ -139,8 +144,9 @@ export const PRODUCTS: ProductDetail[] = [
     name: "Toothbrush Charts",
     tagline: "A sponsored object that lives where the habit happens.",
     oneLiner: "On the bathroom mirror, twice a day.",
+    metaTitle: "Sponsored Toothbrush Brushing Charts | Smile Reach",
     metaDescription:
-      "Sponsored brushing charts go on the bathroom mirror and get a sticker twice a day. For a pediatric dental practice, close to a perfect sponsored object.",
+      "Sponsored brushing charts go on the bathroom mirror and get a sticker twice a day. For a pediatric dental practice, a near-perfect sponsored object.",
     image: "/Images/product-toothbrush-charts.png",
     href: "/products/toothbrush-charts",
     whyItWorks: [
@@ -163,8 +169,9 @@ export const PRODUCTS: ProductDetail[] = [
     name: "Activity Posters",
     tagline: "Printed once, on the wall for years.",
     oneLiner: "On the classroom wall for years.",
+    metaTitle: "Sponsored School Activity Posters | Smile Reach",
     metaDescription:
-      "Sponsored activity posters bring mazes, coloring, and word searches to classroom and waiting-room walls, and stay up for years. Your practice, printed properly, on the wall.",
+      "Sponsored activity posters bring mazes, coloring, and word searches to classroom walls, and stay up for years: your practice, printed properly.",
     image: "/Images/product-activity-posters.png",
     href: "/products/activity-posters",
     whyItWorks: [

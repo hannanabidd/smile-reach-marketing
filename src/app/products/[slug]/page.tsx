@@ -26,7 +26,7 @@ export async function generateMetadata({
   if (!product) return {};
 
   return {
-    title: `${product.name} | Sponsored School Materials | Smile Reach Marketing`,
+    title: product.metaTitle,
     description: product.metaDescription,
     alternates: { canonical: `/products/${product.slug}` },
   };
