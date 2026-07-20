@@ -36,7 +36,7 @@ export default function FAQAccordion({
   heading = "Frequently asked questions",
   faqs = DEFAULT_FAQS,
   background = "white",
-  footnote = "Have a question this doesn't cover? A few operational details (replacement policy, lead times, multi-school sponsorship) are still being finalized — ask us directly and we'll get you an answer.",
+  footnote = "Have a question this doesn't cover? A few operational details (replacement policy, lead times, multi-school sponsorship) are still being finalized, ask us directly and we'll get you an answer.",
 }: {
   heading?: string;
   faqs?: FAQ[];

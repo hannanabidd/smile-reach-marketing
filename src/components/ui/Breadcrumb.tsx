@@ -1,7 +1,15 @@
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 
-export default function Breadcrumb({ current }: { current: string }) {
+export default function Breadcrumb({
+  current,
+  parentLabel = "Products",
+  parentHref = "/products",
+}: {
+  current: string;
+  parentLabel?: string;
+  parentHref?: string;
+}) {
   const schema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -9,8 +17,8 @@ export default function Breadcrumb({ current }: { current: string }) {
       {
         "@type": "ListItem",
         position: 1,
-        name: "Products",
-        item: "https://smilereachmarketing.com/products",
+        name: parentLabel,
+        item: `https://smilereachmarketing.com${parentHref}`,
       },
       {
         "@type": "ListItem",
@@ -30,8 +38,8 @@ export default function Breadcrumb({ current }: { current: string }) {
         <nav aria-label="Breadcrumb" className="text-sm text-charcoal/60">
           <ol className="flex flex-wrap items-center gap-2">
             <li>
-              <Link href="/products" className="hover:text-blue-text">
-                Products
+              <Link href={parentHref} className="hover:text-blue-text">
+                {parentLabel}
               </Link>
             </li>
             <li aria-hidden="true">/</li>

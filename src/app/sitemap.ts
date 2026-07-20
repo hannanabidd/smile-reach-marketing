@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
 import { PRODUCTS } from "@/lib/products";
+import { getAllPostSlugs } from "@/lib/wordpress";
 
-const routes = [
+const staticRoutes = [
   "",
   "/parent-pick-up-tags",
   "/products",
@@ -14,8 +15,14 @@ const routes = [
   "/services",
 ];
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://smilereachmarketing.com";
+  const postSlugs = await getAllPostSlugs();
+
+  const routes = [
+    ...staticRoutes,
+    ...postSlugs.map((slug) => `/resources/${slug}`),
+  ];
 
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,

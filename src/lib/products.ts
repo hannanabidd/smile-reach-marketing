@@ -19,7 +19,7 @@ export type ProductDetail = ProductSummary & {
   related: string[];
 };
 
-// Parent Pick-Up Tags has no detail page — it's the dedicated SEO page.
+// Parent Pick-Up Tags has no detail page, it's the dedicated SEO page.
 // Kept here only so the index grid and "related products" lookups can
 // reference it without a special case at every call site.
 export const PICK_UP_TAGS_SUMMARY: ProductSummary = {

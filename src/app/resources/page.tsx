@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
-import ComingSoon from "@/components/ui/ComingSoon";
+import PageHero from "@/components/sections/PageHero";
+import ValueBanner from "@/components/layout/ValueBanner";
+import BlogGrid from "@/components/sections/BlogGrid";
+import { getPosts } from "@/lib/wordpress";
 
 export const metadata: Metadata = {
   title: "Resources & Guides | Smile Reach Marketing",
@@ -8,12 +11,24 @@ export const metadata: Metadata = {
   alternates: { canonical: "/resources" },
 };
 
-export default function ResourcesPage() {
+export default async function ResourcesPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ page?: string }>;
+}) {
+  const { page: pageParam } = await searchParams;
+  const page = Math.max(1, Number(pageParam) || 1);
+  const { posts, totalPages } = await getPosts({ page, perPage: 9 });
+
   return (
-    <ComingSoon
-      eyebrow="Resources"
-      heading="Our blog is on its way"
-      body="This is where Resources articles will live, written to help practices understand school sponsorship marketing and to bring in organic search traffic."
-    />
+    <>
+      <PageHero
+        eyebrow="Resources"
+        heading="Guides for school sponsorship marketing"
+        body="Articles on school sponsorship, community marketing, and reaching local families, written for orthodontists, pediatric dentists, and family practices."
+      />
+      <ValueBanner />
+      <BlogGrid posts={posts} page={page} totalPages={totalPages} />
+    </>
   );
 }

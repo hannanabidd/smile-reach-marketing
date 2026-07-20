@@ -120,3 +120,59 @@ body {
     font-size: 20px;
   }
 }
+
+/* Typography for raw HTML rendered from the WordPress REST API (/resources). */
+.wp-content {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--charcoal);
+}
+.wp-content > * + * {
+  margin-top: 1.25em;
+}
+.wp-content h2 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.wp-content h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.wp-content a {
+  color: var(--blue-text);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.wp-content ul,
+.wp-content ol {
+  padding-left: 1.5em;
+}
+.wp-content ul {
+  list-style: disc;
+}
+.wp-content ol {
+  list-style: decimal;
+}
+.wp-content li + li {
+  margin-top: 0.5em;
+}
+.wp-content blockquote {
+  border-left: 3px solid var(--sky);
+  padding-left: 1.25em;
+  color: color-mix(in oklab, var(--charcoal) 80%, transparent);
+  font-style: italic;
+}
+.wp-content img {
+  border-radius: 16px;
+  max-width: 100%;
+  height: auto;
+}
+.wp-content figcaption {
+  margin-top: 0.5em;
+  font-size: 13px;
+  color: color-mix(in oklab, var(--charcoal) 60%, transparent);
+  text-align: center;
+}

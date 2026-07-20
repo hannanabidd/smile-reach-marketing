@@ -8,7 +8,7 @@ type SubmitResult =
   | { success: false; error: string };
 
 // Best-effort, single-instance rate limit. Resets on redeploy/cold start and
-// does not share state across serverless instances — swap for a durable
+// does not share state across serverless instances, swap for a durable
 // store (e.g. Upstash Redis) if that becomes a problem in production.
 const submissionsByIp = new Map<string, number[]>();
 const RATE_LIMIT_WINDOW_MS = 60_000;
