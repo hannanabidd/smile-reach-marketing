@@ -46,7 +46,10 @@ export const PRODUCTS: ProductDetail[] = [
       "Schools buy them in the thousands and they wear out every year. Sponsoring the folder puts your practice on the thing a parent physically opens at the kitchen table, five nights a week, at the exact moment they are paying attention to their child's day. Nothing else in this catalogue gets that much handling.",
     ],
     specs: [
-      { label: "Format", value: 'Two-pocket, "Take Home" and "Return to School"' },
+      {
+        label: "Format",
+        value: 'Two-pocket, "Take Home" and "Return to School"',
+      },
       { label: "Front", value: "School branding, mascot, year" },
       { label: "Sponsor panel", value: "Front and back" },
       { label: "Stock weight", value: "", pending: true },
@@ -83,7 +86,7 @@ export const PRODUCTS: ProductDetail[] = [
       { label: "Print process", value: "", pending: true },
     ],
     sponsors:
-      "Any practice that runs on scheduled appointments. Orthodontists and dentists especially, because the calendar's \"when are we free\" moment maps directly onto \"time to book a visit.\"",
+      'Any practice that runs on scheduled appointments. Orthodontists and dentists especially, because the calendar\'s "when are we free" moment maps directly onto "time to book a visit."',
     related: ["take-home-folders", "activity-posters", "parent-pick-up-tags"],
   },
   {
@@ -147,7 +150,7 @@ export const PRODUCTS: ProductDetail[] = [
     metaTitle: "Sponsored Toothbrush Brushing Charts | Smile Reach",
     metaDescription:
       "Sponsored brushing charts go on the bathroom mirror and get a sticker twice a day. For a pediatric dental practice, a near-perfect sponsored object.",
-    image: "/Images/product-toothbrush-charts.png",
+    image: "/Images/daily-brushing-tracker.jpeg",
     href: "/products/toothbrush-charts",
     whyItWorks: [
       "A brushing progress chart goes on a bathroom mirror and earns a sticker morning and night. For most sponsors that would be a nice-to-have. For a pediatric dental practice it is close to a perfect object, because it lives in the exact room where the habit you care about actually happens, and it puts your name there twice a day, every day, for as long as the chart runs.",
@@ -172,7 +175,7 @@ export const PRODUCTS: ProductDetail[] = [
     metaTitle: "Sponsored School Activity Posters | Smile Reach",
     metaDescription:
       "Sponsored activity posters bring mazes, coloring, and word searches to classroom walls, and stay up for years: your practice, printed properly.",
-    image: "/Images/product-activity-posters.png",
+    image: "/Images/activity-poster.jpeg",
     href: "/products/activity-posters",
     whyItWorks: [
       "Classroom and hallway posters do a lot of quiet work: dismissal procedures, brushing guides, safety reminders, and the activity sheets teachers use to fill an awkward ten minutes, mazes and coloring and word searches. Schools print these on an office copier when they print them at all, which means they usually look it. A properly printed sponsored set arrives finished and stays on the wall for years, not weeks.",
