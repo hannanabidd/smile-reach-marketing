@@ -9,14 +9,13 @@ export default function TagExplainer() {
     <section className="bg-sky py-16 sm:py-24">
       <Container className="grid items-center gap-12 lg:grid-cols-[45%_55%]">
         <Reveal>
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-card">
+          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-card bg-white">
             <Image
-              src="/Images/hero-pickup-line.png"
-              alt="Close view of a Parent Pick-Up Tag hanging from a car's rearview mirror"
+              src="/Images/vertical-tag-front.png"
+              alt="Front side of a Parent Pick-Up Tag, showing the school branding and family number"
               fill
               sizes="(min-width: 1024px) 45vw, 100vw"
-              className="object-cover"
-              style={{ objectPosition: "35% 65%", transform: "scale(1.4)" }}
+              className="object-contain p-6"
             />
           </div>
         </Reveal>

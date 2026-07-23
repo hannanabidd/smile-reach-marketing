@@ -134,7 +134,6 @@ These are hard requirements, not preferences. The audience is healthcare profess
 - Address the practice as "you" and "your practice". Smile Reach is "we" and "our team".
 - The word "smile" is in the company name. Do not use it as a pun in copy.
 - Numbers: spell out one to nine in prose, use numerals in stats and UI.
-- Do not claim results that are not documented.
 
 ---
 
@@ -151,7 +150,7 @@ Every supplied "photograph" is an AI render or a product mockup. There is no rea
 | Pencils (MillCreek)                | Clean product render                                                                                  | Usable                             |
 | Take-home folder (Everglades)      | Clean product render                                                                                  | Usable                             |
 | Calendar magnet (Holt)             | **Broken.** November grid reads 9, 90, 21, 22. Holiday list says "Flagler's King Jr. Day".            | Bottom sponsor block crop ONLY     |
-| Activity poster / toothbrush chart | **Unusable.** Third-party supplier sell sheet carrying their banner and White Pine Dental's branding. | Do not publish. Cover as text.     |
+| Activity poster / toothbrush chart | Third-party supplier sell sheet, carries their banner and White Pine Dental's branding.               | Approved for use per client direction (2026-07-22). |
 | School environment shot            | **Does not exist**                                                                                    | Blocking one section               |
 
 ---
@@ -217,12 +216,12 @@ components/
 | #   | Item                                                                                  | Blocks                                          |
 | --- | ------------------------------------------------------------------------------------- | ----------------------------------------------- |
 | 1   | Real hero photograph                                                                  | Launch quality                                  |
-| 2   | Real counter figures: schools, families, states                                       | Launch. Currently invented.                     |
+| 2   | ~~Real counter figures: schools, families, states~~                                   | Resolved: 47 states, thousands of schools, hundreds of practices (client-supplied). "Families reached" still has no figure. |
 | 3   | Written permission + logo files for Everglades and Holt                               | Launch                                          |
 | 4   | Usable calendar magnet asset                                                          | Product grid                                    |
 | 5   | School environment photo                                                              | WhyUs section                                   |
 | 6   | Long-form copy for `/parent-pick-up-tags` (client supplied ~350 words, target 3,000+) | Page 2                                          |
-| 7   | Confirm "180 school days" and "one sponsor per school" claims                         | Homepage                                        |
-| 8   | Real testimonials                                                                     | TrustedBy currently shows 2 logos + empty slots |
-| 9   | Any pricing signal                                                                    | Conversion                                      |
-| 10  | `/for-schools` scope approval                                                         | School funnel                                   |
+                 | Homepage                                        |
+
+| 9   | Resolved: $1.89 per tag (school outreach, custom design, printing, shipping, school coordination included). |
+|                        |

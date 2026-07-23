@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 import Eyebrow from "@/components/ui/Eyebrow";
 import Card from "@/components/ui/Card";
@@ -46,12 +47,30 @@ export default function TagDiagram() {
           <Reveal>
             <Card className="h-full">
               <p className="text-eyebrow mb-4 text-blue-text">Front school side</p>
+              <div className="relative mb-6 aspect-17/11 w-full overflow-hidden rounded-card bg-white">
+                <Image
+                  src="/Images/horizontal-tag-front.png"
+                  alt="Front side of a Parent Pick-Up Tag, showing the school branding and family number"
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-contain p-4"
+                />
+              </div>
               <CalloutList items={FRONT} />
             </Card>
           </Reveal>
           <Reveal delay={0.05}>
             <Card className="h-full">
               <p className="text-eyebrow mb-4 text-blue-text">Reverse sponsor side</p>
+              <div className="relative mb-6 aspect-17/11 w-full overflow-hidden rounded-card bg-white">
+                <Image
+                  src="/Images/horizontal-tag-back.png"
+                  alt="Reverse side of a Parent Pick-Up Tag, showing the sponsor's branding and offer"
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-contain p-4"
+                />
+              </div>
               <CalloutList items={REVERSE} />
             </Card>
           </Reveal>

@@ -1,8 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { ChevronDown } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Eyebrow from "@/components/ui/Eyebrow";
@@ -10,6 +9,7 @@ import Button from "@/components/ui/Button";
 
 export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const reduceMotion = useReducedMotion();
 
   const { scrollYProgress } = useScroll({
@@ -18,30 +18,44 @@ export default function Hero() {
   });
   const imageY = useTransform(scrollYProgress, [0, 1], ["0%", reduceMotion ? "0%" : "18%"]);
 
+  useEffect(() => {
+    if (!videoRef.current) return;
+    if (reduceMotion) {
+      videoRef.current.pause();
+    } else {
+      videoRef.current.play().catch(() => {});
+    }
+  }, [reduceMotion]);
+
   return (
     <section
       ref={sectionRef}
       className="relative flex min-h-[calc(100svh-88px)] w-full items-end overflow-hidden bg-navy"
     >
       <motion.div style={{ y: imageY }} className="absolute inset-0 top-[-10%] h-[120%] w-full">
-        <Image
-          src="/Images/hero-pickup-line.png"
-          alt="A Parent Pick-Up Tag hanging from a car mirror during school dismissal, with families lined up outside an elementary school"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
+        <video
+          ref={videoRef}
+          src="/Images/SRM-school-video.mov"
+          poster="/Images/hero-pickup-line.png"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-hidden
+          className="h-full w-full object-cover"
           style={{ objectPosition: "38% 45%" }}
         />
       </motion.div>
 
+      {/* Light gradient: just enough to keep the headline and buttons readable, while still showing the video through */}
       <div
         aria-hidden
-        className="absolute inset-0 bg-linear-to-t from-navy via-navy/70 to-navy/10"
+        className="absolute inset-0 bg-linear-to-t from-navy/85 via-navy/35 to-transparent"
       />
       <div
         aria-hidden
-        className="absolute inset-0 bg-linear-to-r from-navy/60 via-navy/10 to-transparent"
+        className="absolute inset-0 bg-linear-to-r from-navy/40 via-navy/5 to-transparent"
       />
 
       <Container className="relative z-10 pt-32 pb-16 sm:pb-24">

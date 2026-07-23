@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Repeat, ShieldCheck, MapPin } from "lucide-react";
+import { Repeat, ShieldCheck, MapPin, TrendingUp, EyeOff, Clock } from "lucide-react";
 import ValueBanner from "@/components/layout/ValueBanner";
 import PageHero from "@/components/sections/PageHero";
 import Prose from "@/components/sections/Prose";
 import BenefitGrid from "@/components/sections/BenefitGrid";
+import ComparisonTable from "@/components/sections/ComparisonTable";
 import RoiCalculator from "@/components/sections/RoiCalculator";
 import TrustedBy from "@/components/sections/TrustedBy";
 import FinalCTA from "@/components/sections/FinalCTA";
@@ -16,6 +17,24 @@ export const metadata: Metadata = {
     "Why school sponsorship reaches local families better than ads. The strategy, the math, and the honest limits, for pediatric and orthodontic practices.",
   alternates: { canonical: "/community-marketing" },
 };
+
+const WHY_HARDER = [
+  {
+    icon: TrendingUp,
+    heading: "It is an auction, and everyone is bidding",
+    body: "The digital channels are priced by competition. The more practices in your area want the same families, the more each click costs, and the cost only moves in one direction.",
+  },
+  {
+    icon: EyeOff,
+    heading: "It is built to be ignored",
+    body: "People have spent two decades learning to look past ads: the skip button, the ad blocker, the trained blindness to anything that looks like a banner.",
+  },
+  {
+    icon: Clock,
+    heading: "It disappears",
+    body: "A digital impression exists for a second or two and then it is gone. To stay visible you have to keep paying, forever, because the moment you stop, you vanish.",
+  },
+];
 
 const WHY_SCHOOLS = [
   {
@@ -82,44 +101,16 @@ export default function CommunityMarketingPage() {
         </p>
       </Prose>
 
-      <Prose background="sky" heading="Why reaching families keeps getting harder">
-        <p>
-          Every advertising channel a local practice can buy has the same
-          three problems, and they are getting worse, not better.
-        </p>
-        <p>
-          <strong className="text-navy">
-            It is an auction, and everyone is bidding.
-          </strong>{" "}
-          The digital channels are priced by competition. The more practices
-          in your area that want the same families, the more each click
-          costs, and the cost only moves in one direction. You are not
-          buying attention. You are renting it, at a rate your competitors
-          set.
-        </p>
-        <p>
-          <strong className="text-navy">It is built to be ignored.</strong>{" "}
-          People have spent two decades learning to look past ads. The skip
-          button, the ad blocker, the trained blindness to anything that
-          looks like a banner. An entire generation now treats advertising
-          as visual noise to be filtered, and they are very good at it.
-        </p>
-        <p>
-          <strong className="text-navy">It disappears.</strong> A digital
-          impression exists for a second or two and then it is gone. To stay
-          visible you have to keep paying, forever, because the moment you
-          stop, you vanish. There is no equity being built. There is only
-          the meter running.
-        </p>
-        <p>
-          Community marketing does not fix the auction, and it does not
-          claim to. What it does is step outside it. A sponsorship is not
-          bid against anyone. It is not skippable, because a family hung it
-          in their own car. And it does not disappear when the month ends,
-          because it is a physical object in someone&apos;s home for a
-          school year.
-        </p>
-      </Prose>
+      <BenefitGrid
+        eyebrow="The Problem"
+        heading="Why reaching families keeps getting harder"
+        intro="Every advertising channel a local practice can buy has the same three problems, and they are getting worse, not better."
+        cards={WHY_HARDER}
+        background="sky"
+        footnote="Community marketing does not fix the auction. It steps outside it: not bid against anyone, not skippable because a family hung it in their own car, and not gone when the month ends because it lives in a home for a school year."
+      />
+
+      <ComparisonTable background="white" />
 
       <BenefitGrid
         heading="Why schools specifically"

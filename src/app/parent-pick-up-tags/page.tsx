@@ -8,6 +8,7 @@ import BenefitGrid from "@/components/sections/BenefitGrid";
 import TagDiagram from "@/components/sections/TagDiagram";
 import IndustryGrid from "@/components/sections/IndustryGrid";
 import CostSection from "@/components/sections/CostSection";
+import Testimonials from "@/components/sections/Testimonials";
 import FAQAccordion from "@/components/sections/FAQAccordion";
 import FinalCTA from "@/components/sections/FinalCTA";
 import Container from "@/components/ui/Container";
@@ -383,6 +384,12 @@ export default function ParentPickUpTagsPage() {
       <IndustryGrid />
 
       <CostSection />
+
+      <Testimonials
+        eyebrow="In Their Words"
+        heading="What schools and sponsors say"
+        background="gray"
+      />
 
       <FAQAccordion />
 

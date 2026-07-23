@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/motion/Reveal";
@@ -11,17 +12,32 @@ const DEFAULT_BUTTONS: ButtonSpec[] = [
 ];
 
 export default function FinalCTA({
-  heading = "Ready to reach more families?",
-  body = "Sponsorships are exclusive and they are claimed on a first-come basis. Once a school has a sponsor, that opportunity is gone for the year. Tell us where you practise and we will show you what is open near you.",
+  heading = "Every school has room for only one sponsor",
+  body = "Once a school has a sponsor, it is unavailable until the following school year. Check availability before another practice claims it.",
   buttons = DEFAULT_BUTTONS,
+  backgroundImage,
 }: {
   heading?: string;
   body?: string;
   buttons?: ButtonSpec[];
+  backgroundImage?: string;
 }) {
   return (
     <section className="relative overflow-hidden bg-navy py-24 sm:py-35">
-      <Glow color="gold" className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+      {backgroundImage ? (
+        <>
+          <Image
+            src={backgroundImage}
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-navy/80" />
+        </>
+      ) : (
+        <Glow color="gold" className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+      )}
 
       <Container className="relative">
         <Reveal className="mx-auto max-w-160 text-center">

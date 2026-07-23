@@ -26,7 +26,7 @@ export const PICK_UP_TAGS_SUMMARY: ProductSummary = {
   slug: "parent-pick-up-tags",
   name: "Parent Pick-Up Tags",
   oneLiner: "The flagship. In every family's car, all year.",
-  image: "/Images/product-tags.png",
+  image: "/Images/vertical-tag-front.png",
   href: "/parent-pick-up-tags",
 };
 

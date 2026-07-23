@@ -3,10 +3,18 @@ import Counter from "@/components/motion/Counter";
 import Reveal from "@/components/motion/Reveal";
 import Glow from "@/components/ui/Glow";
 
-const INVENTED_STATS = [
-  { value: 40, label: "Schools partnered", sub: "Across elementary and middle schools" },
-  { value: 12, suffix: "k", label: "Families reached", sub: "Every school day, all year" },
-  { value: 9, label: "States served", sub: "And expanding" },
+type Stat = {
+  display: number | string;
+  suffix?: string;
+  label: string;
+  sub: string;
+};
+
+const STATS: Stat[] = [
+  { display: 47, label: "States served", sub: "From coast to coast" },
+  { display: 1000, suffix: "+", label: "Schools served", sub: "And counting" },
+  { display: 100, suffix: "+", label: "Practices helped", sub: "Across the country" },
+  { display: 1, label: "Sponsor per school", sub: "Exclusivity is the whole point" },
 ];
 
 export default function ProofBand() {
@@ -17,11 +25,14 @@ export default function ProofBand() {
 
       <Container className="relative">
         <div className="grid grid-cols-2 gap-8 lg:grid-cols-4 lg:divide-x lg:divide-white/10">
-          {INVENTED_STATS.map((stat, index) => (
+          {STATS.map((stat, index) => (
             <Reveal key={stat.label} delay={index * 0.05} className="text-center lg:px-4">
               <p className="text-[40px] font-extrabold leading-none text-gold sm:text-[56px]">
-                <Counter value={stat.value} suffix={stat.suffix} />
-                <span className="ml-1 align-top text-sm text-white/50">*</span>
+                {typeof stat.display === "number" ? (
+                  <Counter value={stat.display} suffix={stat.suffix} />
+                ) : (
+                  stat.display
+                )}
               </p>
               <p className="mt-3 text-[15px] font-medium text-white">
                 {stat.label}
@@ -29,24 +40,7 @@ export default function ProofBand() {
               <p className="mt-1 text-[13px] text-white/70">{stat.sub}</p>
             </Reveal>
           ))}
-
-          <Reveal delay={0.15} className="text-center lg:px-4">
-            <p className="text-[40px] font-extrabold leading-none text-gold sm:text-[56px]">
-              1
-            </p>
-            <p className="mt-3 text-[15px] font-medium text-white">
-              Sponsor per school
-            </p>
-            <p className="mt-1 text-[13px] text-white/70">
-              Exclusivity is the whole point
-            </p>
-          </Reveal>
         </div>
-
-        <p className="mt-10 text-center text-xs text-white/40">
-          * Placeholder figures for layout only. Do not launch with these;
-          replace with confirmed counts before going live.
-        </p>
       </Container>
     </section>
   );
