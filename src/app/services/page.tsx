@@ -80,7 +80,7 @@ export default function ServicesPage() {
         </p>
       </Prose>
 
-      <TrustedBy background="white" />
+      {/* <TrustedBy background="white" /> */}
 
       <FinalCTA
         heading="Ready to build a full marketing plan?"

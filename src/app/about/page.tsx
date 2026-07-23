@@ -89,7 +89,7 @@ export default function AboutPage() {
         </p>
       </Prose>
 
-      <TrustedBy background="sky" />
+      {/* <TrustedBy background="sky" /> */}
 
       <FinalCTA
         heading="Let's find your schools"

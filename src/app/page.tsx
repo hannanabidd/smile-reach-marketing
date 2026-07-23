@@ -38,7 +38,7 @@ export default function Home() {
       <ProductGrid />
       <WhyUs />
       <SchoolsBand />
-      <TrustedBy />
+      {/* <TrustedBy /> */}
       <Testimonials background="gray" />
       <FAQAccordion background="sky" />
       <ServicesStrip />

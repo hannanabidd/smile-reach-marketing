@@ -251,7 +251,7 @@ export default function CommunityMarketingPage() {
         </p>
       </Prose>
 
-      <TrustedBy background="white" />
+      {/* <TrustedBy background="white" /> */}
 
       <Prose
         background="gray"
