@@ -67,13 +67,13 @@ export default async function ProductDetailPage({
 
       <ValueBanner />
 
-      <Prose background="white" heading="Why it works">
+      <Prose background="sky" heading="Why it works">
         {product.whyItWorks.map((paragraph) => (
           <p key={paragraph.slice(0, 24)}>{paragraph}</p>
         ))}
       </Prose>
 
-      <section className="bg-sky py-16 sm:py-24">
+      {/* <section className="bg-sky py-16 sm:py-24">
         <Container>
           <Reveal className="mx-auto max-w-190">
             <h2 className="text-display-2 font-bold text-navy">What&apos;s included</h2>
@@ -82,7 +82,7 @@ export default async function ProductDetailPage({
             </div>
           </Reveal>
         </Container>
-      </section>
+      </section> */}
 
       <Prose background="white" heading="Who sponsors this">
         <p>{product.sponsors}</p>

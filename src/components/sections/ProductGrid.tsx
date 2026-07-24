@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import Eyebrow from "@/components/ui/Eyebrow";
+import TagFlipImage from "@/components/ui/TagFlipImage";
 import Reveal from "@/components/motion/Reveal";
 
 export default function ProductGrid() {
@@ -24,17 +25,16 @@ export default function ProductGrid() {
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2">
           <Reveal className="group relative overflow-hidden rounded-card bg-navy p-8 transition-all duration-200 ease-out hover:-translate-y-1.5 sm:col-span-2 sm:row-span-2">
             <Link href="/parent-pick-up-tags" className="flex h-full flex-col justify-between">
-              <div className="relative aspect-4/3 w-full overflow-hidden rounded-card">
-                <Image
-                  src="/Images/hero-pickup-line.png"
-                  alt="A Parent Pick-Up Tag hanging from a car mirror"
-                  fill
-                  sizes="(min-width: 1024px) 50vw, 100vw"
-                  className="object-cover opacity-90 transition-transform duration-300 group-hover:scale-105"
-                  style={{ objectPosition: "38% 45%" }}
-                />
-                <div className="absolute inset-0 bg-navy/40 transition-colors duration-200 group-hover:bg-navy/25" />
-              </div>
+              <TagFlipImage
+                front="/Images/horizontal-tag-front.png"
+                back="/Images/horizontal-tag-back.png"
+                frontAlt="Front side of a Parent Pick-Up Tag"
+                backAlt="Reverse side of a Parent Pick-Up Tag, showing the sponsor's branding and offer"
+                aspect="2 / 2"
+                imageClassName="object-contain px-6"
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                containerClassName="max-h-[250px] sm:max-h-[350px]"
+              />
               <div className="mt-6">
                 <h3 className="text-display-2 font-bold text-white">
                   Parent Pick-Up Tags

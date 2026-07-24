@@ -5,6 +5,7 @@ export type ProductSummary = {
   name: string;
   oneLiner: string;
   image: string;
+  backImage?: string;
   imagePosition?: string;
   href: string;
 };
@@ -27,6 +28,7 @@ export const PICK_UP_TAGS_SUMMARY: ProductSummary = {
   name: "Parent Pick-Up Tags",
   oneLiner: "The flagship. In every family's car, all year.",
   image: "/Images/vertical-tag-front.png",
+  backImage: "/Images/vertical-tag-back.png",
   href: "/parent-pick-up-tags",
 };
 
@@ -171,7 +173,8 @@ export const PRODUCTS: ProductDetail[] = [
     slug: "activity-posters",
     name: "Activity Posters",
     tagline: "Printed once, on the wall for years.",
-    oneLiner: "On the classroom wall for years.",
+    oneLiner:
+      "These are more used as handouts if a doctor visits a school to do a demonstration or an assembly",
     metaTitle: "Sponsored School Activity Posters | Smile Reach",
     metaDescription:
       "Sponsored activity posters bring mazes, coloring, and word searches to classroom walls, and stay up for years: your practice, printed properly.",

@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Container from "@/components/ui/Container";
 import Eyebrow from "@/components/ui/Eyebrow";
 import StatChip from "@/components/ui/StatChip";
+import TagFlipImage from "@/components/ui/TagFlipImage";
 import Reveal from "@/components/motion/Reveal";
 
 export default function TagExplainer() {
@@ -9,15 +9,16 @@ export default function TagExplainer() {
     <section className="bg-sky py-16 sm:py-24">
       <Container className="grid items-center gap-12 lg:grid-cols-[45%_55%]">
         <Reveal>
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-card bg-white">
-            <Image
-              src="/Images/vertical-tag-front.png"
-              alt="Front side of a Parent Pick-Up Tag, showing the school branding and family number"
-              fill
-              sizes="(min-width: 1024px) 45vw, 100vw"
-              className="object-contain p-6"
-            />
-          </div>
+          <TagFlipImage
+            front="/Images/vertical-tag-front.png"
+            back="/Images/vertical-tag-back.png"
+            frontAlt="Front side of a Parent Pick-Up Tag, showing the school branding and family number"
+            backAlt="Reverse side of a Parent Pick-Up Tag, showing the sponsor's branding and offer"
+            aspect="4 / 5"
+          />
+          <p className="mt-3 text-center text-sm text-charcoal/50">
+            Hover to see the sponsor side
+          </p>
         </Reveal>
 
         <Reveal delay={0.1}>

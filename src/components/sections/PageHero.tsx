@@ -16,6 +16,7 @@ export default function PageHero({
   body,
   buttons,
   image,
+  variant = "split",
 }: {
   eyebrow: string;
   heading: string;
@@ -23,7 +24,58 @@ export default function PageHero({
   body?: ReactNode;
   buttons?: ButtonSpec[];
   image?: ImageSpec;
+  variant?: "split" | "banner";
 }) {
+  if (image && variant === "banner") {
+    return (
+      <section className="relative flex min-h-[560px] w-full items-end overflow-hidden bg-navy sm:min-h-[640px]">
+        <Image
+          src={image.src}
+          alt={image.alt}
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+          style={{ objectPosition: image.objectPosition ?? "50% 50%" }}
+        />
+
+        {/* Light gradient: just enough to keep the text readable, while still showing the photo through */}
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-linear-to-t from-navy/90 via-navy/45 to-transparent"
+        />
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-linear-to-r from-navy/50 via-navy/10 to-transparent"
+        />
+
+        <Container className="relative z-10 pt-32 pb-16 sm:pb-24">
+          <Reveal className="max-w-180">
+            <Eyebrow light>{eyebrow}</Eyebrow>
+            <h1 className="text-display-1 font-extrabold !text-white">{heading}</h1>
+            {sub ? (
+              <p className="text-body-lg mt-6 max-w-140 text-white/85">{sub}</p>
+            ) : null}
+            {body ? (
+              <div className="text-body mt-4 max-w-140 space-y-4 text-white/80">
+                {body}
+              </div>
+            ) : null}
+            {buttons?.length ? (
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                {buttons.map((btn) => (
+                  <Button key={btn.label} href={btn.href} variant={btn.variant ?? "primary"}>
+                    {btn.label}
+                  </Button>
+                ))}
+              </div>
+            ) : null}
+          </Reveal>
+        </Container>
+      </section>
+    );
+  }
+
   if (image) {
     return (
       <section className="bg-white pt-16 pb-16 sm:pt-24 sm:pb-20">

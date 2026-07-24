@@ -126,13 +126,14 @@ export default function ParentPickUpTagsPage() {
         }
         buttons={[
           { label: "Check Availability in Your Area", href: "/contact", variant: "primary" },
-          { label: "Request Tags For Your School", href: "/for-schools", variant: "ghost" },
+          { label: "Request Tags For Your School", href: "/for-schools", variant: "ghost-light" },
         ]}
         image={{
-          src: "/Images/hero-pickup-line.png",
+          src: "/Images/parent-tag-cover.png",
           alt: "A Parent Pick-Up Tag hanging from a car mirror during school dismissal",
           objectPosition: "38% 45%",
         }}
+        variant="banner"
       />
 
       <ValueBanner />

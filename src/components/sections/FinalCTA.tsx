@@ -15,7 +15,7 @@ export default function FinalCTA({
   heading = "Every school has room for only one sponsor",
   body = "Once a school has a sponsor, it is unavailable until the following school year. Check availability before another practice claims it.",
   buttons = DEFAULT_BUTTONS,
-  backgroundImage,
+  backgroundImage = "/Images/hero-pickup-line.png",
 }: {
   heading?: string;
   body?: string;
