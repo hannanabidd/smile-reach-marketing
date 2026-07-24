@@ -20,17 +20,17 @@ const DEFAULT_BENEFITS: Benefit[] = [
   {
     icon: BadgeCheck,
     heading: "Exclusive sponsorship",
-    body: "One sponsor per school. No competitor sits beside you, because there is no beside.",
+    body: "Your practice is the only sponsor featured on the Parent Pick-Up Tags at your selected school.",
   },
   {
     icon: HeartHandshake,
     heading: "Positive community goodwill",
-    body: "You are not selling to families. You are funding something their school needed and could not afford.",
+    body: "Your sponsorship helps provide a valuable resource for the school while demonstrating your commitment to local families.",
   },
   {
     icon: MapPin,
     heading: "Hyper-local targeting",
-    body: "You choose the schools. Your spend lands inside the exact catchment your chairs are drawn from.",
+    body: "Reach families from the schools you choose, putting your practice in front of the patients you want most.",
   },
   {
     icon: CalendarRange,

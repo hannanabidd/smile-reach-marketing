@@ -39,7 +39,7 @@ const DEFAULT_ROWS: ComparisonRow[] = [
     icon: Heart,
     criteria: "How the family feels about it",
     left: "An interruption to whatever they were doing.",
-    right: "Support for something their child's school actually needed.",
+    right: "Support for something their child's school actually needs.",
   },
 ];
 

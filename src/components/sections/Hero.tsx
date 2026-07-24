@@ -85,13 +85,13 @@ export default function Hero() {
               Check Availability in Your Area
             </Button>
           </div>
-          <p className="mt-8 text-sm text-white/70">
+          {/* <p className="mt-8 text-sm text-white/70">
             Trusted by practices including{" "}
             <span className="font-semibold text-white">
               Everglades Pediatric Dentistry
             </span>{" "}
             and <span className="font-semibold text-white">Holt Ortho</span>.
-          </p>
+          </p> */}
         </motion.div>
       </Container>
 

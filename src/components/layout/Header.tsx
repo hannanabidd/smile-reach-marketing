@@ -41,7 +41,7 @@ export default function Header() {
           <img
             src="/Images/SRM-logo.svg"
             alt="Smile Reach Marketing"
-            className="h-14 w-auto"
+            className="h-18 w-auto"
           />
         </Link>
 

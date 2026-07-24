@@ -11,7 +11,7 @@ type Stat = {
 };
 
 const STATS: Stat[] = [
-  { display: 47, label: "States served", sub: "From coast to coast" },
+  { display: 35, label: "States served", sub: "From coast to coast" },
   { display: 1000, suffix: "+", label: "Schools served", sub: "And counting" },
   { display: 100, suffix: "+", label: "Practices helped", sub: "Across the country" },
   { display: 1, label: "Sponsor per school", sub: "Exclusivity is the whole point" },

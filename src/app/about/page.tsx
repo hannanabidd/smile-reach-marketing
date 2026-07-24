@@ -28,7 +28,7 @@ export default function AboutPage() {
       <Prose background="sky" heading="Our mission" centered maxWidth={720}>
         <p>To create partnerships that work in three directions at once.</p>
         <p>
-          A school gets a resource it needed and could not fund. A family
+          A school receives a valuable resource at no cost. A family
           gets something genuinely useful, at no cost, with no strings. A
           local practice gets to be the reason it happened, and gets to be
           known for it.

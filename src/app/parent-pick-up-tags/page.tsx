@@ -35,7 +35,7 @@ const HOW_STEPS = [
   {
     number: "03",
     heading: "Staff call it forward",
-    body: "The number is radioed inside. The student is already walking out by the time the car reaches the kerb.",
+    body: "The number is radioed inside. The student is already walking out by the time the car reaches the curb.",
   },
   {
     number: "04",
@@ -81,7 +81,7 @@ const SPONSOR_BENEFITS = [
   {
     icon: BadgeCheck,
     heading: "Exclusive sponsorship status",
-    body: "One sponsor per school. Not a rotation, not a shared panel. There is no competitor beside you because there is no beside.",
+    body: "One sponsor per school. Not a rotation, not a shared panel. No competitor sits beside you at the same school.",
   },
   {
     icon: MapPin,

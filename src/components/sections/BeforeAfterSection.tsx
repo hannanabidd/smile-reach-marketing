@@ -11,8 +11,8 @@ const BEFORE = [
 ];
 
 const AFTER = [
-  "Staff read a number at a glance and confirm the vehicle is authorized.",
-  "The student is already walking out by the time the car reaches the kerb.",
+  "Staff read a number or name at a glance and confirm the vehicle is authorized.",
+  "The student is already walking out by the time the car reaches the curb.",
   "The line moves in a fraction of the time it used to take.",
   "Every match is documented, not remembered.",
 ];
