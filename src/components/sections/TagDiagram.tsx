@@ -15,8 +15,6 @@ const FRONT = [
 const REVERSE = [
   { label: "Sponsor branding", note: "Logo, practice name, phone, website." },
   { label: "Sponsor offer", note: "Optional. A consultation offer, for instance." },
-  { label: '"Schools do not endorse any sponsor"', note: "Non-negotiable. Exact wording confirmed per district." },
-  { label: '"Remove before driving"', note: "Safety wording. Legally sensible." },
 ];
 
 function CalloutList({ items }: { items: { label: string; note: string }[] }) {
@@ -47,31 +45,31 @@ export default function TagDiagram() {
           <Reveal>
             <Card className="h-full">
               <p className="text-eyebrow mb-4 text-blue-text">Front school side</p>
-              <div className="relative mb-6 aspect-17/11 w-full overflow-hidden rounded-card bg-white">
+              <div className="relative mb-6 aspect-17/11 w-full">
                 <Image
                   src="/Images/horizontal-tag-front.png"
                   alt="Front side of a Parent Pick-Up Tag, showing the school branding and family number"
                   fill
                   sizes="(min-width: 1024px) 50vw, 100vw"
-                  className="object-contain p-4"
+                  className="object-contain"
                 />
               </div>
-              <CalloutList items={FRONT} />
+              {/* <CalloutList items={FRONT} /> */}
             </Card>
           </Reveal>
           <Reveal delay={0.05}>
             <Card className="h-full">
               <p className="text-eyebrow mb-4 text-blue-text">Reverse sponsor side</p>
-              <div className="relative mb-6 aspect-17/11 w-full overflow-hidden rounded-card bg-white">
+              <div className="relative mb-6 aspect-17/11 w-full">
                 <Image
                   src="/Images/horizontal-tag-back.png"
                   alt="Reverse side of a Parent Pick-Up Tag, showing the sponsor's branding and offer"
                   fill
                   sizes="(min-width: 1024px) 50vw, 100vw"
-                  className="object-contain p-4"
+                  className="object-contain"
                 />
               </div>
-              <CalloutList items={REVERSE} />
+              {/* <CalloutList items={REVERSE} /> */}
             </Card>
           </Reveal>
         </div>

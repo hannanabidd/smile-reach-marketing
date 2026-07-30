@@ -78,7 +78,7 @@ export default function ProductsGrid() {
                             front={product.image}
                             back={product.backImage}
                             frontAlt={product.name}
-                            backAlt={`${product.name}, sponsor side`}
+                            backAlt={`${product.name}, school side`}
                             aspect="4 / 3"
                             imageClassName="object-contain p-3"
                             sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"

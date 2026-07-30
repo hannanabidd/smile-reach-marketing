@@ -4,6 +4,8 @@ import ValueBanner from "@/components/layout/ValueBanner";
 import PageHero from "@/components/sections/PageHero";
 import BenefitGrid, { type Benefit } from "@/components/sections/BenefitGrid";
 import ProcessSteps, { type Step } from "@/components/sections/ProcessSteps";
+import Prose from "@/components/sections/Prose";
+import TagDiagram from "@/components/sections/TagDiagram";
 import FAQAccordion, { type FAQ } from "@/components/sections/FAQAccordion";
 // import SchoolContactSection from "@/components/sections/SchoolContactSection";
 import FinalCTA from "@/components/sections/FinalCTA";
@@ -127,6 +129,57 @@ export default function ForSchoolsPage() {
         background="gray"
         subCta={null}
       />
+      {/*
+      <Prose background="sky" heading="Numbering: the part schools care about most">
+        <p>
+          Numbering sounds like a production detail. It is the single thing
+          most likely to make a program work or fail, and it is the first
+          question an experienced office administrator will ask.
+        </p>
+        <h3 className="text-display-3 pt-4 font-bold text-navy">
+          Sequential numbering
+        </h3>
+        <p>
+          Every tag gets a unique number, issued in order, tied to a student
+          record. Simple to produce, simple to audit, and the fastest to
+          call over a radio. The disadvantage is that the number carries no
+          information. Staff cannot tell a kindergartener from a fifth
+          grader without checking.
+        </p>
+        <h3 className="text-display-3 pt-4 font-bold text-navy">
+          Family numbering
+        </h3>
+        <p>
+          Siblings share a number. One call brings out three children. For
+          schools with a lot of multi-child families this is a significant
+          time saving, and it prevents the same car being called three
+          times.
+        </p>
+        <h3 className="text-display-3 pt-4 font-bold text-navy">
+          Grade-banded numbering
+        </h3>
+        <p>
+          Numbers are blocked by grade, often with a colour band. Staff can
+          sort the line visually and stage younger children separately.
+          More complex to produce and it has to be reissued as students move
+          up.
+        </p>
+        <h3 className="text-display-3 pt-4 font-bold text-navy">
+          Duplicates and replacements
+        </h3>
+        <p>
+          Every program needs a policy for the tag left in the other car,
+          the grandparent who collects on Thursdays, the divorced parent
+          with a different vehicle, and the tag that went through the wash.
+          Numbered duplicates tied to the same record, and a replacement
+          process the office can run without calling us. Ask your Smile
+          Reach representative whether replacement stock is included in
+          your sponsorship or handled as a reorder, this varies by
+          program.
+        </p>
+      </Prose> */}
+
+      <TagDiagram />
 
       <FAQAccordion
         heading="Questions schools ask us"

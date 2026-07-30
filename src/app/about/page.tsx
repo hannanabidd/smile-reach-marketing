@@ -42,7 +42,7 @@ export default function AboutPage() {
         </p>
       </Prose>
 
-      <Prose
+      {/* <Prose
         background="white"
         heading="What we specialise in"
         button={{ label: "See how sponsorship works", href: "/parent-pick-up-tags" }}
@@ -64,7 +64,7 @@ export default function AboutPage() {
           visibility. It is a narrow thing to be good at. We would rather be
           the best at it than adequate at ten things.
         </p>
-      </Prose>
+      </Prose> */}
 
       <WorkWithUs />
 

@@ -16,6 +16,7 @@ export default function TagFlipImage({
   sizes = "(min-width: 1024px) 45vw, 100vw",
   containerClassName = "",
   background = "white",
+  bare = false,
 }: {
   front: string;
   back: string;
@@ -27,8 +28,10 @@ export default function TagFlipImage({
   sizes?: string;
   containerClassName?: string;
   background?: keyof typeof BG_CLASSES;
+  /** No box, no border, no rounded clipping. Just the two images. */
+  bare?: boolean;
 }) {
-  const bgClass = BG_CLASSES[background];
+  const faceClass = bare ? "" : `overflow-hidden rounded-card ${BG_CLASSES[background]}`;
 
   return (
     <div
@@ -36,10 +39,10 @@ export default function TagFlipImage({
       style={{ aspectRatio: aspect }}
     >
       <div className={`relative h-full w-full transition-transform duration-700 ease-out [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] ${containerClassName || ""}`}>
-        <div className={`absolute inset-0 overflow-hidden rounded-card ${bgClass} [backface-visibility:hidden]`}>
+        <div className={`absolute inset-0 ${faceClass} backface-hidden`}>
           <Image src={front} alt={frontAlt} fill sizes={sizes} className={imageClassName} />
         </div>
-        <div className={`absolute inset-0 overflow-hidden rounded-card ${bgClass} [backface-visibility:hidden] [transform:rotateY(180deg)] ${containerClassName || ""}`}>
+        <div className={`absolute inset-0 ${faceClass} backface-hidden transform-[rotateY(180deg)] ${containerClassName || ""}`}>
           <Image src={back} alt={backAlt} fill sizes={sizes} className={imageClassName} />
         </div>
       </div>

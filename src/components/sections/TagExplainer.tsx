@@ -12,12 +12,14 @@ export default function TagExplainer() {
           <TagFlipImage
             front="/Images/vertical-tag-front.png"
             back="/Images/vertical-tag-back.png"
-            frontAlt="Front side of a Parent Pick-Up Tag, showing the school branding and family number"
-            backAlt="Reverse side of a Parent Pick-Up Tag, showing the sponsor's branding and offer"
+            frontAlt="A Parent Pick-Up Tag showing the sponsor's branding and offer"
+            backAlt="A Parent Pick-Up Tag showing the school branding and authorized pick-up vehicle designation"
             aspect="4 / 5"
+            imageClassName="object-contain"
+            bare
           />
           <p className="mt-3 text-center text-sm text-charcoal/50">
-            Hover to see the sponsor side
+            Hover to see the school side
           </p>
         </Reveal>
 
