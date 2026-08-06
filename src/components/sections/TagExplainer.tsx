@@ -42,7 +42,7 @@ export default function TagExplainer() {
             the tag that lives in their car for the entire school year.
           </p>
 
-          <div className="mt-8 grid grid-cols-3 gap-4">
+          <div className="mt-8 grid grid-cols-1 items-stretch gap-4 sm:grid-cols-3">
             <StatChip value="180+" label="School days per year" unverified />
             <StatChip value="1" label="Sponsor per school" />
             <StatChip value="2x" label="Daily impressions" />

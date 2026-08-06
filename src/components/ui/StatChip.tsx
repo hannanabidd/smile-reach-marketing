@@ -8,7 +8,7 @@ export default function StatChip({
   unverified?: boolean;
 }) {
   return (
-    <div className="rounded-card border border-sky bg-white px-5 py-4 text-center">
+    <div className="flex h-full flex-col items-center justify-center rounded-card border border-sky bg-white px-5 py-4 text-center">
       <p className="text-[32px] font-extrabold leading-none text-gold ">
         {value}
         {unverified ? <span className="ml-1 align-top text-xs text-charcoal/40">*</span> : null}
