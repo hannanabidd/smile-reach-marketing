@@ -9,7 +9,11 @@ type SubmitResult =
   | { success: true }
   | { success: false; error: string };
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// The Resend constructor throws synchronously if no API key is present,
+// which at module scope would crash every request to this action before
+// submitContactForm even runs. Only construct it when the key exists, and
+// let submitContactForm fail gracefully otherwise.
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
 // smilereachmarketing.com is verified in Resend, so this sends as the real
 // domain instead of the onboarding@resend.dev sandbox sender.
@@ -66,6 +70,15 @@ export async function submitContactForm(
     return {
       success: false,
       error: "Too many submissions. Please try again in a minute.",
+    };
+  }
+
+  if (!resend) {
+    console.error("[contact form] RESEND_API_KEY is not configured");
+    return {
+      success: false,
+      error:
+        "We could not send your message. Please call or email us directly.",
     };
   }
 

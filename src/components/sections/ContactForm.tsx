@@ -20,6 +20,9 @@ import { SITE_PHONE, SITE_PHONE_HREF } from "@/lib/site";
 
 export type Intent = "practice" | "school" | "other";
 
+const SUBMIT_FAILURE_MESSAGE =
+  "Something went wrong sending your message. Please try again, or call or email us directly.";
+
 const INTENT_OPTIONS: { value: Intent; label: string; description: string }[] = [
   {
     value: "practice",
@@ -81,11 +84,15 @@ function PracticeForm({
   });
 
   const onSubmit = async (values: PracticeFormValues) => {
-    const result = await submitContactForm(values);
-    if (result.success) {
-      onSuccess(values.name);
-    } else {
-      setError("root", { message: result.error });
+    try {
+      const result = await submitContactForm(values);
+      if (result.success) {
+        onSuccess(values.name);
+      } else {
+        setError("root", { message: result.error });
+      }
+    } catch {
+      setError("root", { message: SUBMIT_FAILURE_MESSAGE });
     }
   };
 
@@ -159,11 +166,15 @@ function SchoolForm({ onSuccess }: { onSuccess: (name: string) => void }) {
   });
 
   const onSubmit = async (values: SchoolFormValues) => {
-    const result = await submitContactForm(values);
-    if (result.success) {
-      onSuccess(values.name);
-    } else {
-      setError("root", { message: result.error });
+    try {
+      const result = await submitContactForm(values);
+      if (result.success) {
+        onSuccess(values.name);
+      } else {
+        setError("root", { message: result.error });
+      }
+    } catch {
+      setError("root", { message: SUBMIT_FAILURE_MESSAGE });
     }
   };
 
@@ -246,11 +257,15 @@ function OtherForm({ onSuccess }: { onSuccess: (name: string) => void }) {
   });
 
   const onSubmit = async (values: OtherFormValues) => {
-    const result = await submitContactForm(values);
-    if (result.success) {
-      onSuccess(values.name);
-    } else {
-      setError("root", { message: result.error });
+    try {
+      const result = await submitContactForm(values);
+      if (result.success) {
+        onSuccess(values.name);
+      } else {
+        setError("root", { message: result.error });
+      }
+    } catch {
+      setError("root", { message: SUBMIT_FAILURE_MESSAGE });
     }
   };
 
