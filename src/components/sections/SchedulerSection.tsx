@@ -1,6 +1,7 @@
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/motion/Reveal";
+import { SCHEDULE_CONSULTATION_URL } from "@/lib/site";
 
 export default function SchedulerSection() {
   return (
@@ -9,12 +10,11 @@ export default function SchedulerSection() {
         <Reveal className="mx-auto max-w-190 text-center">
           <h2 className="text-display-2 font-bold text-navy">Book a call</h2>
           <p className="text-body mx-auto mt-4 max-w-140 text-charcoal/90">
-            Would rather just talk it through? Send the form below with
-            &quot;Schedule a consultation&quot; selected, and we will call
-            you to find a time that works.
+            Would rather just talk it through? Pick a time on our calendar
+            and we will call you then, no form required.
           </p>
           <div className="mt-8 flex justify-center">
-            <Button href="/contact?intent=practice&help=consultation#contact-form" variant="secondary">
+            <Button href={SCHEDULE_CONSULTATION_URL} variant="secondary">
               Schedule a Consultation
             </Button>
           </div>

@@ -6,6 +6,7 @@ import ProcessSteps, { type Step } from "@/components/sections/ProcessSteps";
 import Prose from "@/components/sections/Prose";
 import TrustedBy from "@/components/sections/TrustedBy";
 import FinalCTA from "@/components/sections/FinalCTA";
+import { SCHEDULE_CONSULTATION_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Marketing Services for Dental & Ortho Practices | Smile Reach",
@@ -45,7 +46,7 @@ export default function ServicesPage() {
         heading="Marketing Services for Growing Practices"
         sub="School sponsorship is the centerpiece of what we do. For practices that want a full marketing partner, we also handle the channels that keep the phone ringing between school years."
         buttons={[
-          { label: "Schedule a Consultation", href: "/contact?intent=practice&help=consultation#contact-form", variant: "primary" },
+          { label: "Schedule a Consultation", href: SCHEDULE_CONSULTATION_URL, variant: "primary" },
           { label: "See Parent Pick-Up Tags", href: "/parent-pick-up-tags", variant: "ghost" },
         ]}
       />
@@ -86,7 +87,7 @@ export default function ServicesPage() {
         heading="Ready to build a full marketing plan?"
         body="Tell us what you have running now and where you want to grow. We will show you what makes sense to add, and what does not."
         buttons={[
-          { label: "Schedule a Consultation", href: "/contact?intent=practice&help=consultation#contact-form", variant: "primary" },
+          { label: "Schedule a Consultation", href: SCHEDULE_CONSULTATION_URL, variant: "primary" },
           { label: "See School Sponsorship", href: "/parent-pick-up-tags", variant: "ghost-light" },
         ]}
       />

@@ -1,6 +1,12 @@
 import Link from "next/link";
 import Container from "@/components/ui/Container";
-import { SITE_PHONE, SITE_PHONE_HREF, SITE_EMAIL, SITE_EMAIL_HREF } from "@/lib/site";
+import {
+  SITE_PHONE,
+  SITE_PHONE_HREF,
+  SITE_EMAIL,
+  SITE_EMAIL_HREF,
+  SCHEDULE_CONSULTATION_URL,
+} from "@/lib/site";
 
 const NAV_ITEMS = [
   { label: "Home", href: "/" },
@@ -88,7 +94,9 @@ export default function Footer() {
               </li>
             </ul>
             <Link
-              href="/contact"
+              href={SCHEDULE_CONSULTATION_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-3 inline-block text-sm font-semibold text-gold hover:text-gold/80"
             >
               Schedule a Consultation &rarr;

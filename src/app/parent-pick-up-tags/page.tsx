@@ -13,6 +13,7 @@ import FAQAccordion from "@/components/sections/FAQAccordion";
 import FinalCTA from "@/components/sections/FinalCTA";
 import Container from "@/components/ui/Container";
 import Reveal from "@/components/motion/Reveal";
+import { SCHEDULE_CONSULTATION_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Parent Pick-Up Tags & Car Rider Tags | Free for Schools",
@@ -304,7 +305,7 @@ export default function ParentPickUpTagsPage() {
         body="Sponsorships are exclusive and claimed first-come. Once a school has a sponsor, that opportunity is gone for the year. Tell us where you practise and we will show you what is available."
         buttons={[
           { label: "Check Availability in Your Area", href: "/contact", variant: "primary" },
-          { label: "Schedule a Consultation", href: "/contact", variant: "ghost-light" },
+          { label: "Schedule a Consultation", href: SCHEDULE_CONSULTATION_URL, variant: "ghost-light" },
         ]}
       />
     </>

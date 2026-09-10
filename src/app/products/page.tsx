@@ -6,6 +6,7 @@ import ProcessSteps from "@/components/sections/ProcessSteps";
 import Prose from "@/components/sections/Prose";
 import FinalCTA from "@/components/sections/FinalCTA";
 import { SPONSORSHIP_STEPS } from "@/lib/products";
+import { SCHEDULE_CONSULTATION_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Sponsored School Marketing Products | Smile Reach",
@@ -67,7 +68,7 @@ export default function ProductsIndexPage() {
           },
           {
             label: "Schedule a Consultation",
-            href: "/contact?intent=practice&help=consultation#contact-form",
+            href: SCHEDULE_CONSULTATION_URL,
             variant: "ghost-light",
           },
         ]}

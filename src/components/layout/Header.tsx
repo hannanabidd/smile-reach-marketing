@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
+import { SCHEDULE_CONSULTATION_URL } from "@/lib/site";
 
 const NAV_ITEMS = [
   { label: "Home", href: "/" },
@@ -64,7 +65,7 @@ export default function Header() {
         </nav>
 
         <div className="hidden [@media(min-width:1080px)]:block">
-          <Button href="/contact" variant="primary" className="min-h-11 px-6 text-[14px]">
+          <Button href={SCHEDULE_CONSULTATION_URL} variant="primary" className="min-h-11 px-6 text-[14px]">
             Schedule a Consultation
           </Button>
         </div>
@@ -94,7 +95,7 @@ export default function Header() {
               </Link>
             ))}
             <Button
-              href="/contact"
+              href={SCHEDULE_CONSULTATION_URL}
               variant="primary"
               onClick={() => setMenuOpen(false)}
               className="mt-2 w-full"

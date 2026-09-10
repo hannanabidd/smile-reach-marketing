@@ -10,6 +10,7 @@ import TrustedBy from "@/components/sections/TrustedBy";
 import FinalCTA from "@/components/sections/FinalCTA";
 import Container from "@/components/ui/Container";
 import Reveal from "@/components/motion/Reveal";
+import { SCHEDULE_CONSULTATION_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Community Marketing for Dentists & Orthodontists",
@@ -62,7 +63,7 @@ export default function CommunityMarketingPage() {
         heading="Community marketing that connects your practice with local families"
         sub="Reaching local families is harder and more expensive than it used to be. Traditional advertising is crowded, online ad costs keep climbing, and every channel you can buy, your competitor can buy at the same auction on the same day. School sponsorship works differently. By supporting something a school already needs, your practice earns visibility inside the community instead of competing for attention against it."
         buttons={[
-          { label: "Schedule a Consultation", href: "/contact", variant: "primary" },
+          { label: "Schedule a Consultation", href: SCHEDULE_CONSULTATION_URL, variant: "primary" },
           { label: "See How Sponsorship Works", href: "/parent-pick-up-tags", variant: "ghost" },
         ]}
       />
