@@ -55,6 +55,7 @@ export default function BenefitGrid({
   cards = DEFAULT_BENEFITS,
   background = "white",
   footnote,
+  centerLastRow = false,
 }: {
   eyebrow?: string;
   heading?: string;
@@ -62,6 +63,8 @@ export default function BenefitGrid({
   cards?: Benefit[];
   background?: keyof typeof BG_CLASSES;
   footnote?: string;
+  /** Centre an incomplete final row instead of left-aligning it. */
+  centerLastRow?: boolean;
 }) {
   return (
     <section className={`${BG_CLASSES[background]} py-16 sm:py-24`}>
@@ -74,9 +77,23 @@ export default function BenefitGrid({
           ) : null}
         </Reveal>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div
+          className={
+            centerLastRow
+              ? "mt-12 flex flex-wrap justify-center gap-6"
+              : "mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+          }
+        >
           {cards.map((benefit, index) => (
-            <Reveal key={benefit.heading} delay={index * 0.05}>
+            <Reveal
+              key={benefit.heading}
+              delay={index * 0.05}
+              className={
+                centerLastRow
+                  ? "w-full sm:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)]"
+                  : undefined
+              }
+            >
               <Card className="h-full">
                 <div className="flex h-14 w-14 items-center justify-center rounded-full bg-sky text-blue transition-colors duration-200 group-hover:bg-blue group-hover:text-white">
                   <benefit.icon size={26} strokeWidth={1.5} />

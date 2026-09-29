@@ -17,14 +17,18 @@ export default function PageHero({
   buttons,
   image,
   variant = "split",
+  breadcrumb,
 }: {
-  eyebrow: string;
+  /** Optional on the banner when a breadcrumb takes its place. */
+  eyebrow?: string;
   heading: string;
   sub?: string;
   body?: ReactNode;
   buttons?: ButtonSpec[];
   image?: ImageSpec;
   variant?: "split" | "banner";
+  /** Banner only: shown in place of the eyebrow. */
+  breadcrumb?: ReactNode;
 }) {
   if (image && variant === "banner") {
     return (
@@ -51,13 +55,17 @@ export default function PageHero({
 
         <Container className="relative z-10 pt-32 pb-16 sm:pb-24">
           <Reveal className="max-w-180">
-            <Eyebrow light>{eyebrow}</Eyebrow>
+            {breadcrumb ? (
+              <div className="mb-3">{breadcrumb}</div>
+            ) : eyebrow ? (
+              <p className="text-eyebrow mb-3 text-white">{eyebrow}</p>
+            ) : null}
             <h1 className="text-display-1 font-extrabold !text-white">{heading}</h1>
             {sub ? (
-              <p className="text-body-lg mt-6 max-w-140 text-white/85">{sub}</p>
+              <p className="text-body-lg mt-6 max-w-140 text-white">{sub}</p>
             ) : null}
             {body ? (
-              <div className="text-body mt-4 max-w-140 space-y-4 text-white/80">
+              <div className="text-body mt-4 max-w-140 space-y-4 text-white">
                 {body}
               </div>
             ) : null}
@@ -81,7 +89,7 @@ export default function PageHero({
       <section className="bg-white pt-16 pb-16 sm:pt-24 sm:pb-20">
         <Container className="grid items-center gap-12 lg:grid-cols-[55%_45%]">
           <Reveal>
-            <Eyebrow>{eyebrow}</Eyebrow>
+            {eyebrow ? <Eyebrow>{eyebrow}</Eyebrow> : null}
             <h1 className="text-display-1 font-extrabold text-navy">{heading}</h1>
             {sub ? (
               <p className="text-body-lg mt-4 max-w-140 text-charcoal/90">{sub}</p>
@@ -131,7 +139,7 @@ export default function PageHero({
 
       <Container className="relative">
         <Reveal className="mx-auto max-w-190 text-center">
-          <Eyebrow>{eyebrow}</Eyebrow>
+          {eyebrow ? <Eyebrow>{eyebrow}</Eyebrow> : null}
           <h1 className="text-display-1 font-extrabold text-navy">{heading}</h1>
           {sub ? (
             <p className="text-body-lg mx-auto mt-6 max-w-140 text-charcoal/90">{sub}</p>

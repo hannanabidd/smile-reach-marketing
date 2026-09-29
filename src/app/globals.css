@@ -56,6 +56,112 @@ body {
   outline-offset: 3px;
 }
 
+/* Timing timeline loops. Durations and delays are set inline by TimingTimeline
+   so every effect shares one period; transform and opacity only. */
+@theme {
+  --animate-timeline-playhead: timeline-playhead 10s linear infinite;
+  --animate-timeline-ripple: timeline-ripple 10s ease-out infinite;
+  --animate-timeline-glow: timeline-glow 10s ease-out infinite;
+
+  @keyframes timeline-playhead {
+    0% {
+      transform: translateX(0);
+      opacity: 0;
+    }
+    3%,
+    97% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+  }
+
+  @keyframes timeline-ripple {
+    0% {
+      transform: scale(1);
+      opacity: 0.9;
+    }
+    10%,
+    100% {
+      transform: scale(2.6);
+      opacity: 0;
+    }
+  }
+
+  @keyframes timeline-glow {
+    0% {
+      opacity: 0;
+    }
+    2% {
+      opacity: 1;
+    }
+    14%,
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
+/* Community pulse (CommunityPulse). Duration and per-ring delays are set
+   inline so the houses light as the wave reaches them. */
+@theme {
+  --animate-community-pulse: community-pulse 4s linear infinite;
+  --animate-community-beat: community-beat 4s ease-out infinite;
+  --animate-community-light: community-light 4s ease-out infinite;
+  --animate-ring-spin: ring-spin 80s linear infinite;
+
+  @keyframes community-pulse {
+    0% {
+      transform: scale(0.2);
+      opacity: 0.8;
+    }
+    75%,
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+
+  @keyframes community-beat {
+    0% {
+      transform: scale(1);
+    }
+    6% {
+      transform: scale(1.08);
+    }
+    16%,
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes community-light {
+    0% {
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
+    }
+    30%,
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes ring-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+/* PauseToggle (WCAG 2.2.2): pauses every looping animation in its wrapper */
+.pausable:has(.pausable-toggle:checked) .pausable-anim {
+  animation-play-state: paused;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

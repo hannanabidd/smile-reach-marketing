@@ -11,7 +11,7 @@ const variantStyles: Record<Variant, string> = {
 };
 
 const baseStyles =
-  "inline-flex min-h-[52px] items-center justify-center rounded-[12px] px-8 text-[15px] font-semibold transition-all duration-200 ease-out hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-3 focus-visible:outline-blue focus-visible:outline-offset-3";
+  "inline-flex min-h-[52px] items-center justify-center rounded-[12px] px-8 text-center text-[15px] font-semibold transition-all duration-200 ease-out hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline-3 focus-visible:outline-blue focus-visible:outline-offset-3";
 
 export default function Button({
   children,

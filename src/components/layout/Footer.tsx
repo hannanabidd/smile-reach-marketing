@@ -13,6 +13,7 @@ const NAV_ITEMS = [
   { label: "Pick-Up Tags", href: "/parent-pick-up-tags" },
   { label: "School Marketing Products", href: "/products" },
   { label: "Community Marketing", href: "/community-marketing" },
+  { label: "Industries We Serve", href: "/industries" },
   { label: "About", href: "/about" },
   { label: "Resources", href: "/resources" },
   { label: "Contact", href: "/contact" },

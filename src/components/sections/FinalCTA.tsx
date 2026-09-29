@@ -41,9 +41,9 @@ export default function FinalCTA({
       )}
 
       <Container className="relative">
-        <Reveal className="mx-auto max-w-160 text-center">
-          <h2 className="text-display-2 font-bold text-white">{heading}</h2>
-          <p className="text-body-lg mt-4 text-white/80">{body}</p>
+        <Reveal className="mx-auto max-w-200 text-center">
+          <h2 className="text-display-2 mx-auto max-w-160 font-bold text-white">{heading}</h2>
+          <p className="text-body-lg mx-auto mt-4 max-w-160 text-white/80">{body}</p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
             {buttons.map((btn) => (
               <Button

@@ -1,6 +1,7 @@
 import { type ReactNode } from "react";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
+import Eyebrow from "@/components/ui/Eyebrow";
 import Reveal from "@/components/motion/Reveal";
 
 const BG_CLASSES = {
@@ -13,6 +14,7 @@ type ButtonSpec = { label: string; href: string; variant?: "primary" | "secondar
 
 export default function Prose({
   background = "white",
+  eyebrow,
   heading,
   children,
   button,
@@ -22,6 +24,7 @@ export default function Prose({
   id,
 }: {
   background?: keyof typeof BG_CLASSES;
+  eyebrow?: string;
   heading: string;
   children: ReactNode;
   button?: ButtonSpec;
@@ -39,6 +42,7 @@ export default function Prose({
           style={{ maxWidth }}
           className={`mx-auto ${centered ? "text-center" : ""}`}
         >
+          {eyebrow ? <Eyebrow>{eyebrow}</Eyebrow> : null}
           <h2 className="text-display-2 font-bold text-navy">{heading}</h2>
           <div className="text-body mt-6 space-y-4 text-charcoal/90">
             {children}

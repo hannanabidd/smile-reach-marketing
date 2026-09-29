@@ -8,6 +8,8 @@ const staticRoutes = [
   "/products",
   ...PRODUCTS.map((product) => `/products/${product.slug}`),
   "/community-marketing",
+  "/industries",
+  "/real-estate-marketing",
   "/about",
   "/resources",
   "/contact",
