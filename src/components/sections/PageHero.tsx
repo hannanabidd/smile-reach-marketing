@@ -6,7 +6,7 @@ import Button from "@/components/ui/Button";
 import Reveal from "@/components/motion/Reveal";
 import Glow from "@/components/ui/Glow";
 
-type ButtonSpec = { label: string; href: string; variant?: "primary" | "secondary" | "ghost" | "ghost-light" };
+type ButtonSpec = { label: string; shortLabel?: string; href: string; variant?: "primary" | "secondary" | "ghost" | "ghost-light" };
 type ImageSpec = { src: string; alt: string; objectPosition?: string; fit?: "cover" | "contain" };
 
 export default function PageHero({
@@ -72,7 +72,12 @@ export default function PageHero({
             {buttons?.length ? (
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 {buttons.map((btn) => (
-                  <Button key={btn.label} href={btn.href} variant={btn.variant ?? "primary"}>
+                  <Button
+                    key={btn.label}
+                    href={btn.href}
+                    shortLabel={btn.shortLabel}
+                    variant={btn.variant ?? "primary"}
+                  >
                     {btn.label}
                   </Button>
                 ))}
@@ -102,7 +107,12 @@ export default function PageHero({
             {buttons?.length ? (
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 {buttons.map((btn) => (
-                  <Button key={btn.label} href={btn.href} variant={btn.variant ?? "primary"}>
+                  <Button
+                    key={btn.label}
+                    href={btn.href}
+                    shortLabel={btn.shortLabel}
+                    variant={btn.variant ?? "primary"}
+                  >
                     {btn.label}
                   </Button>
                 ))}
@@ -152,7 +162,12 @@ export default function PageHero({
           {buttons?.length ? (
             <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
               {buttons.map((btn) => (
-                <Button key={btn.label} href={btn.href} variant={btn.variant ?? "primary"}>
+                <Button
+                  key={btn.label}
+                  href={btn.href}
+                  shortLabel={btn.shortLabel}
+                  variant={btn.variant ?? "primary"}
+                >
                   {btn.label}
                 </Button>
               ))}

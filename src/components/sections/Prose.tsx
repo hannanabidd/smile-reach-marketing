@@ -10,7 +10,7 @@ const BG_CLASSES = {
   gray: "bg-gray",
 };
 
-type ButtonSpec = { label: string; href: string; variant?: "primary" | "secondary" | "ghost" };
+type ButtonSpec = { label: string; shortLabel?: string; href: string; variant?: "primary" | "secondary" | "ghost" };
 
 export default function Prose({
   background = "white",
@@ -52,7 +52,12 @@ export default function Prose({
               className={`mt-8 flex flex-col gap-4 sm:flex-row ${centered ? "justify-center" : ""}`}
             >
               {allButtons.map((btn) => (
-                <Button key={btn.label} href={btn.href} variant={btn.variant ?? "ghost"}>
+                <Button
+                  key={btn.label}
+                  href={btn.href}
+                  shortLabel={btn.shortLabel}
+                  variant={btn.variant ?? "ghost"}
+                >
                   {btn.label}
                 </Button>
               ))}

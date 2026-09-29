@@ -20,6 +20,7 @@ export default function Button({
   onClick,
   type = "button",
   className = "",
+  shortLabel,
 }: {
   children: ReactNode;
   href?: string;
@@ -27,8 +28,18 @@ export default function Button({
   onClick?: () => void;
   type?: "button" | "submit";
   className?: string;
+  /** Shown instead of `children` on phones, for labels too long to fit one line there. */
+  shortLabel?: string;
 }) {
   const classes = `${baseStyles} ${variantStyles[variant]} ${className}`;
+  const content = shortLabel ? (
+    <>
+      <span className="sm:hidden">{shortLabel}</span>
+      <span className="hidden sm:inline">{children}</span>
+    </>
+  ) : (
+    children
+  );
 
   if (href) {
     const isExternal = /^https?:\/\//.test(href);
@@ -39,14 +50,14 @@ export default function Button({
         className={classes}
         {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       >
-        {children}
+        {content}
       </Link>
     );
   }
 
   return (
     <button type={type} onClick={onClick} className={classes}>
-      {children}
+      {content}
     </button>
   );
 }

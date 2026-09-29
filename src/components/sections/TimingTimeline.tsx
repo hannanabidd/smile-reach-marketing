@@ -57,10 +57,9 @@ export default function TimingTimeline({
           <div className="text-body-lg mt-6 space-y-4 text-white">{intro}</div>
         </Reveal>
 
-        {/* Wide screens: time runs left to right (needs ~1200px so the moment cards don't collide) */}
-        <div className="mt-16 hidden min-[1200px]:block">
-          {/* Moments, each with a stem down into the lanes */}
-          <div className="relative h-28">
+        <div className="mt-12 sm:mt-16">
+          {/* Wide screens: each moment is a text card with a stem down into the lanes */}
+          <div className="relative hidden h-28 min-[1200px]:block">
             {moments.map((moment, index) => (
               <div
                 key={moment.label}
@@ -74,6 +73,20 @@ export default function TimingTimeline({
                   </p>
                   <span aria-hidden className="h-6 w-px bg-white/50" />
                 </Reveal>
+              </div>
+            ))}
+          </div>
+
+          {/* Narrower screens: numbered markers, keyed to the list under the chart */}
+          <div aria-hidden className="relative h-10 min-[1200px]:hidden">
+            {moments.map((moment, index) => (
+              <div
+                key={moment.label}
+                className="absolute bottom-0 flex -translate-x-1/2 flex-col items-center"
+                style={{ left: `${moment.at}%` }}
+              >
+                <NumberBadge n={index + 1} style={loopAt(moment.at)} />
+                <span className="h-3 w-px bg-white/50" />
               </div>
             ))}
           </div>
@@ -119,73 +132,37 @@ export default function TimingTimeline({
           </div>
 
           <div className="relative mt-4 h-5 text-eyebrow text-white">
-            {ticks.map((tick, index) => (
-              <span
-                key={tick.label}
-                className={`absolute top-0 whitespace-nowrap ${
-                  index === 0
-                    ? ""
-                    : index === ticks.length - 1
-                      ? "-translate-x-full"
-                      : "-translate-x-1/2"
-                }`}
-                style={{ left: `${tick.at}%` }}
-              >
-                {tick.label}
-              </span>
-            ))}
+            {ticks.map((tick, index) => {
+              const isFirst = index === 0;
+              const isLast = index === ticks.length - 1;
+              const isMiddle = index === Math.floor(ticks.length / 2);
+              return (
+                <span
+                  key={tick.label}
+                  className={`absolute top-0 whitespace-nowrap ${
+                    isFirst ? "" : isLast ? "-translate-x-full" : "-translate-x-1/2"
+                  } ${
+                    // Phones only have room for the ends and the midpoint
+                    isFirst || isLast || isMiddle ? "" : "hidden sm:block"
+                  }`}
+                  style={{ left: `${tick.at}%` }}
+                >
+                  {tick.label}
+                </span>
+              );
+            })}
           </div>
         </div>
 
-        {/* Below 1200px: time runs top to bottom */}
-        <div className="mx-auto mt-12 max-w-140 min-[1200px]:hidden">
-          <div className="mb-6 flex flex-wrap gap-x-6 gap-y-2 text-[15px] font-semibold text-white">
-            <span className="flex items-center gap-2">
-              <span aria-hidden className="h-4 w-0 border-l-2 border-dashed border-white/50" />
-              {occasionalLabel}
-            </span>
-            <span className="flex items-center gap-2">
-              <span aria-hidden className="h-4 w-1 rounded-full bg-white" />
-              {consistentLabel}
-            </span>
-          </div>
-
-          <div className="relative pl-16">
-            {/* The two lanes as vertical rails */}
-            <span
-              aria-hidden
-              className="absolute top-0 bottom-0 left-3 border-l-2 border-dashed border-white/50"
-            />
-            <span aria-hidden className="absolute top-0 bottom-0 left-10 w-1 rounded-full bg-white" />
-
-            <p className="text-eyebrow pb-6 text-white">{ticks[0]?.label}</p>
-            <ol className="space-y-5">
-              {moments.map((moment, index) => (
-                <li key={moment.label} className="relative">
-                  <span
-                    aria-hidden
-                    className="absolute top-1/2 -left-[59px] h-4 w-4 -translate-y-1/2 rounded-full border-2 border-white/60 bg-navy"
-                  />
-                  <span
-                    aria-hidden
-                    className="absolute top-1/2 -left-[34px] flex h-6 w-6 -translate-y-1/2 items-center justify-center rounded-full bg-white text-navy"
-                  >
-                    {/* No horizontal track here, so the ripples cascade top to bottom */}
-                    <Ripple style={loopAt(((index + 0.5) / moments.length) * 100)} />
-                    <Check size={14} strokeWidth={2.5} />
-                  </span>
-                  <Reveal delay={index * 0.06}>
-                    <p className="relative rounded-[12px] border border-white/25 bg-white/10 px-4 py-3 text-[15px] leading-snug font-semibold text-white">
-                      <CardGlow style={loopAt(((index + 0.5) / moments.length) * 100)} />
-                      <span className="relative">{moment.label}</span>
-                    </p>
-                  </Reveal>
-                </li>
-              ))}
-            </ol>
-            <p className="text-eyebrow pt-6 text-white">{ticks[ticks.length - 1]?.label}</p>
-          </div>
-        </div>
+        {/* Below 1200px the moments are listed under the chart, one number per marker */}
+        <ol className="mx-auto mt-10 grid max-w-190 gap-x-8 gap-y-4 sm:grid-cols-2 min-[1200px]:hidden">
+          {moments.map((moment, index) => (
+            <li key={moment.label} className="flex items-center gap-3">
+              <NumberBadge n={index + 1} style={loopAt(moment.at)} />
+              <span className="text-[15px] leading-snug font-semibold text-white">{moment.label}</span>
+            </li>
+          ))}
+        </ol>
 
         {/* <div className="mt-8 flex justify-center">
           <PauseToggle label="Pause timeline animation" />
@@ -249,6 +226,22 @@ function Ripple({ style }: { style: CSSProperties }) {
       className="pausable-anim absolute inset-0 rounded-full border-2 border-white opacity-0 motion-safe:animate-timeline-ripple"
       style={style}
     />
+  );
+}
+
+/** Numbered marker that brightens as the playhead passes its moment. */
+function NumberBadge({ n, style }: { n: number; style: CSSProperties }) {
+  return (
+    <span
+      aria-hidden
+      className="relative flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-white/40 bg-navy text-[13px] font-bold text-white"
+    >
+      <span
+        className="pausable-anim absolute inset-0 rounded-full bg-white/20 opacity-0 motion-safe:animate-timeline-glow"
+        style={style}
+      />
+      <span className="relative">{n}</span>
+    </span>
   );
 }
 

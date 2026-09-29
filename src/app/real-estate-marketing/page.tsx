@@ -270,7 +270,12 @@ export default function RealEstateMarketingPage() {
           objectPosition: "50% 60%",
         }}
         buttons={[
-          { label: "Explore School Marketing Opportunities", href: AVAILABILITY_HREF, variant: "primary" },
+          {
+            label: "Explore School Marketing Opportunities",
+            shortLabel: "Explore Opportunities",
+            href: AVAILABILITY_HREF,
+            variant: "primary",
+          },
           { label: "Schedule a Consultation", href: SCHEDULE_CONSULTATION_URL, variant: "ghost-light" },
         ]}
       />
@@ -346,7 +351,12 @@ export default function RealEstateMarketingPage() {
           </div>
         }
         buttons={[
-          { label: "Explore Opportunities in Your Target Communities", href: AVAILABILITY_HREF, variant: "primary" },
+          {
+            label: "Explore Opportunities in Your Target Communities",
+            shortLabel: "Explore Your Communities",
+            href: AVAILABILITY_HREF,
+            variant: "primary",
+          },
         ]}
         footer={
           <div className="rounded-card border border-sky bg-sky px-4 py-8 sm:p-10">
@@ -572,7 +582,12 @@ export default function RealEstateMarketingPage() {
           </div>
         }
         buttons={[
-          { label: "Tell Us Where You Want to Build Your Brand", href: AVAILABILITY_HREF, variant: "primary" },
+          {
+            label: "Tell Us Where You Want to Build Your Brand",
+            shortLabel: "Tell Us Where You Want to Grow",
+            href: AVAILABILITY_HREF,
+            variant: "primary",
+          },
         ]}
       >
         <p>
@@ -715,7 +730,12 @@ export default function RealEstateMarketingPage() {
         body="The homeowners and families you want to reach are already connected through their local schools. Whether you want to strengthen one geographic farm or build recognition across multiple communities, we'll help you explore the opportunities. Choose your communities. Support local schools. Build a name families recognize."
         backgroundImage="/Images/real-estate-CTA.jpg"
         buttons={[
-          { label: "Explore Real Estate Marketing Opportunities", href: AVAILABILITY_HREF, variant: "primary" },
+          {
+            label: "Explore Real Estate Marketing Opportunities",
+            shortLabel: "Explore Opportunities",
+            href: AVAILABILITY_HREF,
+            variant: "primary",
+          },
           { label: "Schedule a Consultation", href: SCHEDULE_CONSULTATION_URL, variant: "ghost-light" },
         ]}
       />
