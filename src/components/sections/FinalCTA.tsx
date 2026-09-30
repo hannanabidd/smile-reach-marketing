@@ -21,7 +21,8 @@ export default function FinalCTA({
   heading?: string;
   body?: string;
   buttons?: ButtonSpec[];
-  backgroundImage?: string;
+  /** null for no photo (navy with a glow), e.g. while an image is still to come. */
+  backgroundImage?: string | null;
 }) {
   return (
     <section className="relative overflow-hidden bg-navy py-24 sm:py-35">

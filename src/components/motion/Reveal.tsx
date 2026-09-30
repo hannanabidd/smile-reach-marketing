@@ -16,22 +16,21 @@ export default function Reveal({
 }) {
   const reduceMotion = useReducedMotion();
 
-  if (reduceMotion) {
-    return (
-      <div className={className} style={style}>
-        {children}
-      </div>
-    );
-  }
-
+  // Always render the same motion.div so server and client markup match. The
+  // server can't know the motion preference, and React won't patch a
+  // mismatched style on hydration, so swapping in a plain div here left
+  // reduced-motion visitors stuck on the server's opacity: 0. Under reduced
+  // motion the reveal just happens instantly instead.
   return (
     <motion.div
       className={className}
       style={style}
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.5, delay, ease: "easeOut" }}
+      viewport={{ once: true, margin: reduceMotion ? "0px" : "-80px" }}
+      transition={
+        reduceMotion ? { duration: 0 } : { duration: 0.5, delay, ease: "easeOut" }
+      }
     >
       {children}
     </motion.div>

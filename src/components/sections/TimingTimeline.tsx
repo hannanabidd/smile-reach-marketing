@@ -46,7 +46,7 @@ export default function TimingTimeline({
   occasionalLabel: string;
   consistentLabel: string;
   outro: ReactNode;
-  statement: string;
+  statement?: string;
 }) {
   return (
     <section className="pausable overflow-hidden bg-navy py-16 text-white sm:py-24">
@@ -170,7 +170,9 @@ export default function TimingTimeline({
 
         <Reveal className="mx-auto mt-12 max-w-190 text-center">
           <div className="text-body-lg space-y-4 text-white">{outro}</div>
-          <p className="text-display-2 mt-10 font-bold !text-white">{statement}</p>
+          {statement ? (
+            <p className="text-display-2 mt-10 font-bold !text-white">{statement}</p>
+          ) : null}
         </Reveal>
       </Container>
     </section>

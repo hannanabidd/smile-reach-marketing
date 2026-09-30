@@ -2,8 +2,9 @@ export type Industry = {
   slug: string;
   name: string;
   href: string;
-  image: string;
-  imageAlt: string;
+  /** Omit until the photo is supplied; the card shows a placeholder. */
+  image?: string;
+  imageAlt?: string;
   imagePosition?: string;
   oneLiner: string;
 };
@@ -20,5 +21,12 @@ export const INDUSTRIES: Industry[] = [
     imagePosition: "60% 70%",
     oneLiner:
       "School marketing for real estate agents, teams, and brokerages. Build your name in the neighborhoods you want to farm.",
+  },
+  {
+    slug: "insurance-marketing",
+    name: "Insurance Marketing",
+    href: "/insurance-marketing",
+    oneLiner:
+      "School advertising for insurance agents and agencies. Stay visible with the local families your agency serves.",
   },
 ];

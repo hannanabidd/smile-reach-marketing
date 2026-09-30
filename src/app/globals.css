@@ -157,6 +157,62 @@ body {
   }
 }
 
+/* Insurance page loops: AdFeedVsTag (feed scroll, tag swing) and MomentRotator.
+   The rotator keyframes assume five moments: each gets one 20% slot of the cycle. */
+@theme {
+  --animate-feed-scroll: feed-scroll 18s linear infinite;
+  --animate-tag-swing: tag-swing 3.6s ease-in-out infinite;
+  --animate-rotator-text: rotator-text 12.5s ease-out infinite;
+  --animate-rotator-slot: rotator-slot 12.5s ease-out infinite;
+
+  @keyframes feed-scroll {
+    to {
+      transform: translateY(-50%);
+    }
+  }
+
+  @keyframes tag-swing {
+    0%,
+    100% {
+      transform: rotate(-4deg);
+    }
+    50% {
+      transform: rotate(4deg);
+    }
+  }
+
+  @keyframes rotator-text {
+    0% {
+      opacity: 0;
+      transform: translateY(0.4em);
+    }
+    3%,
+    17% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    20%,
+    100% {
+      opacity: 0;
+      transform: translateY(-0.4em);
+    }
+  }
+
+  @keyframes rotator-slot {
+    0% {
+      opacity: 0;
+    }
+    3%,
+    17% {
+      opacity: 1;
+    }
+    20%,
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
 /* PauseToggle (WCAG 2.2.2): pauses every looping animation in its wrapper */
 .pausable:has(.pausable-toggle:checked) .pausable-anim {
   animation-play-state: paused;

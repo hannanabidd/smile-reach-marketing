@@ -6,6 +6,8 @@ import Button from "@/components/ui/Button";
 import Reveal from "@/components/motion/Reveal";
 import Glow from "@/components/ui/Glow";
 
+const isDev = process.env.NODE_ENV !== "production";
+
 type ButtonSpec = { label: string; shortLabel?: string; href: string; variant?: "primary" | "secondary" | "ghost" | "ghost-light" };
 type ImageSpec = { src: string; alt: string; objectPosition?: string; fit?: "cover" | "contain" };
 
@@ -30,18 +32,25 @@ export default function PageHero({
   /** Banner only: shown in place of the eyebrow. */
   breadcrumb?: ReactNode;
 }) {
-  if (image && variant === "banner") {
+  if (variant === "banner") {
     return (
       <section className="relative flex min-h-[560px] w-full items-end overflow-hidden bg-navy sm:min-h-[640px]">
-        <Image
-          src={image.src}
-          alt={image.alt}
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-          style={{ objectPosition: image.objectPosition ?? "50% 50%" }}
-        />
+        {image ? (
+          <Image
+            src={image.src}
+            alt={image.alt}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+            style={{ objectPosition: image.objectPosition ?? "50% 50%" }}
+          />
+        ) : isDev ? (
+          // Photo not supplied yet: plain navy in production, a reminder in dev
+          <p className="absolute top-6 right-6 z-10 rounded-full border-2 border-dashed border-white/60 px-4 py-2 text-sm font-medium text-white">
+            Hero banner image pending
+          </p>
+        ) : null}
 
         {/* Light gradient: just enough to keep the text readable, while still showing the photo through */}
         <div
