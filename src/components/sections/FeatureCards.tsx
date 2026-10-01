@@ -6,6 +6,8 @@ import Eyebrow from "@/components/ui/Eyebrow";
 import Reveal from "@/components/motion/Reveal";
 
 export type FeatureCard = {
+  /** Small label above the title. */
+  eyebrow?: string;
   title: string;
   body: ReactNode;
   /** Square media slot at the top of the card (image, illustration, etc.). */
@@ -53,6 +55,7 @@ export default function FeatureCards({
               <article className="flex h-full flex-col overflow-hidden rounded-card border border-sky bg-white">
                 <div className="relative aspect-square w-full overflow-hidden">{card.media}</div>
                 <div className="flex flex-1 flex-col p-6">
+                  {card.eyebrow ? <Eyebrow>{card.eyebrow}</Eyebrow> : null}
                   <h3 className="text-display-3 font-bold text-navy">{card.title}</h3>
                   <div className="text-body mt-3 flex-1 space-y-3 text-charcoal/90">{card.body}</div>
                   {card.link ? (

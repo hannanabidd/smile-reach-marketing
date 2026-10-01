@@ -29,4 +29,11 @@ export const INDUSTRIES: Industry[] = [
     oneLiner:
       "School advertising for insurance agents and agencies. Stay visible with the local families your agency serves.",
   },
+  {
+    slug: "pediatric-dentist-marketing",
+    name: "Pediatric Dental Marketing",
+    href: "/pediatric-dentist-marketing",
+    oneLiner:
+      "School marketing for pediatric dental practices. Reach the parents in the communities around your practice.",
+  },
 ];
