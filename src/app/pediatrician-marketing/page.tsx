@@ -52,13 +52,13 @@ const IMAGES = {
 export const metadata: Metadata = {
   title: "Pediatrician Marketing & School Advertising | Smile Reach Marketing",
   description:
-    "Pediatrician marketing that builds lasting relationships with local families. Sponsor school pickup tags, calendar magnets, folders, and health resources.",
+    "Pediatrician marketing that builds lasting relationships with local families. Sponsor school pick-up tags, calendar magnets, folders, and health resources.",
   alternates: { canonical: PAGE_PATH },
   openGraph: { images: [IMAGES.banner] },
 };
 
 const OPPORTUNITIES: CheckListItem[] = [
-  { label: "Parent pickup and car rider tags", icon: Car },
+  { label: "Parent pick-up and car rider tags", icon: Car },
   { label: "School calendar magnets", icon: CalendarDays },
   { label: "Daily and take-home folders", icon: FolderOpen },
   { label: "Health and wellness resources", icon: HeartPulse },
@@ -146,7 +146,7 @@ const BENEFITS: Benefit[] = [
   {
     icon: Repeat,
     heading: "Create Repeated Visibility",
-    body: "Pickup tags, calendar magnets, folders, and other school materials can provide ongoing exposure rather than a single advertising impression.",
+    body: "Pick-up tags, calendar magnets, folders, and other school materials can provide ongoing exposure rather than a single advertising impression.",
   },
   {
     icon: School,
@@ -168,7 +168,7 @@ const BENEFITS: Benefit[] = [
 const FAQS: FAQ[] = [
   {
     q: "How does school marketing work for pediatricians?",
-    a: "Smile Reach Marketing helps pediatric practices connect with school sponsorship opportunities. Depending on the school and program, your practice may sponsor parent pickup tags, calendar magnets, folders, health resources, or other useful school materials.",
+    a: "Smile Reach Marketing helps pediatric practices connect with school sponsorship opportunities. Depending on the school and program, your practice may sponsor parent pick-up tags, calendar magnets, folders, health resources, or other useful school materials.",
   },
   {
     q: "Is school marketing a good fit for pediatric practices?",
@@ -184,7 +184,7 @@ const FAQS: FAQ[] = [
   },
   {
     q: "What school sponsorship opportunities are available?",
-    a: "Programs vary by school but may include parent pickup and car rider tags, school calendar magnets, daily or take-home folders, health and wellness resources, and other useful school materials.",
+    a: "Programs vary by school but may include parent pick-up and car rider tags, school calendar magnets, daily or take-home folders, health and wellness resources, and other useful school materials.",
   },
   {
     q: "Can we promote school and sports physicals?",
@@ -206,7 +206,7 @@ const serviceSchema = {
   name: "Pediatrician Marketing Through School Sponsorships",
   serviceType: "Pediatrician marketing",
   description:
-    "School and community marketing for pediatricians and pediatric practices, including parent pickup tags, school calendar magnets, take-home folders, and health and wellness resources.",
+    "School and community marketing for pediatricians and pediatric practices, including parent pick-up tags, school calendar magnets, take-home folders, and health and wellness resources.",
   url: `https://smilereachmarketing.com${PAGE_PATH}`,
   areaServed: "US",
   audience: {
@@ -330,7 +330,7 @@ export default function PediatricianMarketingPage() {
           sponsorship opportunities.
         </p>
         <p>
-          From parent pickup tags and car rider tags to school calendar
+          From parent pick-up tags and car rider tags to school calendar
           magnets, take-home folders, and health and wellness resources, we
           help your practice get its name in front of parents in the
           communities you serve.
@@ -418,15 +418,15 @@ export default function PediatricianMarketingPage() {
 
       <MediaSplit
         background="gray"
-        eyebrow="Parent Pickup Tag Sponsorships"
-        heading="Put Your Practice in the Pickup Line"
+        eyebrow="Parent Pick-Up Tag Sponsorships"
+        heading="Put Your Practice in the Pick-Up Line"
         media={
           <div className="mx-auto max-w-90">
             <TagFlipImage
               front="/Images/vertical-tag-front.png"
               back="/Images/vertical-tag-back.png"
-              frontAlt="The sponsor side of a parent pickup tag, with the sponsor's branding and offer"
-              backAlt="The school side of a parent pickup tag, showing school branding and the pickup vehicle designation"
+              frontAlt="The sponsor side of a parent pick-up tag, with the sponsor's branding and offer"
+              backAlt="The school side of a parent pick-up tag, showing school branding and the pick-up vehicle designation"
               aspect="4 / 5"
               imageClassName="object-contain"
               bare
@@ -442,20 +442,20 @@ export default function PediatricianMarketingPage() {
           One of Smile Reach Marketing&apos;s most distinctive opportunities is
           the{" "}
           <Link href="/parent-pick-up-tags" className={inlineLink}>
-            parent pickup tag sponsorship program
+            parent pick-up tag sponsorship program
           </Link>
           .
         </p>
         <p>
-          Schools use pickup tags (sometimes called car rider tags or
+          Schools use pick-up tags (sometimes called car rider tags or
           dismissal tags) to help identify vehicles and students during
-          dismissal. School and pickup information appears on the front, while
+          dismissal. School and pick-up information appears on the front, while
           the sponsor message appears on the back.
         </p>
         <p>
           Now think about who&apos;s using those tags: parents and caregivers
           of local children. For a pediatric practice, it&apos;s hard to find a
-          more relevant audience. Pickup tag sponsorships help you build
+          more relevant audience. Pick-up tag sponsorships help you build
           familiarity with families throughout the school year while
           supporting something the school already needs.
         </p>

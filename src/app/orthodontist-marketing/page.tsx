@@ -59,13 +59,13 @@ const IMAGES = {
 export const metadata: Metadata = {
   title: "Orthodontic Marketing & School Advertising | Smile Reach Marketing",
   description:
-    "Grow your orthodontic practice with local school and community marketing. Reach families through pickup tags, calendar magnets, folders and school sponsorships.",
+    "Grow your orthodontic practice with local school and community marketing. Reach families through pick-up tags, calendar magnets, folders and school sponsorships.",
   alternates: { canonical: PAGE_PATH },
   openGraph: { images: [IMAGES.banner] },
 };
 
 const OPPORTUNITIES: CheckListItem[] = [
-  { label: "Parent pickup and car rider tags", icon: Car },
+  { label: "Parent pick-up and car rider tags", icon: Car },
   { label: "School calendar magnets", icon: CalendarDays },
   { label: "Daily and take-home folders", icon: FolderOpen },
   { label: "Other school and family resources", icon: Backpack },
@@ -150,7 +150,7 @@ const BENEFITS: Benefit[] = [
   {
     icon: Repeat,
     heading: "Create Repeated Visibility",
-    body: "Pickup tags, calendar magnets, folders, and other school materials can provide ongoing exposure rather than a single advertising impression.",
+    body: "Pick-up tags, calendar magnets, folders, and other school materials can provide ongoing exposure rather than a single advertising impression.",
   },
   {
     icon: Target,
@@ -172,7 +172,7 @@ const BENEFITS: Benefit[] = [
 const FAQS: FAQ[] = [
   {
     q: "How does school marketing work for orthodontists?",
-    a: "Smile Reach Marketing helps orthodontic practices connect with school sponsorship opportunities. Depending on the school and program, your practice may sponsor parent pickup tags, calendar magnets, folders, or other useful school materials.",
+    a: "Smile Reach Marketing helps orthodontic practices connect with school sponsorship opportunities. Depending on the school and program, your practice may sponsor parent pick-up tags, calendar magnets, folders, or other useful school materials.",
   },
   {
     q: "Why is school marketing a good fit for orthodontists?",
@@ -192,7 +192,7 @@ const FAQS: FAQ[] = [
   },
   {
     q: "What types of school sponsorship opportunities are available?",
-    a: "Opportunities vary by school and market but may include parent pickup and car rider tags, school calendar magnets, daily or take-home folders, and other useful school materials.",
+    a: "Opportunities vary by school and market but may include parent pick-up and car rider tags, school calendar magnets, daily or take-home folders, and other useful school materials.",
   },
   {
     q: "Can school marketing help a new orthodontic practice?",
@@ -210,7 +210,7 @@ const serviceSchema = {
   name: "Orthodontic Marketing Through School Sponsorships",
   serviceType: "Orthodontic marketing",
   description:
-    "School and community marketing for orthodontic practices, including parent pickup tags, school calendar magnets, and take-home folders.",
+    "School and community marketing for orthodontic practices, including parent pick-up tags, school calendar magnets, and take-home folders.",
   url: `https://smilereachmarketing.com${PAGE_PATH}`,
   areaServed: "US",
   audience: {
@@ -331,7 +331,7 @@ export default function OrthodontistMarketingPage() {
           put your practice in front of parents in the communities you serve.
         </p>
         <p>
-          From parent pickup tags and car rider tags to school calendar
+          From parent pick-up tags and car rider tags to school calendar
           magnets, take-home folders, and other useful school materials, we
           help orthodontic practices create meaningful visibility with local
           families.
@@ -481,16 +481,16 @@ export default function OrthodontistMarketingPage() {
       </MediaSplit>
 
       <MediaSplit
-        eyebrow="Parent Pickup Tag Sponsorships"
-        heading="Put Your Practice in the Pickup Line"
+        eyebrow="Parent Pick-Up Tag Sponsorships"
+        heading="Put Your Practice in the Pick-Up Line"
         reverse
         media={
           <div className="mx-auto max-w-90">
             <TagFlipImage
               front="/Images/vertical-tag-front.png"
               back="/Images/vertical-tag-back.png"
-              frontAlt="School pickup tag sponsorship for orthodontists: the sponsor side of an orthodontic practice's parent pickup tag"
-              backAlt="The school side of a parent pickup tag, showing school branding and the pickup vehicle designation"
+              frontAlt="School pick-up tag sponsorship for orthodontists: the sponsor side of an orthodontic practice's parent pick-up tag"
+              backAlt="The school side of a parent pick-up tag, showing school branding and the pick-up vehicle designation"
               aspect="4 / 5"
               imageClassName="object-contain"
               bare
@@ -506,14 +506,14 @@ export default function OrthodontistMarketingPage() {
           One of Smile Reach Marketing&apos;s most unique opportunities for
           orthodontists is the{" "}
           <Link href="/parent-pick-up-tags" className={inlineLink}>
-            parent pickup tag sponsorship program
+            parent pick-up tag sponsorship program
           </Link>
           .
         </p>
         <p>
-          Schools use pickup tags (sometimes called car rider tags or
+          Schools use pick-up tags (sometimes called car rider tags or
           dismissal tags) to help identify vehicles and students during
-          dismissal. The school information and pickup identification appear
+          dismissal. The school information and pick-up identification appear
           on the front, while the sponsor message appears on the back.
         </p>
         <p>
@@ -522,12 +522,12 @@ export default function OrthodontistMarketingPage() {
           practice, that&apos;s an unusually relevant audience.
         </p>
         <p>
-          Pickup tag sponsorships can help your practice build familiarity
+          Pick-up tag sponsorships can help your practice build familiarity
           with local families throughout the school year while supporting a
           practical resource the school already needs.
         </p>
         <p className="font-semibold text-navy">
-          Your next patient may already be in the pickup line.
+          Your next patient may already be in the pick-up line.
         </p>
       </MediaSplit>
 

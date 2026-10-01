@@ -55,13 +55,13 @@ const IMAGES = {
 export const metadata: Metadata = {
   title: "Urgent Care Marketing & School Advertising | Smile Reach Marketing",
   description:
-    "Urgent care marketing that reaches local families before they need you. Sponsor school pickup tags, calendar magnets, and folders across your service area.",
+    "Urgent care marketing that reaches local families before they need you. Sponsor school pick-up tags, calendar magnets, and folders across your service area.",
   alternates: { canonical: PAGE_PATH },
   openGraph: { images: [IMAGES.banner] },
 };
 
 const OPPORTUNITIES: CheckListItem[] = [
-  { label: "Parent pickup and car rider tags", icon: Car },
+  { label: "Parent pick-up and car rider tags", icon: Car },
   { label: "School calendar magnets", icon: CalendarDays },
   { label: "Daily and take-home folders", icon: FolderOpen },
   { label: "Health and wellness resources", icon: HeartPulse },
@@ -141,7 +141,7 @@ const BENEFITS: Benefit[] = [
   {
     icon: Repeat,
     heading: "Create Repeated Visibility",
-    body: "Pickup tags, calendar magnets, folders, and other school materials can provide ongoing exposure rather than a single advertising impression.",
+    body: "Pick-up tags, calendar magnets, folders, and other school materials can provide ongoing exposure rather than a single advertising impression.",
   },
   {
     icon: School,
@@ -163,7 +163,7 @@ const BENEFITS: Benefit[] = [
 const FAQS: FAQ[] = [
   {
     q: "How does school marketing work for urgent care centers?",
-    a: "Smile Reach Marketing connects urgent care centers with school sponsorship opportunities. Depending on the school and program, your center may sponsor parent pickup tags, calendar magnets, folders, health resources, or other useful school materials.",
+    a: "Smile Reach Marketing connects urgent care centers with school sponsorship opportunities. Depending on the school and program, your center may sponsor parent pick-up tags, calendar magnets, folders, health resources, or other useful school materials.",
   },
   {
     q: "Why is school marketing a good fit for urgent care?",
@@ -179,7 +179,7 @@ const FAQS: FAQ[] = [
   },
   {
     q: "What school sponsorship opportunities are available?",
-    a: "Programs vary by school but may include parent pickup and car rider tags, school calendar magnets, daily or take-home folders, health and wellness resources, and other useful school materials.",
+    a: "Programs vary by school but may include parent pick-up and car rider tags, school calendar magnets, daily or take-home folders, health and wellness resources, and other useful school materials.",
   },
   {
     q: "Can we promote school and sports physicals?",
@@ -197,7 +197,7 @@ const serviceSchema = {
   name: "Urgent Care Marketing Through School Sponsorships",
   serviceType: "Urgent care marketing",
   description:
-    "School and community marketing for urgent care centers, including parent pickup tags, school calendar magnets, and take-home folders.",
+    "School and community marketing for urgent care centers, including parent pick-up tags, school calendar magnets, and take-home folders.",
   url: `https://smilereachmarketing.com${PAGE_PATH}`,
   areaServed: "US",
   audience: {
@@ -322,7 +322,7 @@ export default function UrgentCareMarketingPage() {
           center is familiar to parents long before they need you.
         </p>
         <p>
-          From parent pickup tags and car rider tags to school calendar magnets
+          From parent pick-up tags and car rider tags to school calendar magnets
           and take-home folders, we put your name in front of the families who
           live in your service area.
         </p>
@@ -438,16 +438,16 @@ export default function UrgentCareMarketingPage() {
       </MediaSplit>
 
       <MediaSplit
-        eyebrow="Parent Pickup Tag Sponsorships"
-        heading="Put Your Center in the Pickup Line"
+        eyebrow="Parent Pick-Up Tag Sponsorships"
+        heading="Put Your Center in the Pick-Up Line"
         reverse
         media={
           <div className="mx-auto max-w-90">
             <TagFlipImage
               front="/Images/vertical-tag-front.png"
               back="/Images/vertical-tag-back.png"
-              frontAlt="The sponsor side of a parent pickup tag, with the sponsor's branding and offer"
-              backAlt="The school side of a parent pickup tag, showing school branding and the pickup vehicle designation"
+              frontAlt="The sponsor side of a parent pick-up tag, with the sponsor's branding and offer"
+              backAlt="The school side of a parent pick-up tag, showing school branding and the pick-up vehicle designation"
               aspect="4 / 5"
               imageClassName="object-contain"
               bare
@@ -463,20 +463,20 @@ export default function UrgentCareMarketingPage() {
           One of Smile Reach Marketing&apos;s most distinctive opportunities is
           the{" "}
           <Link href="/parent-pick-up-tags" className={inlineLink}>
-            parent pickup tag sponsorship program
+            parent pick-up tag sponsorship program
           </Link>
           .
         </p>
         <p>
-          Schools use pickup tags (sometimes called car rider tags or
+          Schools use pick-up tags (sometimes called car rider tags or
           dismissal tags) to help identify vehicles and students during
-          dismissal. School and pickup information appears on the front, while
+          dismissal. School and pick-up information appears on the front, while
           the sponsor message appears on the back.
         </p>
         <p>
           Now think about who&apos;s using those tags: parents and caregivers
           of local children. For an urgent care center, that&apos;s an
-          extremely relevant audience. A pickup tag keeps your name in the
+          extremely relevant audience. A pick-up tag keeps your name in the
           family car all school year, which is often exactly where a parent is
           sitting when they decide where to go.
         </p>
@@ -505,7 +505,7 @@ export default function UrgentCareMarketingPage() {
           day of school or the first practice of the season.
         </p>
         <p>
-          And because pickup tags and calendar magnets stay in use all year,
+          And because pick-up tags and calendar magnets stay in use all year,
           your name is still there long after August: through cold and flu
           season, winter sports, and the spring season that follows.
         </p>

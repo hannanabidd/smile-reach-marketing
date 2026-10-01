@@ -54,13 +54,13 @@ const IMAGES: { banner: string | null; card: string | null; cta: string | null }
 export const metadata: Metadata = {
   title: "Insurance Agency Marketing & School Advertising | Smile Reach Marketing",
   description:
-    "Reach local families with school advertising and community marketing for insurance agents. Sponsor pickup tags, calendar magnets, folders and more with Smile Reach Marketing.",
+    "Reach local families with school advertising and community marketing for insurance agents. Sponsor pick-up tags, calendar magnets, folders and more with Smile Reach Marketing.",
   alternates: { canonical: PAGE_PATH },
   ...(IMAGES.banner ? { openGraph: { images: [IMAGES.banner] } } : {}),
 };
 
 const OPPORTUNITIES: CheckListItem[] = [
-  { label: "Parent pickup and car rider tags", icon: Car },
+  { label: "Parent pick-up and car rider tags", icon: Car },
   { label: "School calendar magnets", icon: CalendarDays },
   { label: "Daily or take-home folders", icon: FolderOpen },
   { label: "Other school and family resources", icon: Backpack },
@@ -164,7 +164,7 @@ const BENEFITS: Benefit[] = [
 const FAQS: FAQ[] = [
   {
     q: "How does school advertising work for insurance agents?",
-    a: "Smile Reach Marketing connects insurance agencies with school-based sponsorship opportunities. Depending on the program, an insurance agency may sponsor parent pickup tags, calendar magnets, folders, or other useful school materials that provide brand visibility with local families.",
+    a: "Smile Reach Marketing connects insurance agencies with school-based sponsorship opportunities. Depending on the program, an insurance agency may sponsor parent pick-up tags, calendar magnets, folders, or other useful school materials that provide brand visibility with local families.",
   },
   {
     q: "Can I target specific schools or communities?",
@@ -180,7 +180,7 @@ const FAQS: FAQ[] = [
   },
   {
     q: "What school marketing products are available?",
-    a: "Opportunities vary by school, but programs may include parent pickup/car rider tags, school calendar magnets, daily or take-home folders, and other custom school materials.",
+    a: "Opportunities vary by school, but programs may include parent pick-up/car rider tags, school calendar magnets, daily or take-home folders, and other custom school materials.",
   },
   {
     q: "Is this only for auto insurance agents?",
@@ -198,7 +198,7 @@ const serviceSchema = {
   name: "Insurance Agency Marketing Through School Sponsorships",
   serviceType: "Insurance agency marketing",
   description:
-    "School advertising and community marketing for insurance agents and agencies, including parent pickup tags, school calendar magnets, and take-home folders.",
+    "School advertising and community marketing for insurance agents and agencies, including parent pick-up tags, school calendar magnets, and take-home folders.",
   url: `https://smilereachmarketing.com${PAGE_PATH}`,
   areaServed: "US",
   audience: {
@@ -311,7 +311,7 @@ export default function InsuranceMarketingPage() {
         </p>
         <p>
           Instead of competing for another digital impression, your agency can
-          become part of something families actually use: from school pickup
+          become part of something families actually use: from school pick-up
           tags hanging in vehicles to calendar magnets, folders, and other
           school materials.
         </p>
@@ -408,15 +408,15 @@ export default function InsuranceMarketingPage() {
 
       <MediaSplit
         background="gray"
-        eyebrow="Parent Pickup Tag Sponsorships"
-        heading="Put Your Brand in the School Pickup Line"
+        eyebrow="Parent Pick-Up Tag Sponsorships"
+        heading="Put Your Brand in the School Pick-Up Line"
         media={
           <div className="mx-auto max-w-90">
             <TagFlipImage
               front="/Images/vertical-tag-front.png"
               back="/Images/vertical-tag-back.png"
-              frontAlt="School car rider tag sponsorship: the sponsor side of a parent pickup tag"
-              backAlt="The school side of a parent pickup tag, showing school branding and the pickup vehicle designation"
+              frontAlt="School car rider tag sponsorship: the sponsor side of a parent pick-up tag"
+              backAlt="The school side of a parent pick-up tag, showing school branding and the pick-up vehicle designation"
               aspect="4 / 5"
               imageClassName="object-contain"
               bare
@@ -431,17 +431,17 @@ export default function InsuranceMarketingPage() {
         <p>
           One of our most distinctive marketing opportunities is our{" "}
           <strong className="text-navy">
-            school parent pickup tag sponsorship program.
+            school parent pick-up tag sponsorship program.
           </strong>
         </p>
         <p>
-          Pickup tags (sometimes called car rider tags, dismissal tags, or
-          rearview mirror pickup tags) are used by schools to help identify
+          Pick-up tags (sometimes called car rider tags, dismissal tags, or
+          rearview mirror pick-up tags) are used by schools to help identify
           vehicles and students during dismissal. That creates a unique
           opportunity for an insurance agency.
         </p>
         <p>
-          The school information and pickup identification appear on the front,
+          The school information and pick-up identification appear on the front,
           while the sponsor message appears on the back. The result is a
           practical school item that can keep your insurance agency visible
           with local parents throughout the school year.
@@ -450,7 +450,7 @@ export default function InsuranceMarketingPage() {
           For insurance agents who depend on local households for auto, home,
           renters, life, and other insurance needs,{" "}
           <Link href="/parent-pick-up-tags" className={inlineLink}>
-            pickup tag sponsorships
+            pick-up tag sponsorships
           </Link>{" "}
           are a highly targeted way to build community awareness.
         </p>

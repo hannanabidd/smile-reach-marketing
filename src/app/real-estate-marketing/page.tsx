@@ -45,7 +45,7 @@ const AVAILABILITY_HREF = "/contact?intent=practice&help=availability#contact-fo
 export const metadata: Metadata = {
   title: "Real Estate Marketing & Local School Advertising | Smile Reach Marketing",
   description:
-    "Build your real estate brand in local communities through school marketing, pickup tags, calendar magnets, folders and sponsorship opportunities.",
+    "Build your real estate brand in local communities through school marketing, pick-up tags, calendar magnets, folders and sponsorship opportunities.",
   alternates: { canonical: PAGE_PATH },
   openGraph: {
     images: ["/Images/real-estate-banner.jpg"],
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
 };
 
 const OPPORTUNITIES: CheckListItem[] = [
-  { label: "Parent pickup and car rider tags", icon: Car },
+  { label: "Parent pick-up and car rider tags", icon: Car },
   { label: "School calendar magnets", icon: CalendarDays },
   { label: "Daily and take-home folders", icon: FolderOpen },
   { label: "Other school and family resources", icon: Backpack },
@@ -114,7 +114,7 @@ const TARGETING_OPTIONS = [
 ];
 
 const BUSINESS_TYPES = [
-  "Real estate teams",
+  "Real Estate teams",
   "Independent brokerages",
   "Multi-office brokerages",
   "New real estate offices",
@@ -129,7 +129,7 @@ const EXISTING_CHANNELS = [
   "Direct mail",
   "Social media",
   "Google Ads",
-  "Real estate SEO",
+  "Real Estate SEO",
   "Email marketing",
   "Online lead generation",
   "Community events",
@@ -167,7 +167,7 @@ const BENEFITS: Benefit[] = [
   {
     icon: Repeat,
     heading: "Create Repeated Visibility",
-    body: "Pickup tags, calendar magnets, folders, and other school materials can provide ongoing exposure rather than a single advertising impression.",
+    body: "Pick-up tags, calendar magnets, folders, and other school materials can provide ongoing exposure rather than a single advertising impression.",
   },
   {
     icon: Target,
@@ -189,11 +189,11 @@ const BENEFITS: Benefit[] = [
 const FAQS: FAQ[] = [
   {
     q: "How does school marketing work for real estate agents?",
-    a: "Smile Reach Marketing helps real estate professionals connect with school sponsorship opportunities. Depending on the school and program, an agent, team, or brokerage may sponsor parent pickup tags, calendar magnets, folders, or other useful school materials.",
+    a: "Smile Reach Marketing helps real estate professionals connect with school sponsorship opportunities. Depending on the school and program, an agent, team, or brokerage may sponsor parent pick-up tags, calendar magnets, folders, or other useful school materials.",
   },
   {
     q: "Why is school marketing a good fit for real estate agents?",
-    a: "Real estate is highly geographic. Schools bring together families from surrounding neighborhoods and communities, giving real estate professionals another way to build local brand recognition within the areas they want to serve.",
+    a: "Real Estate is highly geographic. Schools bring together families from surrounding neighborhoods and communities, giving real estate professionals another way to build local brand recognition within the areas they want to serve.",
   },
   {
     q: "Can I target schools within my real estate farm?",
@@ -213,7 +213,7 @@ const FAQS: FAQ[] = [
   },
   {
     q: "What school sponsorship opportunities are available?",
-    a: "Programs vary by school but may include parent pickup/car rider tags, school calendar magnets, daily or take-home folders, and other useful school resources.",
+    a: "Programs vary by school but may include parent pick-up/car rider tags, school calendar magnets, daily or take-home folders, and other useful school resources.",
   },
   {
     q: "Can I sponsor more than one school?",
@@ -225,14 +225,14 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   name: "Real Estate Marketing Through School Sponsorships",
-  serviceType: "Real estate marketing",
+  serviceType: "Real Estate marketing",
   description:
-    "School marketing and sponsorship opportunities for real estate agents, teams, and brokerages, including parent pickup tags, school calendar magnets, and take-home folders.",
+    "School marketing and sponsorship opportunities for real estate agents, teams, and brokerages, including parent pick-up tags, school calendar magnets, and take-home folders.",
   url: `https://smilereachmarketing.com${PAGE_PATH}`,
   areaServed: "US",
   audience: {
     "@type": "Audience",
-    audienceType: "Real estate agents, teams, and brokerages",
+    audienceType: "Real Estate agents, teams, and brokerages",
   },
   provider: {
     "@type": "Organization",
@@ -282,7 +282,7 @@ export default function RealEstateMarketingPage() {
 
       <ValueBanner />
 
-      <Prose background="white" heading="Real estate is local">
+      <Prose background="white" heading="Real Estate Is Local">
         <p>
           The homeowners, buyers, and future sellers you want to reach live in
           specific neighborhoods, communities, and school boundaries.
@@ -293,7 +293,7 @@ export default function RealEstateMarketingPage() {
           sponsorship opportunities.
         </p>
         <p>
-          From parent pickup tags and car rider tags to school calendar magnets,
+          From parent pick-up tags and car rider tags to school calendar magnets,
           take-home folders, and other useful school materials, we help real
           estate professionals put their name in front of families in the
           communities that matter most.
@@ -313,7 +313,7 @@ export default function RealEstateMarketingPage() {
           </>
         }
       >
-        <p>Real estate agents have plenty of ways to advertise.</p>
+        <p>Real Estate agents have plenty of ways to advertise.</p>
         <p>
           Social media. Postcards. Farming. Digital ads. Billboards. Open
           houses. Email marketing.
@@ -374,7 +374,7 @@ export default function RealEstateMarketingPage() {
         }
       >
         <p>
-          Real estate marketing has always been about location. Agents farm
+          Real Estate marketing has always been about location. Agents farm
           neighborhoods. They target ZIP codes. They advertise within
           subdivisions. They build relationships within communities.
         </p>
@@ -410,15 +410,15 @@ export default function RealEstateMarketingPage() {
       />
 
       <MediaSplit
-        eyebrow="Parent Pickup Tag Sponsorships"
-        heading="Put Your Name in the Pickup Line"
+        eyebrow="Parent Pick-Up Tag Sponsorships"
+        heading="Put Your Name in the Pick-Up Line"
         media={
           <div className="mx-auto max-w-90">
             <TagFlipImage
               front="/Images/vertical-tag-front.png"
               back="/Images/vertical-tag-back.png"
-              frontAlt="Real estate agent school pickup tag sponsorship: the sponsor side of a parent pickup tag"
-              backAlt="The school side of a parent pickup tag, showing school branding and the pickup vehicle designation"
+              frontAlt="Real Estate agent school pick-up tag sponsorship: the sponsor side of a parent pick-up tag"
+              backAlt="The school side of a parent pick-up tag, showing school branding and the pick-up vehicle designation"
               aspect="4 / 5"
               imageClassName="object-contain"
               bare
@@ -432,12 +432,12 @@ export default function RealEstateMarketingPage() {
       >
         <p>
           One of Smile Reach Marketing&apos;s most unique opportunities for real
-          estate professionals is the parent pickup tag sponsorship program.
+          Estate professionals is the parent pick-up tag sponsorship program.
         </p>
         <p>
-          Schools use pickup tags (sometimes called car rider tags or dismissal
+          Schools use pick-up tags (sometimes called car rider tags or dismissal
           tags) to help identify vehicles and students during dismissal. School
-          and pickup information appears on the front, while the sponsor
+          and pick-up information appears on the front, while the sponsor
           message appears on the back.
         </p>
         <p>
@@ -450,7 +450,7 @@ export default function RealEstateMarketingPage() {
         <p>
           That makes{" "}
           <Link href="/parent-pick-up-tags" className={inlineLink}>
-            pickup tag sponsorships
+            pick-up tag sponsorships
           </Link>{" "}
           an interesting addition to a neighborhood farming or local
           brand-awareness strategy.
@@ -479,7 +479,7 @@ export default function RealEstateMarketingPage() {
         buttons={[{ label: "See Calendar Magnets", href: "/products/calendar-magnets" }]}
       >
         <p>
-          Real estate agents work hard to get their names inside the homes of
+          Real Estate agents work hard to get their names inside the homes of
           potential sellers. School calendar magnets provide a useful way to do
           exactly that.
         </p>
@@ -495,7 +495,7 @@ export default function RealEstateMarketingPage() {
           six months from now? Next spring? Two years from now?
         </p>
         <p>
-          Real estate marketing is often about being remembered when that
+          Real Estate marketing is often about being remembered when that
           moment finally arrives.{" "}
           <Link href="/products/calendar-magnets" className={inlineLink}>
             Learn more about school calendar magnet marketing
@@ -526,7 +526,7 @@ export default function RealEstateMarketingPage() {
           announcements, forms, and other school information.
         </p>
         <p>
-          Real estate agents, teams, and brokerages can sponsor these useful
+          Real Estate agents, teams, and brokerages can sponsor these useful
           resources and gain visibility among families within the school
           community.
         </p>
@@ -540,7 +540,7 @@ export default function RealEstateMarketingPage() {
         heading="Build Recognition Before Someone Decides to Move"
         intro={
           <p>
-            Real estate marketing has a timing problem. You don&apos;t know
+            Real Estate marketing has a timing problem. You don&apos;t know
             exactly when someone is going to sell their home. A homeowner who
             sees your marketing today may not list for another year.
           </p>
@@ -705,7 +705,7 @@ export default function RealEstateMarketingPage() {
           strategy.
         </p>
         <p>
-          Real estate has always been about relationships and local
+          Real Estate has always been about relationships and local
           recognition. Smile Reach Marketing helps you build both by connecting
           your business with the schools at the center of the communities you
           want to serve.

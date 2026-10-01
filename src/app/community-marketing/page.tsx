@@ -278,7 +278,7 @@ export default function CommunityMarketingPage() {
 
       <FinalCTA
         heading="See what community marketing could do near you"
-        body="Tell us where you practise and we will show you which local schools are looking for a sponsor, and what it would take to be the one they find."
+        body="Tell us where you practice and we will show you which local schools are looking for a sponsor, and what it would take to be the one they find."
       />
     </>
   );

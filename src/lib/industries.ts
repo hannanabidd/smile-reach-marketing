@@ -77,4 +77,14 @@ export const INDUSTRIES: Industry[] = [
     oneLiner:
       "School marketing for urgent care centers. Become the name families know before they need care.",
   },
+  {
+    slug: "lawyer-marketing",
+    name: "Law Firm Marketing",
+    href: "/lawyer-marketing",
+    image: "/Images/law-firm-card.jpg",
+    imageAlt: "A smiling couple meeting with their lawyer to go over paperwork",
+    imagePosition: "50% 30%",
+    oneLiner:
+      "School marketing for lawyers and law firms. Become the name local families know before they need legal help.",
+  },
 ];

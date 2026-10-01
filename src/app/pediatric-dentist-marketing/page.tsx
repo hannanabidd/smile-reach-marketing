@@ -55,13 +55,13 @@ const IMAGES: { banner: string | null; card: string | null; cta: string | null }
 export const metadata: Metadata = {
   title: "Pediatric Dental Marketing & School Advertising | Smile Reach Marketing",
   description:
-    "Reach local parents with pediatric dental marketing through schools. Sponsor pickup tags, calendar magnets, folders and more with Smile Reach Marketing.",
+    "Reach local parents with pediatric dental marketing through schools. Sponsor pick-up tags, calendar magnets, folders and more with Smile Reach Marketing.",
   alternates: { canonical: PAGE_PATH },
   ...(IMAGES.banner ? { openGraph: { images: [IMAGES.banner] } } : {}),
 };
 
 const OPPORTUNITIES: CheckListItem[] = [
-  { label: "Parent pickup and car rider tags", icon: Car },
+  { label: "Parent pick-up and car rider tags", icon: Car },
   { label: "School calendar magnets", icon: CalendarDays },
   { label: "Daily and take-home folders", icon: FolderOpen },
   { label: "Dental health and brushing resources", icon: Brush },
@@ -150,7 +150,7 @@ const BENEFITS: Benefit[] = [
   {
     icon: Repeat,
     heading: "Create Repeated Visibility",
-    body: "Products such as pickup tags, calendars, and folders can remain in use for extended periods rather than disappearing after a single impression.",
+    body: "Products such as pick-up tags, calendars, and folders can remain in use for extended periods rather than disappearing after a single impression.",
   },
   {
     icon: Sparkles,
@@ -167,7 +167,7 @@ const BENEFITS: Benefit[] = [
 const FAQS: FAQ[] = [
   {
     q: "How does school marketing work for pediatric dentists?",
-    a: "Smile Reach Marketing helps pediatric dental practices connect with school sponsorship opportunities. Depending on the school and program, your practice may sponsor parent pickup tags, calendar magnets, folders, dental health resources, or other useful materials distributed to students and families.",
+    a: "Smile Reach Marketing helps pediatric dental practices connect with school sponsorship opportunities. Depending on the school and program, your practice may sponsor parent pick-up tags, calendar magnets, folders, dental health resources, or other useful materials distributed to students and families.",
   },
   {
     q: "Why is school advertising a good fit for pediatric dentists?",
@@ -183,7 +183,7 @@ const FAQS: FAQ[] = [
   },
   {
     q: "What types of school sponsorships are available?",
-    a: "Opportunities vary by school and market but may include parent pickup/car rider tags, calendar magnets, take-home folders, dental health resources, and other school materials.",
+    a: "Opportunities vary by school and market but may include parent pick-up/car rider tags, calendar magnets, take-home folders, dental health resources, and other school materials.",
   },
   {
     q: "Can we promote a new pediatric dental office?",
@@ -201,7 +201,7 @@ const serviceSchema = {
   name: "Pediatric Dental Marketing Through School Sponsorships",
   serviceType: "Pediatric dental marketing",
   description:
-    "School marketing and sponsorship opportunities for pediatric dental practices, including parent pickup tags, school calendar magnets, take-home folders, and dental health resources.",
+    "School marketing and sponsorship opportunities for pediatric dental practices, including parent pick-up tags, school calendar magnets, take-home folders, and dental health resources.",
   url: `https://smilereachmarketing.com${PAGE_PATH}`,
   areaServed: "US",
   audience: {
@@ -328,7 +328,7 @@ export default function PediatricDentistMarketingPage() {
           opportunities.
         </p>
         <p>
-          From parent pickup tags and car rider tags to school calendar
+          From parent pick-up tags and car rider tags to school calendar
           magnets, take-home folders, and other school materials, we help
           pediatric dental practices get their name in front of parents while
           supporting the schools in their communities.
@@ -417,15 +417,15 @@ export default function PediatricDentistMarketingPage() {
 
       <MediaSplit
         background="gray"
-        eyebrow="Parent Pickup Tag Sponsorships"
-        heading="Be Seen in the Pickup Line All School Year"
+        eyebrow="Parent Pick-Up Tag Sponsorships"
+        heading="Be Seen in the Pick-Up Line All School Year"
         media={
           <div className="mx-auto max-w-90">
             <TagFlipImage
               front="/Images/vertical-tag-front.png"
               back="/Images/vertical-tag-back.png"
-              frontAlt="School pickup tag sponsorship for pediatric dentists: the sponsor side of a parent pickup tag"
-              backAlt="The school side of a parent pickup tag, showing school branding and the pickup vehicle designation"
+              frontAlt="School pick-up tag sponsorship for pediatric dentists: the sponsor side of a parent pick-up tag"
+              backAlt="The school side of a parent pick-up tag, showing school branding and the pick-up vehicle designation"
               aspect="4 / 5"
               imageClassName="object-contain"
               bare
@@ -439,11 +439,11 @@ export default function PediatricDentistMarketingPage() {
       >
         <p>
           One of our most unique pediatric dental marketing opportunities is
-          the school parent pickup tag sponsorship.
+          the school parent pick-up tag sponsorship.
         </p>
         <p>
-          Schools use pickup tags (also known as car rider tags or dismissal
-          tags) to help manage student pickup. Smile Reach Marketing turns this
+          Schools use pick-up tags (also known as car rider tags or dismissal
+          tags) to help manage student pick-up. Smile Reach Marketing turns this
           everyday school resource into a valuable community sponsorship
           opportunity. School and dismissal information appears on the front,
           while the sponsor message appears on the back.
@@ -456,7 +456,7 @@ export default function PediatricDentistMarketingPage() {
         </p>
         <p>
           <Link href="/parent-pick-up-tags" className={inlineLink}>
-            Learn more about parent pickup tag sponsorships
+            Learn more about parent pick-up tag sponsorships
           </Link>
           .
         </p>
@@ -661,7 +661,7 @@ export default function PediatricDentistMarketingPage() {
 
       <FinalCTA
         heading="Ready to Reach More Local Families?"
-        body="Your next patients may already be sitting in the pickup line. Whether you want to reach one school or build awareness across an entire community, we'll help explore the opportunities available. Support local schools. Reach local parents. Grow your practice."
+        body="Your next patients may already be sitting in the pick-up line. Whether you want to reach one school or build awareness across an entire community, we'll help explore the opportunities available. Support local schools. Reach local parents. Grow your practice."
         backgroundImage={IMAGES.cta}
         buttons={[
           {

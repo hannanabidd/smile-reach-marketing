@@ -19,7 +19,7 @@ export default function IndustriesPage() {
     <>
       <PageHero
         eyebrow="Industries We Serve"
-        heading="Community marketing for businesses that serve local families"
+        heading="Community Marketing for Businesses That Serve Local Families"
         sub="If your customers are the families in the pick-up line, a school sponsorship puts your name in front of them every school day."
         buttons={[
           { label: "Schedule a Consultation", href: SCHEDULE_CONSULTATION_URL, variant: "primary" },
@@ -29,18 +29,18 @@ export default function IndustriesPage() {
 
       <ValueBanner />
 
-      <IndustriesGrid heading="Find your industry" industries={INDUSTRIES} />
+      <IndustriesGrid heading="Find Your Industry" industries={INDUSTRIES} />
 
       <Prose
         background="sky"
-        heading="Why school sponsorship works across industries"
+        heading="Why School Sponsorship Works Across Industries"
         centered
         button={{ label: "See how Parent Pick-Up Tags work", href: "/parent-pick-up-tags" }}
       >
         <p>
           The families around a school are local, settled, and making long,
           trust-driven decisions. Whether that decision is a home, a policy,
-          or a pediatrician, the business they already recognise has the head
+          or a pediatrician, the business they already recognize has the head
           start.
         </p>
         <p>
@@ -51,7 +51,7 @@ export default function IndustriesPage() {
       </Prose>
 
       <FinalCTA
-        heading="Don't see your industry?"
+        heading="Don't See Your Industry?"
         body="If your customers are local families, the model likely fits. Tell us about your business and the schools you want to reach."
         buttons={[
           { label: "Schedule a Consultation", href: SCHEDULE_CONSULTATION_URL, variant: "primary" },

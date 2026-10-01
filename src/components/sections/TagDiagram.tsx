@@ -9,7 +9,7 @@ const FRONT = [
   { label: "Student or family number", note: "Largest element. Legible from 15 feet." },
   { label: '"Authorized Pick-Up Vehicle"', note: "Standard wording. Editable." },
   { label: "Blank identification area", note: "Handwritten student name, grade, teacher." },
-  { label: "Grade or teacher colour band", note: "Optional. Some schools sort the line by grade." },
+  { label: "Grade or teacher color band", note: "Optional. Some schools sort the line by grade." },
 ];
 
 const REVERSE = [
