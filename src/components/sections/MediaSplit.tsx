@@ -8,9 +8,11 @@ const BG_CLASSES = {
   white: "bg-white",
   sky: "bg-sky",
   gray: "bg-gray",
+  /** Dark band; copy and the default button switch to their light variants. */
+  navy: "bg-navy",
 };
 
-type ButtonSpec = { label: string; shortLabel?: string; href: string; variant?: "primary" | "secondary" | "ghost" };
+type ButtonSpec = { label: string; shortLabel?: string; href: string; variant?: "primary" | "secondary" | "ghost" | "ghost-light" };
 
 export default function MediaSplit({
   eyebrow,
@@ -35,13 +37,17 @@ export default function MediaSplit({
   footer?: ReactNode;
   id?: string;
 }) {
+  const dark = background === "navy";
+
   return (
     <section id={id} className={`scroll-mt-22 ${BG_CLASSES[background]} py-16 sm:py-24`}>
       <Container className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
         <Reveal className={reverse ? "lg:order-2" : ""}>
-          {eyebrow ? <Eyebrow>{eyebrow}</Eyebrow> : null}
-          <h2 className="text-display-2 font-bold text-navy">{heading}</h2>
-          <div className="text-body mt-6 space-y-4 text-charcoal/90">{children}</div>
+          {eyebrow ? <Eyebrow light={dark}>{eyebrow}</Eyebrow> : null}
+          <h2 className={`text-display-2 font-bold ${dark ? "!text-white" : "text-navy"}`}>{heading}</h2>
+          <div className={`text-body mt-6 space-y-4 ${dark ? "text-white" : "text-charcoal/90"}`}>
+            {children}
+          </div>
           {buttons?.length ? (
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               {buttons.map((btn) => (
@@ -49,7 +55,7 @@ export default function MediaSplit({
                   key={btn.label}
                   href={btn.href}
                   shortLabel={btn.shortLabel}
-                  variant={btn.variant ?? "ghost"}
+                  variant={btn.variant ?? (dark ? "ghost-light" : "ghost")}
                 >
                   {btn.label}
                 </Button>
