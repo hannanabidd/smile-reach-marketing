@@ -26,6 +26,9 @@ export const INDUSTRIES: Industry[] = [
     slug: "insurance-marketing",
     name: "Insurance Marketing",
     href: "/insurance-marketing",
+    image: "/Images/insurance-marketing-card.jpg",
+    imageAlt: "A mother and daughter walking hand in hand through a school parking lot",
+    imagePosition: "50% 45%",
     oneLiner:
       "School advertising for insurance agents and agencies. Stay visible with the local families your agency serves.",
   },
@@ -33,7 +36,20 @@ export const INDUSTRIES: Industry[] = [
     slug: "pediatric-dentist-marketing",
     name: "Pediatric Dental Marketing",
     href: "/pediatric-dentist-marketing",
+    image: "/Images/pediatric-dentist-card.jpg",
+    imageAlt: "A smiling schoolgirl with a backpack holding a book in a school library",
+    imagePosition: "50% 40%",
     oneLiner:
       "School marketing for pediatric dental practices. Reach the parents in the communities around your practice.",
+  },
+  {
+    slug: "orthodontist-marketing",
+    name: "Orthodontic Marketing",
+    href: "/orthodontist-marketing",
+    image: "/Images/orthodontist-card.jpg",
+    imageAlt: "A smiling mother and her son hugging in a school playground",
+    imagePosition: "50% 30%",
+    oneLiner:
+      "School marketing for orthodontic practices. Reach elementary-school families at the age the AAO recommends a first check-up.",
   },
 ];

@@ -12,6 +12,7 @@ const staticRoutes = [
   "/real-estate-marketing",
   "/insurance-marketing",
   "/pediatric-dentist-marketing",
+  "/orthodontist-marketing",
   "/about",
   "/resources",
   "/contact",

@@ -55,3 +55,43 @@ export function sequenceCss(
 
   return `@media (prefers-reduced-motion: no-preference) {\n${keyframes}\n}`;
 }
+
+/**
+ * CSS for rotating items that take turns: with N items, each one is shown for
+ * its own 1/N slot of the cycle, then hands over to the next. Works for any
+ * number of items. Same reduced-motion handling as sequenceCss: the items keep
+ * their resting styles, so give the ones that should stay hidden `opacity-0`.
+ */
+export function rotationCss(
+  names: string[],
+  {
+    slotSeconds,
+    enterFrom = "none",
+    exitTo = "none",
+  }: {
+    slotSeconds: number;
+    /** Transform as each item arrives, e.g. "translateY(0.4em)". */
+    enterFrom?: string;
+    /** Transform as each item leaves. */
+    exitTo?: string;
+  },
+): string {
+  const count = names.length;
+  const fade = 0.12 / count;
+  const keyframes = names
+    .map((name, index) => {
+      const start = index / count;
+      const end = (index + 1) / count;
+      return [
+        `@keyframes ${name} {`,
+        `0%, ${pct(start)} { opacity: 0; transform: ${enterFrom}; }`,
+        `${pct(start + fade)}, ${pct(end - fade)} { opacity: 1; transform: none; }`,
+        `${pct(end)}, 100% { opacity: 0; transform: ${exitTo}; }`,
+        `}`,
+        `.${name} { animation: ${name} ${count * slotSeconds}s ease-out infinite; }`,
+      ].join("\n");
+    })
+    .join("\n");
+
+  return `@media (prefers-reduced-motion: no-preference) {\n${keyframes}\n}`;
+}

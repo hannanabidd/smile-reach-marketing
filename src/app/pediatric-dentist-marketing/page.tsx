@@ -593,7 +593,7 @@ export default function PediatricDentistMarketingPage() {
             <div className="relative aspect-square w-full overflow-hidden rounded-card">
               <Image
                 src={IMAGES.card}
-                alt="Pediatric dentist community marketing with local schools"
+                alt="A smiling schoolgirl with a backpack holding a book in a school library"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 className="object-cover"

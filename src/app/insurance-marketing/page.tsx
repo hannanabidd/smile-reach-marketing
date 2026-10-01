@@ -366,7 +366,7 @@ export default function InsuranceMarketingPage() {
             <div className="relative aspect-square w-full overflow-hidden rounded-card">
               <Image
                 src={IMAGES.card}
-                alt="Insurance agency community marketing with local schools"
+                alt="A mother and daughter walking hand in hand through a school parking lot"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 className="object-cover"

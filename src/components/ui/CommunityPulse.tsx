@@ -1,4 +1,4 @@
-import { House, School } from "lucide-react";
+import { House, School, type LucideIcon } from "lucide-react";
 import { type CSSProperties } from "react";
 import PauseToggle from "@/components/ui/PauseToggle";
 
@@ -31,16 +31,21 @@ function polar(radius: number, angle: number): CSSProperties {
 }
 
 /**
- * A school at the centre of its community: a wave radiates from the school and
- * each ring of homes lights up as it arrives. Decorative; the copy beside it
- * carries the meaning.
+ * Something at the centre of its community: a wave radiates from the centre
+ * and each ring of surrounding icons lights up as it arrives. By default a
+ * school with homes around it; pass other icons for, e.g., a practice with the
+ * schools around it. Decorative; the copy beside it carries the meaning.
  */
 export default function CommunityPulse({
   centerLabel,
   pauseLabel,
+  centerIcon: CenterIcon = School,
+  nodeIcon: NodeIcon = House,
 }: {
   centerLabel?: string;
   pauseLabel: string;
+  centerIcon?: LucideIcon;
+  nodeIcon?: LucideIcon;
 }) {
   return (
     // Capped when stacked under the copy (below lg) so it doesn't swamp tablets
@@ -59,13 +64,13 @@ export default function CommunityPulse({
           />
         ))}
 
-        {/* The wave from the school */}
+        {/* The wave from the centre */}
         <span
           className="pausable-anim absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-blue bg-blue/10 opacity-0 motion-safe:animate-community-pulse"
           style={{ width: `${PULSE_RADIUS * 2}%`, height: `${PULSE_RADIUS * 2}%` }}
         />
 
-        {/* Homes */}
+        {/* Surrounding icons */}
         {RINGS.flatMap((ring) =>
           ring.angles.map((angle) => (
             <span
@@ -74,23 +79,23 @@ export default function CommunityPulse({
               style={polar(ring.radius, angle)}
             >
               <span className="absolute inset-0 flex items-center justify-center rounded-full border border-blue/40 bg-sky text-blue">
-                <House size={18} strokeWidth={1.5} />
+                <NodeIcon size={18} strokeWidth={1.5} />
               </span>
               {/* Lit state, faded in as the wave passes */}
               <span
                 className="pausable-anim absolute inset-0 flex items-center justify-center rounded-full bg-navy text-white opacity-0 motion-safe:animate-community-light"
                 style={{ animationDelay: arrivalDelay(ring.radius) }}
               >
-                <House size={18} strokeWidth={1.5} />
+                <NodeIcon size={18} strokeWidth={1.5} />
               </span>
             </span>
           )),
         )}
 
-        {/* The school */}
+        {/* Centre */}
         <span className="absolute top-1/2 left-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center">
           <span className="pausable-anim flex h-16 w-16 items-center justify-center rounded-full bg-navy text-white motion-safe:animate-community-beat sm:h-22 sm:w-22">
-            <School size={30} strokeWidth={1.5} />
+            <CenterIcon size={30} strokeWidth={1.5} />
           </span>
         </span>
         {centerLabel ? (

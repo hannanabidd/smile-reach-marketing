@@ -157,13 +157,10 @@ body {
   }
 }
 
-/* Insurance page loops: AdFeedVsTag (feed scroll, tag swing) and MomentRotator.
-   The rotator keyframes assume five moments: each gets one 20% slot of the cycle. */
+/* AdFeedVsTag loops: feed scroll and tag swing. */
 @theme {
   --animate-feed-scroll: feed-scroll 18s linear infinite;
   --animate-tag-swing: tag-swing 3.6s ease-in-out infinite;
-  --animate-rotator-text: rotator-text 12.5s ease-out infinite;
-  --animate-rotator-slot: rotator-slot 12.5s ease-out infinite;
 
   @keyframes feed-scroll {
     to {
@@ -178,37 +175,6 @@ body {
     }
     50% {
       transform: rotate(4deg);
-    }
-  }
-
-  @keyframes rotator-text {
-    0% {
-      opacity: 0;
-      transform: translateY(0.4em);
-    }
-    3%,
-    17% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    20%,
-    100% {
-      opacity: 0;
-      transform: translateY(-0.4em);
-    }
-  }
-
-  @keyframes rotator-slot {
-    0% {
-      opacity: 0;
-    }
-    3%,
-    17% {
-      opacity: 1;
-    }
-    20%,
-    100% {
-      opacity: 0;
     }
   }
 }

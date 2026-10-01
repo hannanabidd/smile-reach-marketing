@@ -1,5 +1,6 @@
 import { Check, type LucideIcon } from "lucide-react";
 import { type CSSProperties, type ReactNode } from "react";
+import { rotationCss } from "@/lib/sequence";
 import Container from "@/components/ui/Container";
 import Eyebrow from "@/components/ui/Eyebrow";
 import Reveal from "@/components/motion/Reveal";
@@ -12,17 +13,11 @@ export type RotatorMoment = {
   icon: LucideIcon;
 };
 
-// Each moment holds the spotlight for one slot. The keyframes in globals.css
-// (rotator-text, rotator-slot) give each moment 20% of the cycle, so this
-// section expects exactly five moments.
+// Each moment holds the spotlight for one slot; works for any number of moments.
 const SLOT_SECONDS = 2.5;
 
-function slot(index: number, count: number): CSSProperties {
-  return {
-    animationDuration: `${SLOT_SECONDS * count}s`,
-    animationDelay: `${SLOT_SECONDS * index}s`,
-  };
-}
+// Phrases longer than this get room for a third line on phones.
+const LONG_PHRASE = 28;
 
 /**
  * A sentence whose middle keeps changing: "When a family [needs a quote /
@@ -51,8 +46,23 @@ export default function MomentRotator({
   moments: RotatorMoment[];
   outro?: ReactNode;
 }) {
+  const css = [
+    rotationCss(
+      moments.map((_, index) => `rotator-text-${index}`),
+      { slotSeconds: SLOT_SECONDS, enterFrom: "translateY(0.4em)", exitTo: "translateY(-0.4em)" },
+    ),
+    rotationCss(
+      moments.map((_, index) => `rotator-tile-${index}`),
+      { slotSeconds: SLOT_SECONDS },
+    ),
+  ].join("\n");
+  const longest = Math.max(...moments.map((moment) => moment.phrase.length));
+  const phraseHeight =
+    longest > LONG_PHRASE ? "h-[3.6em] sm:h-[2.5em] lg:h-[1.3em]" : "h-[2.5em] lg:h-[1.3em]";
+
   return (
     <section className="pausable overflow-hidden bg-navy py-16 text-white sm:py-24">
+      <style>{css}</style>
       <Container>
         <Reveal className="mx-auto max-w-190 text-center">
           {eyebrow ? <Eyebrow light>{eyebrow}</Eyebrow> : null}
@@ -65,15 +75,14 @@ export default function MomentRotator({
           <p className="sr-only">{fullSentence}</p>
           <div aria-hidden>
             <p className="text-body-lg text-white">{sentenceStart}</p>
-            <div className="text-display-2 relative my-3 h-[2.5em] font-bold text-white sm:h-[1.3em]">
+            <div className={`text-display-2 relative my-3 font-bold text-white ${phraseHeight}`}>
               {moments.map((moment, index) => (
                 <span
                   key={moment.phrase}
-                  className={`pausable-anim absolute inset-0 flex items-center justify-center motion-safe:opacity-0 motion-safe:animate-rotator-text ${
+                  className={`rotator-text-${index} pausable-anim absolute inset-0 flex items-center justify-center ${
                     // Reduced motion: just show the first moment, no rotation
-                    index === 0 ? "" : "motion-reduce:hidden"
+                    index === 0 ? "" : "opacity-0"
                   }`}
-                  style={slot(index, moments.length)}
                 >
                   <span className="border-b-4 border-white/40 pb-1">{moment.phrase},</span>
                 </span>
@@ -84,22 +93,24 @@ export default function MomentRotator({
         </div>
 
         {/* Tiles that light up with the sentence */}
-        <ul className="mt-12 flex flex-wrap justify-center gap-3 sm:gap-4">
+        <ul
+          className="mt-12 flex flex-wrap justify-center gap-3 sm:gap-4"
+          // One row on desktop, however many moments there are
+          style={{ "--n": moments.length } as CSSProperties}
+        >
           {moments.map((moment, index) => (
             <li
               key={moment.label}
-              className="relative flex w-[calc(50%-6px)] flex-col items-center gap-3 rounded-[12px] border border-white/25 bg-white/10 px-3 py-5 text-center sm:w-[calc(33.333%-11px)] lg:w-[calc(20%-13px)]"
+              className="relative flex w-[calc(50%-6px)] flex-col items-center gap-3 rounded-[12px] border border-white/25 bg-white/10 px-3 py-5 text-center sm:w-[calc(33.333%-11px)] lg:w-[calc((100%_-_(var(--n)_-_1)_*_16px)_/_var(--n))]"
             >
               {/* Active state */}
               <span
                 aria-hidden
-                className="pausable-anim absolute inset-0 rounded-[12px] border border-white bg-white/15 opacity-0 motion-safe:animate-rotator-slot"
-                style={slot(index, moments.length)}
+                className={`rotator-tile-${index} pausable-anim absolute inset-0 rounded-[12px] border border-white bg-white/15 opacity-0`}
               />
               <span
                 aria-hidden
-                className="pausable-anim absolute -top-2.5 -right-2.5 flex h-7 w-7 items-center justify-center rounded-full bg-white text-navy opacity-0 motion-safe:animate-rotator-slot"
-                style={slot(index, moments.length)}
+                className={`rotator-tile-${index} pausable-anim absolute -top-2.5 -right-2.5 flex h-7 w-7 items-center justify-center rounded-full bg-white text-navy opacity-0`}
               >
                 <Check size={16} strokeWidth={2.5} />
               </span>
