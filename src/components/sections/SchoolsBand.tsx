@@ -6,7 +6,7 @@ export default function SchoolsBand({
   heading = "Are you a school?",
   body = "Parent Pick-Up Tags cost your school nothing. A local sponsor covers design, printing, and delivery, and you receive a dismissal system that is faster and safer than the one you are running now. No budget line, no purchase order, no catch.",
   buttonLabel = "Request Tags For Your School",
-  buttonHref = "/for-schools",
+  buttonHref = "/parent-pick-up-tags#request-tags",
 }: {
   heading?: string;
   body?: string;

@@ -4,14 +4,18 @@ import Reveal from "@/components/motion/Reveal";
 import ContactForm from "@/components/sections/ContactForm";
 import { SITE_PHONE, SITE_PHONE_HREF, SITE_EMAIL, SITE_EMAIL_HREF } from "@/lib/site";
 
-export default function SchoolContactSection() {
+export default function SchoolContactSection({
+  id = "contact-form",
+  heading = "Request tags for your school",
+}: {
+  id?: string;
+  heading?: string;
+} = {}) {
   return (
-    <section id="contact-form" className="scroll-mt-22 bg-white py-16 sm:py-24">
-      <Container className="grid grid-cols-1 gap-12 lg:grid-cols-[40%_60%]">
+    <section id={id} className="scroll-mt-22 bg-white py-16 sm:py-24">
+      <Container className="grid grid-cols-1 gap-12 lg:grid-cols-[2fr_3fr]">
         <Reveal>
-          <h2 className="text-display-2 font-bold text-navy">
-            Request tags for your school
-          </h2>
+          <h2 className="text-display-2 font-bold text-navy">{heading}</h2>
           <p className="text-body mt-4 text-charcoal/90">
             Tell us a little about your school and we will take it from
             there. A real person reads every request, matches you with a

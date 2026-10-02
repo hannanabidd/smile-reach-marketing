@@ -59,9 +59,9 @@ export default function ContactPage() {
 
       <SchoolsBand
         heading="Are you a school?"
-        body='Parent Pick-Up Tags cost your school nothing. A local sponsor covers design, printing, and delivery. Choose "School looking for tags" in the form above, or visit our schools page to see how it works.'
+        body='Parent Pick-Up Tags cost your school nothing. A local sponsor covers design, printing, and delivery. Choose "A School" in the form above, or visit our schools page to see how it works.'
         buttonLabel="How It Works For Schools"
-        buttonHref="/for-schools"
+        buttonHref="/parent-pick-up-tags"
       />
 
       <SchedulerSection />

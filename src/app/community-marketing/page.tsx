@@ -64,7 +64,7 @@ export default function CommunityMarketingPage() {
         sub="Reaching local families is harder and more expensive than it used to be. Traditional advertising is crowded, online ad costs keep climbing, and every channel you can buy, your competitor can buy at the same auction on the same day. School sponsorship works differently. By supporting something a school already needs, your practice earns visibility inside the community instead of competing for attention against it."
         buttons={[
           { label: "Schedule a Consultation", href: SCHEDULE_CONSULTATION_URL, variant: "primary" },
-          { label: "See How Sponsorship Works", href: "/parent-pick-up-tags", variant: "ghost" },
+          { label: "See Parent Pick-Up Tags", href: "/parent-pick-up-tags", variant: "ghost" },
         ]}
       />
 
@@ -180,7 +180,7 @@ export default function CommunityMarketingPage() {
         </Container>
       </section>
 
-      <Prose id="who-we-serve" background="white" heading="Is community marketing right for your practice?" button={{ label: "See who sponsors tags", href: "/parent-pick-up-tags#industries" }}>
+      <Prose id="who-we-serve" background="white" heading="Is community marketing right for your practice?" button={{ label: "See industries we serve", href: "/industries" }}>
         <p>
           This strategy is not for everyone, and it is worth being honest
           about the fit. School sponsorship works best when three things

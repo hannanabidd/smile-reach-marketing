@@ -45,7 +45,7 @@ export default function AboutPage() {
       {/* <Prose
         background="white"
         heading="What we specialise in"
-        button={{ label: "See how sponsorship works", href: "/parent-pick-up-tags" }}
+        button={{ label: "See how sponsorship works", href: "/community-marketing" }}
       >
         <p>
           Our primary focus is Parent Pick-Up Tag sponsorships and

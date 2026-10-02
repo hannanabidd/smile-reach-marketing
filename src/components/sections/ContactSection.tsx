@@ -7,7 +7,7 @@ import { SITE_PHONE, SITE_PHONE_HREF, SITE_EMAIL, SITE_EMAIL_HREF } from "@/lib/
 export default function ContactSection() {
   return (
     <section id="contact-form" className="scroll-mt-22 bg-white py-16 sm:py-24">
-      <Container className="grid grid-cols-1 gap-12 lg:grid-cols-[40%_60%]">
+      <Container className="grid grid-cols-1 gap-12 lg:grid-cols-[2fr_3fr]">
         <Reveal>
           <h2 className="text-display-2 font-bold text-navy">Talk to our team</h2>
           <p className="text-body mt-4 text-charcoal/90">

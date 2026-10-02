@@ -33,6 +33,13 @@ const nextConfig: NextConfig = {
         destination: "/products",
         permanent: true,
       },
+      // /parent-pick-up-tags is now the single school-facing page for pick-up /
+      // car rider tags; this stops the two pages competing for the same searches.
+      {
+        source: "/for-schools",
+        destination: "/parent-pick-up-tags",
+        permanent: true,
+      },
     ];
   },
 };

@@ -20,10 +20,13 @@ export default function PageHero({
   image,
   variant = "split",
   breadcrumb,
+  narrowHeading = false,
+  strongScrim = false,
 }: {
   /** Optional on the banner when a breadcrumb takes its place. */
   eyebrow?: string;
-  heading: string;
+  /** A string, or markup when part of it must not wrap (e.g. "Pick-Up"). */
+  heading: ReactNode;
   sub?: string;
   body?: ReactNode;
   buttons?: ButtonSpec[];
@@ -31,6 +34,10 @@ export default function PageHero({
   variant?: "split" | "banner";
   /** Banner only: shown in place of the eyebrow. */
   breadcrumb?: ReactNode;
+  /** Banner only: wrap the headline sooner, to keep it clear of a busy photo. */
+  narrowHeading?: boolean;
+  /** Banner only: darker fade behind the copy, for photos whose subject sits mid-frame. */
+  strongScrim?: boolean;
 }) {
   if (variant === "banner") {
     return (
@@ -61,6 +68,16 @@ export default function PageHero({
           aria-hidden
           className="absolute inset-0 bg-linear-to-r from-navy/50 via-navy/10 to-transparent"
         />
+        {strongScrim ? (
+          <>
+            <div
+              aria-hidden
+              className="absolute inset-y-0 left-0 w-full bg-linear-to-r from-navy/85 from-30% via-navy/70 via-50% to-transparent lg:w-[70%]"
+            />
+            {/* Below xl the copy runs over the photo's centre, so dim it evenly */}
+            <div aria-hidden className="absolute inset-0 bg-navy/60 xl:hidden" />
+          </>
+        ) : null}
 
         <Container className="relative z-10 pt-32 pb-16 sm:pb-24">
           <Reveal className="max-w-180">
@@ -69,7 +86,9 @@ export default function PageHero({
             ) : eyebrow ? (
               <p className="text-eyebrow mb-3 text-white">{eyebrow}</p>
             ) : null}
-            <h1 className="text-display-1 font-extrabold !text-white">{heading}</h1>
+            <h1 className={`text-display-1 font-extrabold !text-white ${narrowHeading ? "max-w-150" : ""}`}>
+              {heading}
+            </h1>
             {sub ? (
               <p className="text-body-lg mt-6 max-w-140 text-white">{sub}</p>
             ) : null}

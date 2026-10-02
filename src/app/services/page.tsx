@@ -67,7 +67,7 @@ export default function ServicesPage() {
         background="sky"
         heading="Why pair this with a school sponsorship?"
         centered
-        button={{ label: "See how sponsorship works", href: "/parent-pick-up-tags" }}
+        button={{ label: "See how sponsorship works", href: "/community-marketing" }}
       >
         <p>
           Digital marketing gets you found by families actively searching.
@@ -88,7 +88,7 @@ export default function ServicesPage() {
         body="Tell us what you have running now and where you want to grow. We will show you what makes sense to add, and what does not."
         buttons={[
           { label: "Schedule a Consultation", href: SCHEDULE_CONSULTATION_URL, variant: "primary" },
-          { label: "See School Sponsorship", href: "/parent-pick-up-tags", variant: "ghost-light" },
+          { label: "See School Sponsorship", href: "/community-marketing", variant: "ghost-light" },
         ]}
       />
     </>

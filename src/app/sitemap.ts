@@ -19,7 +19,6 @@ const staticRoutes = [
   "/about",
   "/resources",
   "/contact",
-  "/for-schools",
   "/services",
 ];
 

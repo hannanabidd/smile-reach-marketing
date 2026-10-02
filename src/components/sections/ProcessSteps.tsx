@@ -48,18 +48,20 @@ export default function ProcessSteps({
   heading = "Five steps. We handle four of them.",
   steps = DEFAULT_STEPS,
   background = "gray",
-  subCta = { label: "See What Sponsorship Includes", href: "/parent-pick-up-tags" },
+  subCta = { label: "See What Sponsorship Includes", href: "/community-marketing" },
+  id,
 }: {
   eyebrow?: string;
   heading?: string;
   steps?: Step[];
   background?: keyof typeof BG_CLASSES;
   subCta?: { label: string; href: string } | null;
+  id?: string;
 }) {
   const columnsClass = steps.length >= 5 ? "lg:grid-cols-5" : "lg:grid-cols-4";
 
   return (
-    <section className={`${BG_CLASSES[background]} py-16 sm:py-24`}>
+    <section id={id} className={`scroll-mt-22 ${BG_CLASSES[background]} py-16 sm:py-24`}>
       <Container>
         <Reveal className="text-center">
           {eyebrow ? <Eyebrow>{eyebrow}</Eyebrow> : null}
