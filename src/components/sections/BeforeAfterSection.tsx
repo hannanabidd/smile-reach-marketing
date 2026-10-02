@@ -2,6 +2,7 @@ import { X, Check } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Eyebrow from "@/components/ui/Eyebrow";
 import Reveal from "@/components/motion/Reveal";
+import DismissalRace from "@/components/ui/DismissalRace";
 
 const BEFORE = [
   "Staff try to recognize a face through a windshield, in the rain, from ten feet away.",
@@ -28,7 +29,16 @@ export default function BeforeAfterSection() {
           </h2>
         </Reveal>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <Reveal className="mx-auto mt-12 max-w-200">
+          <DismissalRace
+            without={{ label: "Without tags", carLabels: ["?", "?", "?", "?", "?"] }}
+            withTags={{ label: "With pick-up tags", carLabels: ["046", "129", "352", "087", "214"] }}
+            clearLabel="Line clear"
+            caption="Same line, same cars. With tags, students are called before the car reaches the curb."
+          />
+        </Reveal>
+
+        <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-2">
           <Reveal className="rounded-card border border-sky bg-gray p-8">
             <p className="text-eyebrow text-charcoal/60">Before Parent Pick-Up Tags</p>
             <ul className="mt-4 space-y-3">

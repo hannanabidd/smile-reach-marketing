@@ -3,6 +3,7 @@ import Eyebrow from "@/components/ui/Eyebrow";
 import StatChip from "@/components/ui/StatChip";
 import TagFlipImage from "@/components/ui/TagFlipImage";
 import Reveal from "@/components/motion/Reveal";
+import SchoolWeekTracker from "@/components/ui/SchoolWeekTracker";
 
 export default function TagExplainer() {
   return (
@@ -47,6 +48,18 @@ export default function TagExplainer() {
             <StatChip value="1" label="Sponsor per school" />
             <StatChip value="2x" label="Daily impressions" />
           </div>
+        </Reveal>
+      </Container>
+
+      <Container className="mt-12 lg:mt-16">
+        <Reveal>
+          <SchoolWeekTracker
+            eyebrow="One family, one week"
+            counterLabel="times your name is in front of them"
+            days={["Mon", "Tue", "Wed", "Thu", "Fri"]}
+            slotLabels={["Drop-off", "Pick-up"]}
+            footer="And again every week, August through June."
+          />
         </Reveal>
       </Container>
     </section>
