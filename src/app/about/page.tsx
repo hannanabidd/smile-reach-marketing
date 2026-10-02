@@ -1,18 +1,40 @@
 import type { Metadata } from "next";
+import { School, Users, Store } from "lucide-react";
 import ValueBanner from "@/components/layout/ValueBanner";
 import PageHero from "@/components/sections/PageHero";
 import OurStory from "@/components/sections/OurStory";
 import Prose from "@/components/sections/Prose";
 import WorkWithUs from "@/components/sections/WorkWithUs";
 import TrustedBy from "@/components/sections/TrustedBy";
+import SchoolsBand from "@/components/sections/SchoolsBand";
+import PartnershipLoop, { type LoopStep } from "@/components/ui/PartnershipLoop";
 import FinalCTA from "@/components/sections/FinalCTA";
 
 export const metadata: Metadata = {
   title: "About Us | School Sponsorship Specialists | Smile Reach",
   description:
-    "Smile Reach Marketing connects schools that need resources with local practices that want to reach families. Our mission, our story, how we work.",
+    "Smile Reach Marketing connects schools that need resources with local businesses that want to reach families. Our mission, our story, how we work.",
   alternates: { canonical: "/about" },
 };
+
+// In the order the partnership flows: business funds, school hands out, family remembers.
+const MISSION: [LoopStep, LoopStep, LoopStep] = [
+  {
+    icon: Store,
+    who: "The local business",
+    gets: "Gets to be the reason it happened, and to be known for it.",
+  },
+  {
+    icon: School,
+    who: "The school",
+    gets: "Receives a valuable resource at no cost.",
+  },
+  {
+    icon: Users,
+    who: "The family",
+    gets: "Gets something genuinely useful, with no strings attached.",
+  },
+];
 
 export default function AboutPage() {
   return (
@@ -20,20 +42,25 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About Us"
         heading="Helping businesses reach families through schools"
-        body="Smile Reach Marketing was created to connect two groups who need each other and rarely meet: schools that need resources they cannot fund, and local practices that want to reach the families those schools serve."
+        body="Smile Reach Marketing was created to connect two groups who need each other and rarely meet: schools that need resources they cannot fund, and local businesses that want to reach the families those schools serve."
       />
       <ValueBanner />
       <OurStory />
 
-      <Prose background="sky" heading="Our mission" centered maxWidth={720}>
-        <p>To create partnerships that work in three directions at once.</p>
-        <p>
-          A school receives a valuable resource at no cost. A family
-          gets something genuinely useful, at no cost, with no strings. A
-          local practice gets to be the reason it happened, and gets to be
-          known for it.
+      <Prose background="sky" heading="Our mission" centered maxWidth={960}>
+        <p className="text-body-lg">
+          To create partnerships that work in three directions at once.
         </p>
-        <p>
+        <div className="py-6">
+          <PartnershipLoop
+            steps={MISSION}
+            links={["Funds the materials", "Hands them out"]}
+            returnLabel="Families remember who helped"
+            finale="All three, at once."
+            summary="The local business funds the materials, the school hands them out to families, and families remember the business that helped."
+          />
+        </div>
+        <p className="mx-auto max-w-180">
           Most advertising is a transfer of attention from one party to
           another. This is not that. Nobody in the pick-up line is worse off
           because your name is on the tag, and the school is measurably
@@ -44,7 +71,7 @@ export default function AboutPage() {
 
       {/* <Prose
         background="white"
-        heading="What we specialise in"
+        heading="What we specialize in"
         button={{ label: "See how sponsorship works", href: "/community-marketing" }}
       >
         <p>
@@ -91,9 +118,11 @@ export default function AboutPage() {
 
       {/* <TrustedBy background="sky" /> */}
 
+      <SchoolsBand />
+
       <FinalCTA
         heading="Let's find your schools"
-        body="Tell us where you practise and we will show you which schools near you are looking for a sponsor."
+        body="Tell us where your business is and we will show you which schools near you are looking for a sponsor."
       />
     </>
   );

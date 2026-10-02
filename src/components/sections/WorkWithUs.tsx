@@ -7,12 +7,12 @@ const POINTS = [
   {
     icon: CheckCircle,
     heading: "A proven program",
-    body: "Tags are not an experiment. Schools have run them for years, and they run them because they work.",
+    body: "Pick-up tags are not an experiment. Schools have used them for years because they make dismissal safer and faster, and our programs cost schools nothing.",
   },
   {
     icon: Users,
     heading: "Family-focused expertise",
-    body: "We only market to families, through schools. It is the one thing we do.",
+    body: "School and community marketing is our focus: reaching local families through the schools they are already part of.",
   },
   {
     icon: BadgeCheck,
@@ -22,7 +22,7 @@ const POINTS = [
   {
     icon: PackageCheck,
     heading: "Full-service production",
-    body: "We handle design, printing, and delivery ourselves, so your team does not have to manage a vendor.",
+    body: "We handle design, printing, and delivery, so neither your team nor the school has to manage a vendor.",
   },
 ];
 

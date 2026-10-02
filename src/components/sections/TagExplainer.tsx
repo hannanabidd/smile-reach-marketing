@@ -7,7 +7,7 @@ import Reveal from "@/components/motion/Reveal";
 export default function TagExplainer() {
   return (
     <section className="bg-sky py-16 sm:py-24">
-      <Container className="grid items-center gap-12 lg:grid-cols-[45%_55%]">
+      <Container className="grid items-center gap-12 lg:grid-cols-[9fr_11fr]">
         <Reveal>
           <TagFlipImage
             front="/Images/vertical-tag-front.png"

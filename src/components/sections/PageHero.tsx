@@ -120,7 +120,7 @@ export default function PageHero({
   if (image) {
     return (
       <section className="bg-white pt-16 pb-16 sm:pt-24 sm:pb-20">
-        <Container className="grid items-center gap-12 lg:grid-cols-[55%_45%]">
+        <Container className="grid items-center gap-12 lg:grid-cols-[11fr_9fr]">
           <Reveal>
             {eyebrow ? <Eyebrow>{eyebrow}</Eyebrow> : null}
             <h1 className="text-display-1 font-extrabold text-navy">{heading}</h1>

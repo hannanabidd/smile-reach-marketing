@@ -6,7 +6,7 @@ import Reveal from "@/components/motion/Reveal";
 export default function WhyUs() {
   return (
     <section className="bg-sky py-16 sm:py-24">
-      <Container className="grid items-center gap-12 lg:grid-cols-[55%_45%]">
+      <Container className="grid items-center gap-12 lg:grid-cols-[11fr_9fr]">
         <Reveal>
           <h2 className="text-display-2 font-bold text-navy">
             We are not another dental marketing agency
