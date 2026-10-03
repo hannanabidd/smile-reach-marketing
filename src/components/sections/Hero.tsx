@@ -61,9 +61,10 @@ export default function Hero() {
 
       <Container className="relative z-10 pt-32 pb-16 sm:pb-24">
         <motion.div
-          initial={reduceMotion ? undefined : { opacity: 0, y: 28 }}
-          animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          // Same props on server and client; reduced motion only zeroes the duration
+          initial={{ opacity: 0, y: 28 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: reduceMotion ? 0 : 0.6, ease: "easeOut" }}
           className="max-w-180"
         >
           <Eyebrow light>School Sponsorship Marketing</Eyebrow>
@@ -96,16 +97,15 @@ export default function Hero() {
         </motion.div>
       </Container>
 
-      {!reduceMotion ? (
-        <motion.div
-          aria-hidden
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 text-white/70"
-        >
-          <ChevronDown size={28} strokeWidth={1.5} />
-        </motion.div>
-      ) : null}
+      {/* Always rendered so server and client markup match; hidden by CSS under reduced motion */}
+      <motion.div
+        aria-hidden
+        animate={{ y: [0, 8, 0] }}
+        transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 text-white/70 motion-reduce:hidden"
+      >
+        <ChevronDown size={28} strokeWidth={1.5} />
+      </motion.div>
     </section>
   );
 }

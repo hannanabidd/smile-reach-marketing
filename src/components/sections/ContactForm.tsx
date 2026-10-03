@@ -402,9 +402,12 @@ export default function ContactForm({
 
       <motion.div
         key={intent}
-        initial={reduceMotion ? undefined : { opacity: 0, y: 8 }}
-        animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-        transition={{ duration: 0.2 }}
+        // Same props on server and client (the server can't know the motion
+        // preference); reduced motion only zeroes the duration. Branching here
+        // left the form stuck at opacity 0 after hydration.
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: reduceMotion ? 0 : 0.2 }}
         className="mt-6"
       >
         {intent === "practice" ? (

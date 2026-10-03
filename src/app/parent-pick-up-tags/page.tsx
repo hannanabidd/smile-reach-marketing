@@ -24,11 +24,12 @@ import Prose from "@/components/sections/Prose";
 import MediaSplit from "@/components/sections/MediaSplit";
 import ProcessSteps, { type Step } from "@/components/sections/ProcessSteps";
 import BenefitGrid, { type Benefit } from "@/components/sections/BenefitGrid";
-import FAQAccordion, { type FAQ } from "@/components/sections/FAQAccordion";
+import FAQAccordion from "@/components/sections/FAQAccordion";
 import SchoolContactSection from "@/components/sections/SchoolContactSection";
 import CheckList, { type CheckListItem } from "@/components/ui/CheckList";
 import TagFlipImage from "@/components/ui/TagFlipImage";
 import CarLineCaller from "@/components/ui/CarLineCaller";
+import { TAGS_PAGE_FAQS } from "@/lib/faqs";
 import WindshieldCheck, { type CheckStep } from "@/components/ui/WindshieldCheck";
 
 const REQUEST_ID = "request-tags";
@@ -170,57 +171,6 @@ const PROGRAM_PROMISES: Benefit[] = [
     icon: CalendarRange,
     heading: "Ready for the first day",
     body: "Request early and most schools have tags in hand before the school year starts.",
-  },
-];
-
-const FAQS: FAQ[] = [
-  {
-    q: "What are parent pick-up tags?",
-    a: "Parent pick-up tags are hang tags that families display from their rearview mirror in the school pick-up line. Each tag shows your school's name and a number or student name large enough for staff to read through the windshield, so they can identify authorized vehicles and call students forward quickly. They're also called car rider tags, carpool tags, and school dismissal tags.",
-  },
-  {
-    q: "Are the pick-up tags really free for our school?",
-    a: "Yes. A local business sponsor covers the full cost of design, printing, and delivery. Your school is never billed for tags.",
-  },
-  {
-    q: "Why would a business pay for our tags?",
-    a: "Local businesses, often family-focused practices, sponsor tags as a way to support the schools in their community. In return, their message appears on the back of the tag. Your school gets the tags at no cost.",
-  },
-  {
-    q: "Does accepting a sponsor mean our school endorses the business?",
-    a: "No. Tags carry standard wording that separates sponsorship from endorsement. Public schools can't endorse a commercial business, and the tag design reflects that.",
-  },
-  {
-    q: "Do we approve the sponsor and the design?",
-    a: "Yes. We confirm the sponsor match with your office, and your office reviews the tag artwork before anything goes to print.",
-  },
-  {
-    q: "Can the car rider tags be numbered?",
-    a: "Yes. Tags can be numbered so staff can call cars forward by number. We'll work with your office on a numbering approach that fits the way your school runs dismissal.",
-  },
-  {
-    q: "Can families get more than one tag?",
-    a: "Yes. Families with a second car, a grandparent who helps with pick-up, or a carpool can get extra tags with the same number.",
-  },
-  {
-    q: "What does our office need to provide?",
-    a: "Your school name, your colors or logo if you have one, and an approximate count of car rider families. We build the design around what you give us.",
-  },
-  {
-    q: "How long does it take to get tags?",
-    a: "Most schools go from first contact to tags in hand within a few weeks, depending on the sponsor's timeline and your district's approval process.",
-  },
-  {
-    q: "We already have a car rider tag system. Can you still help?",
-    a: "Yes. We can redesign your existing system with sponsor funding, or work alongside what you have now. Tell us what you're using and we'll work around it.",
-  },
-  {
-    q: "Can we request tags in the middle of the school year?",
-    a: "Yes. Most programs launch before the school year starts, but a mid-year start works too, as long as a sponsor is available.",
-  },
-  {
-    q: "Who can request tags for a school?",
-    a: "Anyone involved in running dismissal can start the request: principals, office staff, transportation and dismissal coordinators, PTA or PTO members, and district staff. We'll confirm the details with the school before anything is printed.",
   },
 ];
 
@@ -448,9 +398,10 @@ export default function ParentPickUpTagsPage() {
 
       <FAQAccordion
         heading="Frequently Asked Questions About School Pick-Up Tags"
-        faqs={FAQS}
+        faqs={TAGS_PAGE_FAQS}
         background="sky"
         footnote="Have a question this doesn't cover? Ask us in the request form below and we'll get you an answer."
+        moreLink={{ label: "See all school pick-up tag FAQs", href: "/faq#for-schools" }}
       />
 
       <SchoolContactSection id={REQUEST_ID} heading="Request Free Pick-Up Tags for Your School" />

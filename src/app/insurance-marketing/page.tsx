@@ -606,7 +606,7 @@ export default function InsuranceMarketingPage() {
         </p>
       </Prose>
 
-      <FAQAccordion heading="Frequently Asked Questions" faqs={FAQS} footnote={null} background="sky" />
+      <FAQAccordion heading="Frequently Asked Questions" faqs={FAQS} footnote={null} moreLink={{ label: "See all sponsorship FAQs", href: "/faq#for-businesses" }} background="sky" />
 
       <FinalCTA
         heading="Put Your Insurance Agency in Front of More Local Families"

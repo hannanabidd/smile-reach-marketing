@@ -723,7 +723,7 @@ export default function RealEstateMarketingPage() {
         </p>
       </Prose>
 
-      <FAQAccordion heading="Frequently Asked Questions" faqs={FAQS} footnote={null} />
+      <FAQAccordion heading="Frequently Asked Questions" faqs={FAQS} footnote={null} moreLink={{ label: "See all sponsorship FAQs", href: "/faq#for-businesses" }} />
 
       <FinalCTA
         heading="Ready to Build Your Name in More Local Communities?"

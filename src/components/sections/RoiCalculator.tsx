@@ -60,9 +60,9 @@ export default function RoiCalculator() {
             <AnimatePresence mode="wait" initial={false}>
               <motion.span
                 key={breakEven}
-                initial={reduceMotion ? undefined : { opacity: 0, y: 4 }}
-                animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-                transition={{ duration: 0.2 }}
+                initial={{ opacity: 0, y: 4 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: reduceMotion ? 0 : 0.2 }}
                 className="inline-block text-[20px] font-extrabold text-gold"
               >
                 {breakEven}

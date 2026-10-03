@@ -16,6 +16,7 @@ const NAV_ITEMS = [
   { label: "Industries We Serve", href: "/industries" },
   { label: "About", href: "/about" },
   { label: "Resources", href: "/resources" },
+  { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
 ];
 

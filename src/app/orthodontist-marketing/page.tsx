@@ -707,7 +707,7 @@ export default function OrthodontistMarketingPage() {
         </p>
       </Prose>
 
-      <FAQAccordion heading="Frequently Asked Questions" faqs={FAQS} footnote={null} background="sky" />
+      <FAQAccordion heading="Frequently Asked Questions" faqs={FAQS} footnote={null} moreLink={{ label: "See all sponsorship FAQs", href: "/faq#for-businesses" }} background="sky" />
 
       <FinalCTA
         heading="Ready to Reach More Local Families?"

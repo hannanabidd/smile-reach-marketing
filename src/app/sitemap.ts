@@ -18,6 +18,7 @@ const staticRoutes = [
   "/lawyer-marketing",
   "/about",
   "/resources",
+  "/faq",
   "/contact",
   "/services",
 ];
