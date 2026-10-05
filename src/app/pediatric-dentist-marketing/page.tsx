@@ -422,9 +422,9 @@ export default function PediatricDentistMarketingPage() {
         media={
           <div className="mx-auto max-w-90">
             <TagFlipImage
-              front="/Images/vertical-tag-front.png"
+              front="/Images/pediatric-dental-tag-front.png"
               back="/Images/vertical-tag-back.png"
-              frontAlt="School pick-up tag sponsorship for pediatric dentists: the sponsor side of a parent pick-up tag"
+              frontAlt="Sponsor side of a parent pick-up tag for a pediatric dental practice, with a smiling child in a dental chair and the practice's phone number"
               backAlt="The school side of a parent pick-up tag, showing school branding and the pick-up vehicle designation"
               aspect="4 / 5"
               imageClassName="object-contain"

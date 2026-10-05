@@ -423,9 +423,9 @@ export default function PediatricianMarketingPage() {
         media={
           <div className="mx-auto max-w-90">
             <TagFlipImage
-              front="/Images/vertical-tag-front.png"
+              front="/Images/pediatric-tag-front.png"
               back="/Images/vertical-tag-back.png"
-              frontAlt="The sponsor side of a parent pick-up tag, with the sponsor's branding and offer"
+              frontAlt="Sponsor side of a parent pick-up tag for a pediatric care practice, listing common conditions it treats"
               backAlt="The school side of a parent pick-up tag, showing school branding and the pick-up vehicle designation"
               aspect="4 / 5"
               imageClassName="object-contain"

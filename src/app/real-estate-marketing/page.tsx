@@ -415,9 +415,9 @@ export default function RealEstateMarketingPage() {
         media={
           <div className="mx-auto max-w-90">
             <TagFlipImage
-              front="/Images/vertical-tag-front.png"
+              front="/Images/real-estate-tag-front.png"
               back="/Images/vertical-tag-back.png"
-              frontAlt="Real Estate agent school pick-up tag sponsorship: the sponsor side of a parent pick-up tag"
+              frontAlt="Sponsor side of a parent pick-up tag for a local real estate agency, with a photo of a family home and the agency's phone number"
               backAlt="The school side of a parent pick-up tag, showing school branding and the pick-up vehicle designation"
               aspect="4 / 5"
               imageClassName="object-contain"

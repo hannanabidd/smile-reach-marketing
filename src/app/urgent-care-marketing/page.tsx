@@ -444,9 +444,9 @@ export default function UrgentCareMarketingPage() {
         media={
           <div className="mx-auto max-w-90">
             <TagFlipImage
-              front="/Images/vertical-tag-front.png"
+              front="/Images/urgent-care-tag-front.png"
               back="/Images/vertical-tag-back.png"
-              frontAlt="The sponsor side of a parent pick-up tag, with the sponsor's branding and offer"
+              frontAlt="Sponsor side of a parent pick-up tag for a walk-in urgent care center, with a doctor and the center's phone number"
               backAlt="The school side of a parent pick-up tag, showing school branding and the pick-up vehicle designation"
               aspect="4 / 5"
               imageClassName="object-contain"
