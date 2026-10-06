@@ -179,6 +179,18 @@ body {
   }
 }
 
+/* FeatureCards: fade contained product images into the card on all sides, so
+   images with off-white or gray backgrounds (or products touching the edge)
+   don't show a hard rectangle. The mask covers the whole <img> box, so the
+   stops assume a square image contained in a 4:3 frame: the picture spans
+   12.5%-87.5% of the width and the full height. */
+.media-fade img {
+  mask-image:
+    linear-gradient(to right, transparent 12.5%, #000 15%, #000 85%, transparent 87.5%),
+    linear-gradient(to bottom, transparent, #000 5%, #000 95%, transparent);
+  mask-composite: intersect;
+}
+
 /* PauseToggle (WCAG 2.2.2): pauses every looping animation in its wrapper */
 .pausable:has(.pausable-toggle:checked) .pausable-anim {
   animation-play-state: paused;

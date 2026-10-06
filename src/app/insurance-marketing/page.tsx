@@ -219,11 +219,11 @@ const MORE_WAYS: FeatureCard[] = [
     title: "Calendar Magnet Sponsorships",
     media: (
       <Image
-        src="/Images/product-calender-magnets.png"
-        alt="School calendar magnet advertising for insurance agencies: sample calendar magnets with the sponsor's details along the bottom"
+        src="/Images/insurance-magnet.png"
+        alt="School calendar magnets sponsored by a local insurance agency, with the agency's address, phone number, and website along the bottom"
         fill
         sizes="(min-width: 768px) 33vw, 100vw"
-        className="object-cover"
+        className="object-contain"
       />
     ),
     body: (
@@ -241,11 +241,11 @@ const MORE_WAYS: FeatureCard[] = [
     title: "School Folder Sponsorships",
     media: (
       <Image
-        src="/Images/product-folders.png"
-        alt="Sample sponsored take-home folders for school, shown closed, open, and from the back"
+        src="/Images/insurance-folder.png"
+        alt="Take-home folders for school sponsored by a local insurance agency, shown closed, open, and from the back"
         fill
         sizes="(min-width: 768px) 33vw, 100vw"
-        className="object-cover"
+        className="object-contain"
       />
     ),
     body: (

@@ -468,8 +468,8 @@ export default function RealEstateMarketingPage() {
         media={
           <div className="relative aspect-square w-full overflow-hidden rounded-card">
             <Image
-              src="/Images/product-calender-magnets.png"
-              alt="Sample school calendar magnets with the sponsor's name, address, phone number, and website along the bottom"
+              src="/Images/real-estate-magnet.png"
+              alt="School calendar magnets sponsored by a local real estate agency, with the agency's address, phone number, and website along the bottom"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"
@@ -510,8 +510,8 @@ export default function RealEstateMarketingPage() {
         media={
           <div className="relative aspect-square w-full overflow-hidden rounded-card">
             <Image
-              src="/Images/product-folders.png"
-              alt="Sample sponsored take-home folders for school, shown closed, open, and from the back"
+              src="/Images/real-estate-folder.png"
+              alt="Take-home folders for school sponsored by a local real estate agency, shown closed, open, and from the back"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"

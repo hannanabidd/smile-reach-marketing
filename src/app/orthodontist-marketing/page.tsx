@@ -236,7 +236,7 @@ const PRODUCT_CARDS: FeatureCard[] = [
         alt="School calendar magnet sponsored by orthodontic practice: sample magnets with the practice's details along the bottom"
         fill
         sizes="(min-width: 768px) 33vw, 100vw"
-        className="object-cover"
+        className="object-contain"
       />
     ),
     body: (
@@ -265,7 +265,7 @@ const PRODUCT_CARDS: FeatureCard[] = [
         alt="Sample sponsored take-home folders for school, shown closed, open, and from the back"
         fill
         sizes="(min-width: 768px) 33vw, 100vw"
-        className="object-cover"
+        className="object-contain"
       />
     ),
     body: (

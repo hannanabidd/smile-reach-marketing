@@ -223,11 +223,11 @@ const PRODUCT_CARDS: FeatureCard[] = [
     title: "Keep Your Practice Visible at Home",
     media: (
       <Image
-        src="/Images/product-calender-magnets.png"
-        alt="School calendar magnet sponsored by pediatric dental practice: sample magnets with the practice's details along the bottom"
+        src="/Images/pediatric-dental-magnet.png"
+        alt="School calendar magnets sponsored by a pediatric dental practice, with the practice's address, phone number, and website along the bottom"
         fill
         sizes="(min-width: 768px) 33vw, 100vw"
-        className="object-cover"
+        className="object-contain"
       />
     ),
     body: (
@@ -253,11 +253,11 @@ const PRODUCT_CARDS: FeatureCard[] = [
     title: "Connect School and Home",
     media: (
       <Image
-        src="/Images/product-folders.png"
-        alt="Sample sponsored take-home folders for school, shown closed, open, and from the back"
+        src="/Images/pediatric-dental-folder.png"
+        alt="Take-home folders for school sponsored by a pediatric dental practice, shown closed, open, and from the back"
         fill
         sizes="(min-width: 768px) 33vw, 100vw"
-        className="object-cover"
+        className="object-contain"
       />
     ),
     body: (

@@ -34,11 +34,12 @@ export default function FeatureCards({
   cards: FeatureCard[];
   background?: keyof typeof BG_CLASSES;
 }) {
-  // Two cards sit in a narrower grid so their square media doesn't get oversized.
-  const gridClasses =
-    cards.length === 2
-      ? "mx-auto max-w-220 md:grid-cols-2"
-      : "md:grid-cols-3";
+  // Cards span the full container. Two-up media is 4:3 to keep the cards
+  // compact; product images use object-contain there, and their white
+  // edges fade into the card (globals.css), so nothing is cropped or boxed.
+  const twoUp = cards.length === 2;
+  const gridClasses = twoUp ? "md:grid-cols-2" : "md:grid-cols-3";
+  const mediaAspect = twoUp ? "aspect-4/3 media-fade" : "aspect-square";
 
   return (
     <section className={`${BG_CLASSES[background]} py-16 sm:py-24`}>
@@ -53,7 +54,7 @@ export default function FeatureCards({
           {cards.map((card, index) => (
             <Reveal key={card.title} delay={index * 0.05}>
               <article className="flex h-full flex-col overflow-hidden rounded-card border border-sky bg-white">
-                <div className="relative aspect-square w-full overflow-hidden">{card.media}</div>
+                <div className={`relative w-full overflow-hidden ${mediaAspect}`}>{card.media}</div>
                 <div className="flex flex-1 flex-col p-6">
                   {card.eyebrow ? <Eyebrow>{card.eyebrow}</Eyebrow> : null}
                   <h3 className="text-display-3 font-bold text-navy">{card.title}</h3>
