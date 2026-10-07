@@ -243,8 +243,8 @@ const PRODUCT_CARDS: FeatureCard[] = [
     title: "Connect With School Families",
     media: (
       <Image
-        src="/Images/law-firm-folder.png"
-        alt="Take-home folders for school sponsored by a local law firm, shown closed, open, and from the back"
+        src="/Images/law-firm-school-folder.png"
+        alt="Elementary school take-home folders with the school's branding on the front and a local law firm on the back as a proud school sponsor"
         fill
         sizes="(min-width: 768px) 33vw, 100vw"
         className="object-contain"

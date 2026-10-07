@@ -510,8 +510,8 @@ export default function RealEstateMarketingPage() {
         media={
           <div className="relative aspect-square w-full overflow-hidden rounded-card">
             <Image
-              src="/Images/real-estate-folder.png"
-              alt="Take-home folders for school sponsored by a local real estate agency, shown closed, open, and from the back"
+              src="/Images/real-estate-school-folder.png"
+              alt="Elementary school take-home folders with the school's branding on the front and a local real estate agency on the back as a proud school sponsor"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"

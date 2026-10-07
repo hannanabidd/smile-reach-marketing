@@ -253,8 +253,8 @@ const PRODUCT_CARDS: FeatureCard[] = [
     title: "Connect School and Home",
     media: (
       <Image
-        src="/Images/pediatric-dental-folder.png"
-        alt="Take-home folders for school sponsored by a pediatric dental practice, shown closed, open, and from the back"
+        src="/Images/pediatric-dental-school-folder.png"
+        alt="Elementary school take-home folders with the school's branding on the front and a pediatric dental practice on the back as a proud school sponsor"
         fill
         sizes="(min-width: 768px) 33vw, 100vw"
         className="object-contain"

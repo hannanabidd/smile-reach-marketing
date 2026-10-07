@@ -241,8 +241,8 @@ const MORE_WAYS: FeatureCard[] = [
     title: "School Folder Sponsorships",
     media: (
       <Image
-        src="/Images/insurance-folder.png"
-        alt="Take-home folders for school sponsored by a local insurance agency, shown closed, open, and from the back"
+        src="/Images/insurance-school-folder.png"
+        alt="Elementary school take-home folders with the school's branding on the front and a local insurance agency on the back as a proud school sponsor"
         fill
         sizes="(min-width: 768px) 33vw, 100vw"
         className="object-contain"
