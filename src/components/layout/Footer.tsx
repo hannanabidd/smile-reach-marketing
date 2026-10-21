@@ -39,7 +39,7 @@ export default function Footer() {
           <div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/Images/SRM-logo.svg"
+              src="/Images/SRM-Logo.png"
               alt="Smile Reach Marketing"
               className="h-16 w-auto brightness-0 invert"
             />

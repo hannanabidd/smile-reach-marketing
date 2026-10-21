@@ -41,9 +41,9 @@ export default function Header() {
         <Link href="/" className="flex items-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/Images/SRM-logo.svg"
+            src="/Images/SRM-Logo.png"
             alt="Smile Reach Marketing"
-            className="h-18 w-auto"
+            className="h-12 w-auto"
           />
         </Link>
 
