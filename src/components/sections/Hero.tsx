@@ -6,7 +6,7 @@ import { ChevronDown } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Eyebrow from "@/components/ui/Eyebrow";
 import Button from "@/components/ui/Button";
-import { SCHEDULE_CONSULTATION_URL } from "@/lib/site";
+import { SCHEDULE_CONSULTATION_URL, AVAILABILITY_FORM_URL } from "@/lib/site";
 
 export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -83,7 +83,7 @@ export default function Hero() {
             <Button href={SCHEDULE_CONSULTATION_URL} variant="primary">
               Schedule a Consultation
             </Button>
-            <Button href="/contact" variant="ghost-light">
+            <Button href={AVAILABILITY_FORM_URL} variant="ghost-light">
               Check Availability in Your Area
             </Button>
           </div>

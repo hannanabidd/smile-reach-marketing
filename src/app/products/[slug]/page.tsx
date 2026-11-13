@@ -11,7 +11,7 @@ import FinalCTA from "@/components/sections/FinalCTA";
 import Container from "@/components/ui/Container";
 import Reveal from "@/components/motion/Reveal";
 import { PRODUCTS, SPONSORSHIP_STEPS, getProduct } from "@/lib/products";
-import { SCHEDULE_CONSULTATION_URL } from "@/lib/site";
+import { SCHEDULE_CONSULTATION_URL, AVAILABILITY_FORM_URL } from "@/lib/site";
 
 export function generateStaticParams() {
   return PRODUCTS.map((product) => ({ slug: product.slug }));
@@ -54,7 +54,7 @@ export default async function ProductDetailPage({
         buttons={[
           {
             label: "Check Availability in Your Area",
-            href: "/contact?intent=practice&help=availability#contact-form",
+            href: AVAILABILITY_FORM_URL,
             variant: "primary",
           },
         ]}
@@ -105,7 +105,7 @@ export default async function ProductDetailPage({
         buttons={[
           {
             label: "Check Availability in Your Area",
-            href: "/contact?intent=practice&help=availability#contact-form",
+            href: AVAILABILITY_FORM_URL,
             variant: "primary",
           },
           {

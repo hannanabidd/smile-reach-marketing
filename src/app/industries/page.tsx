@@ -5,7 +5,7 @@ import IndustriesGrid from "@/components/sections/IndustriesGrid";
 import Prose from "@/components/sections/Prose";
 import FinalCTA from "@/components/sections/FinalCTA";
 import { INDUSTRIES } from "@/lib/industries";
-import { SCHEDULE_CONSULTATION_URL } from "@/lib/site";
+import { SCHEDULE_CONSULTATION_URL, AVAILABILITY_FORM_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Industries We Serve: School Sponsorship Marketing | Smile Reach",
@@ -57,7 +57,7 @@ export default function IndustriesPage() {
           { label: "Schedule a Consultation", href: SCHEDULE_CONSULTATION_URL, variant: "primary" },
           {
             label: "Check Availability in Your Area",
-            href: "/contact?intent=practice&help=availability#contact-form",
+            href: AVAILABILITY_FORM_URL,
             variant: "ghost-light",
           },
         ]}

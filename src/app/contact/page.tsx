@@ -7,6 +7,7 @@ import SchoolsBand from "@/components/sections/SchoolsBand";
 import SchedulerSection from "@/components/sections/SchedulerSection";
 import FAQAccordion from "@/components/sections/FAQAccordion";
 import FinalCTA from "@/components/sections/FinalCTA";
+import { AVAILABILITY_FORM_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact Us | Check Availability & Pricing | Smile Reach",
@@ -79,7 +80,7 @@ export default function ContactPage() {
         buttons={[
           {
             label: "Check Availability",
-            href: "/contact?intent=practice&help=availability#contact-form",
+            href: AVAILABILITY_FORM_URL,
             variant: "primary",
           },
         ]}

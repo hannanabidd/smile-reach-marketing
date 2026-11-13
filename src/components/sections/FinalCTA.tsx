@@ -3,13 +3,13 @@ import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/motion/Reveal";
 import Glow from "@/components/ui/Glow";
-import { SCHEDULE_CONSULTATION_URL } from "@/lib/site";
+import { SCHEDULE_CONSULTATION_URL, AVAILABILITY_FORM_URL } from "@/lib/site";
 
 type ButtonSpec = { label: string; shortLabel?: string; href: string; variant?: "primary" | "ghost-light" };
 
 const DEFAULT_BUTTONS: ButtonSpec[] = [
   { label: "Schedule a Consultation", href: SCHEDULE_CONSULTATION_URL, variant: "primary" },
-  { label: "Check Availability in Your Area", href: "/contact", variant: "ghost-light" },
+  { label: "Check Availability in Your Area", href: AVAILABILITY_FORM_URL, variant: "ghost-light" },
 ];
 
 export default function FinalCTA({

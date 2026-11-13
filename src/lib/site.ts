@@ -4,3 +4,5 @@ export const SITE_EMAIL = "info@smilereachmarketing.com";
 export const SITE_EMAIL_HREF = "mailto:info@smilereachmarketing.com";
 export const SITE_HOURS = "Monday – Friday, 9:00 AM – 5:00 PM";
 export const SCHEDULE_CONSULTATION_URL = "https://cal.com/timfolks/smile-reach-marketing";
+/** Practice availability form (Monday). Every "Check Availability" button links here. */
+export const AVAILABILITY_FORM_URL = "https://wkf.ms/4kbZEWK";
